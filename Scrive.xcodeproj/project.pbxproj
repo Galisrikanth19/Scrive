@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1E8CC02940CD36002CFDFE /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23752940BBEB0017CDD0 /* Poppins-Regular.ttf */; };
 		2DDB232529406A3F0017CDD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB232429406A3F0017CDD0 /* AppDelegate.swift */; };
 		2DDB232729406A3F0017CDD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB232629406A3F0017CDD0 /* SceneDelegate.swift */; };
 		2DDB232929406A3F0017CDD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB232829406A3F0017CDD0 /* ViewController.swift */; };
@@ -15,6 +16,35 @@
 		2DDB233129406A410017CDD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB232F29406A410017CDD0 /* LaunchScreen.storyboard */; };
 		2DDB233929406BD40017CDD0 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB233829406BD40017CDD0 /* StringExtensions.swift */; };
 		2DDB233D29406F540017CDD0 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB233C29406F540017CDD0 /* UserDefaultsHelper.swift */; };
+		2DDB233F2940ADF60017CDD0 /* UILabelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB233E2940ADF60017CDD0 /* UILabelExtensions.swift */; };
+		2DDB23412940AE2B0017CDD0 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB23402940AE2B0017CDD0 /* UIButtonExtensions.swift */; };
+		2DDB23432940B1990017CDD0 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB23422940B1990017CDD0 /* UIViewExtensions.swift */; };
+		2DDB23452940B1FA0017CDD0 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB23442940B1FA0017CDD0 /* UIColorExtensions.swift */; };
+		2DDB23592940BB420017CDD0 /* RoxboroughCF-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23482940BB420017CDD0 /* RoxboroughCF-Heavy.otf */; };
+		2DDB235A2940BB420017CDD0 /* RoxboroughCF-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23492940BB420017CDD0 /* RoxboroughCF-Bold.otf */; };
+		2DDB235B2940BB420017CDD0 /* RoxboroughCF-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB234A2940BB420017CDD0 /* RoxboroughCF-Thin.otf */; };
+		2DDB235C2940BB420017CDD0 /* RoxboroughCF-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB234B2940BB420017CDD0 /* RoxboroughCF-Medium.otf */; };
+		2DDB235D2940BB420017CDD0 /* RoxboroughCF-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB234C2940BB420017CDD0 /* RoxboroughCF-Light.otf */; };
+		2DDB235E2940BB420017CDD0 /* RoxboroughCF-DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB234D2940BB420017CDD0 /* RoxboroughCF-DemiBold.otf */; };
+		2DDB235F2940BB420017CDD0 /* RoxboroughCF-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB234E2940BB420017CDD0 /* RoxboroughCF-ExtraBold.otf */; };
+		2DDB23602940BB420017CDD0 /* RoxboroughCF-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB234F2940BB420017CDD0 /* RoxboroughCF-Regular.otf */; };
+		2DDB23612940BB420017CDD0 /* ProximaNova-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23512940BB420017CDD0 /* ProximaNova-Thin.otf */; };
+		2DDB23622940BB420017CDD0 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23522940BB420017CDD0 /* ProximaNova-Light.otf */; };
+		2DDB23632940BB420017CDD0 /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23532940BB420017CDD0 /* ProximaNova-Semibold.otf */; };
+		2DDB23642940BB420017CDD0 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23542940BB420017CDD0 /* ProximaNova-Bold.otf */; };
+		2DDB23652940BB420017CDD0 /* ProximaNova-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23552940BB420017CDD0 /* ProximaNova-Medium.otf */; };
+		2DDB23662940BB420017CDD0 /* ProximaNova-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23562940BB420017CDD0 /* ProximaNova-Black.otf */; };
+		2DDB23672940BB420017CDD0 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23572940BB420017CDD0 /* ProximaNova-Regular.otf */; };
+		2DDB23682940BB420017CDD0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23582940BB420017CDD0 /* Colors.xcassets */; };
+		2DDB237D2940BBEB0017CDD0 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB236B2940BBEB0017CDD0 /* Poppins-ExtraLight.ttf */; };
+		2DDB23812940BBEB0017CDD0 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB236F2940BBEB0017CDD0 /* Poppins-Light.ttf */; };
+		2DDB23822940BBEB0017CDD0 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23702940BBEB0017CDD0 /* Poppins-Medium.ttf */; };
+		2DDB23852940BBEB0017CDD0 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23732940BBEB0017CDD0 /* Poppins-ExtraBold.ttf */; };
+		2DDB23892940BBEB0017CDD0 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23772940BBEB0017CDD0 /* Poppins-Bold.ttf */; };
+		2DDB238A2940BBEB0017CDD0 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23782940BBEB0017CDD0 /* Poppins-Black.ttf */; };
+		2DDB238B2940BBEB0017CDD0 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23792940BBEB0017CDD0 /* Poppins-Thin.ttf */; };
+		2DDB238C2940BBEB0017CDD0 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB237A2940BBEB0017CDD0 /* Poppins-SemiBold.ttf */; };
+		2DDB238D2940BBEB0017CDD0 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB237B2940BBEB0017CDD0 /* Poppins-Italic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +58,36 @@
 		2DDB233229406A410017CDD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DDB233829406BD40017CDD0 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		2DDB233C29406F540017CDD0 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		2DDB233E2940ADF60017CDD0 /* UILabelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelExtensions.swift; sourceTree = "<group>"; };
+		2DDB23402940AE2B0017CDD0 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
+		2DDB23422940B1990017CDD0 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		2DDB23442940B1FA0017CDD0 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		2DDB23482940BB420017CDD0 /* RoxboroughCF-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RoxboroughCF-Heavy.otf"; sourceTree = "<group>"; };
+		2DDB23492940BB420017CDD0 /* RoxboroughCF-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RoxboroughCF-Bold.otf"; sourceTree = "<group>"; };
+		2DDB234A2940BB420017CDD0 /* RoxboroughCF-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RoxboroughCF-Thin.otf"; sourceTree = "<group>"; };
+		2DDB234B2940BB420017CDD0 /* RoxboroughCF-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RoxboroughCF-Medium.otf"; sourceTree = "<group>"; };
+		2DDB234C2940BB420017CDD0 /* RoxboroughCF-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RoxboroughCF-Light.otf"; sourceTree = "<group>"; };
+		2DDB234D2940BB420017CDD0 /* RoxboroughCF-DemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RoxboroughCF-DemiBold.otf"; sourceTree = "<group>"; };
+		2DDB234E2940BB420017CDD0 /* RoxboroughCF-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RoxboroughCF-ExtraBold.otf"; sourceTree = "<group>"; };
+		2DDB234F2940BB420017CDD0 /* RoxboroughCF-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RoxboroughCF-Regular.otf"; sourceTree = "<group>"; };
+		2DDB23512940BB420017CDD0 /* ProximaNova-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Thin.otf"; sourceTree = "<group>"; };
+		2DDB23522940BB420017CDD0 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		2DDB23532940BB420017CDD0 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		2DDB23542940BB420017CDD0 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		2DDB23552940BB420017CDD0 /* ProximaNova-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Medium.otf"; sourceTree = "<group>"; };
+		2DDB23562940BB420017CDD0 /* ProximaNova-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Black.otf"; sourceTree = "<group>"; };
+		2DDB23572940BB420017CDD0 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		2DDB23582940BB420017CDD0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		2DDB236B2940BBEB0017CDD0 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		2DDB236F2940BBEB0017CDD0 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		2DDB23702940BBEB0017CDD0 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		2DDB23732940BBEB0017CDD0 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		2DDB23752940BBEB0017CDD0 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		2DDB23772940BBEB0017CDD0 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		2DDB23782940BBEB0017CDD0 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		2DDB23792940BBEB0017CDD0 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		2DDB237A2940BBEB0017CDD0 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		2DDB237B2940BBEB0017CDD0 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +126,7 @@
 				2DDB233B29406F350017CDD0 /* HelperClasses */,
 				2DDB233A29406BE80017CDD0 /* Extensions */,
 				2DDB232A29406A3F0017CDD0 /* Main.storyboard */,
-				2DDB232D29406A410017CDD0 /* Assets.xcassets */,
+				2DDB23692940BB470017CDD0 /* Resources */,
 				2DDB232F29406A410017CDD0 /* LaunchScreen.storyboard */,
 				2DDB233229406A410017CDD0 /* Info.plist */,
 			);
@@ -77,6 +137,10 @@
 			isa = PBXGroup;
 			children = (
 				2DDB233829406BD40017CDD0 /* StringExtensions.swift */,
+				2DDB23422940B1990017CDD0 /* UIViewExtensions.swift */,
+				2DDB233E2940ADF60017CDD0 /* UILabelExtensions.swift */,
+				2DDB23402940AE2B0017CDD0 /* UIButtonExtensions.swift */,
+				2DDB23442940B1FA0017CDD0 /* UIColorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -87,6 +151,72 @@
 				2DDB233C29406F540017CDD0 /* UserDefaultsHelper.swift */,
 			);
 			path = HelperClasses;
+			sourceTree = "<group>";
+		};
+		2DDB23462940BB420017CDD0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2DDB236A2940BBEB0017CDD0 /* Poppins */,
+				2DDB23472940BB420017CDD0 /* RoxboroughCF */,
+				2DDB23502940BB420017CDD0 /* ProximaNova */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2DDB23472940BB420017CDD0 /* RoxboroughCF */ = {
+			isa = PBXGroup;
+			children = (
+				2DDB23482940BB420017CDD0 /* RoxboroughCF-Heavy.otf */,
+				2DDB23492940BB420017CDD0 /* RoxboroughCF-Bold.otf */,
+				2DDB234A2940BB420017CDD0 /* RoxboroughCF-Thin.otf */,
+				2DDB234B2940BB420017CDD0 /* RoxboroughCF-Medium.otf */,
+				2DDB234C2940BB420017CDD0 /* RoxboroughCF-Light.otf */,
+				2DDB234D2940BB420017CDD0 /* RoxboroughCF-DemiBold.otf */,
+				2DDB234E2940BB420017CDD0 /* RoxboroughCF-ExtraBold.otf */,
+				2DDB234F2940BB420017CDD0 /* RoxboroughCF-Regular.otf */,
+			);
+			path = RoxboroughCF;
+			sourceTree = "<group>";
+		};
+		2DDB23502940BB420017CDD0 /* ProximaNova */ = {
+			isa = PBXGroup;
+			children = (
+				2DDB23512940BB420017CDD0 /* ProximaNova-Thin.otf */,
+				2DDB23522940BB420017CDD0 /* ProximaNova-Light.otf */,
+				2DDB23532940BB420017CDD0 /* ProximaNova-Semibold.otf */,
+				2DDB23542940BB420017CDD0 /* ProximaNova-Bold.otf */,
+				2DDB23552940BB420017CDD0 /* ProximaNova-Medium.otf */,
+				2DDB23562940BB420017CDD0 /* ProximaNova-Black.otf */,
+				2DDB23572940BB420017CDD0 /* ProximaNova-Regular.otf */,
+			);
+			path = ProximaNova;
+			sourceTree = "<group>";
+		};
+		2DDB23692940BB470017CDD0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2DDB232D29406A410017CDD0 /* Assets.xcassets */,
+				2DDB23582940BB420017CDD0 /* Colors.xcassets */,
+				2DDB23462940BB420017CDD0 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2DDB236A2940BBEB0017CDD0 /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				2DDB236B2940BBEB0017CDD0 /* Poppins-ExtraLight.ttf */,
+				2DDB236F2940BBEB0017CDD0 /* Poppins-Light.ttf */,
+				2DDB23702940BBEB0017CDD0 /* Poppins-Medium.ttf */,
+				2DDB23732940BBEB0017CDD0 /* Poppins-ExtraBold.ttf */,
+				2DDB23752940BBEB0017CDD0 /* Poppins-Regular.ttf */,
+				2DDB23772940BBEB0017CDD0 /* Poppins-Bold.ttf */,
+				2DDB23782940BBEB0017CDD0 /* Poppins-Black.ttf */,
+				2DDB23792940BBEB0017CDD0 /* Poppins-Thin.ttf */,
+				2DDB237A2940BBEB0017CDD0 /* Poppins-SemiBold.ttf */,
+				2DDB237B2940BBEB0017CDD0 /* Poppins-Italic.ttf */,
+			);
+			path = Poppins;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,9 +277,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DDB237D2940BBEB0017CDD0 /* Poppins-ExtraLight.ttf in Resources */,
+				2DDB235A2940BB420017CDD0 /* RoxboroughCF-Bold.otf in Resources */,
 				2DDB233129406A410017CDD0 /* LaunchScreen.storyboard in Resources */,
+				2DDB238B2940BBEB0017CDD0 /* Poppins-Thin.ttf in Resources */,
+				2DDB23892940BBEB0017CDD0 /* Poppins-Bold.ttf in Resources */,
+				2D1E8CC02940CD36002CFDFE /* Poppins-Regular.ttf in Resources */,
+				2DDB235D2940BB420017CDD0 /* RoxboroughCF-Light.otf in Resources */,
+				2DDB23822940BBEB0017CDD0 /* Poppins-Medium.ttf in Resources */,
+				2DDB23622940BB420017CDD0 /* ProximaNova-Light.otf in Resources */,
+				2DDB235E2940BB420017CDD0 /* RoxboroughCF-DemiBold.otf in Resources */,
+				2DDB235B2940BB420017CDD0 /* RoxboroughCF-Thin.otf in Resources */,
+				2DDB238C2940BBEB0017CDD0 /* Poppins-SemiBold.ttf in Resources */,
+				2DDB23602940BB420017CDD0 /* RoxboroughCF-Regular.otf in Resources */,
+				2DDB235C2940BB420017CDD0 /* RoxboroughCF-Medium.otf in Resources */,
 				2DDB232E29406A410017CDD0 /* Assets.xcassets in Resources */,
+				2DDB23642940BB420017CDD0 /* ProximaNova-Bold.otf in Resources */,
 				2DDB232C29406A3F0017CDD0 /* Main.storyboard in Resources */,
+				2DDB23672940BB420017CDD0 /* ProximaNova-Regular.otf in Resources */,
+				2DDB23682940BB420017CDD0 /* Colors.xcassets in Resources */,
+				2DDB23592940BB420017CDD0 /* RoxboroughCF-Heavy.otf in Resources */,
+				2DDB235F2940BB420017CDD0 /* RoxboroughCF-ExtraBold.otf in Resources */,
+				2DDB23812940BBEB0017CDD0 /* Poppins-Light.ttf in Resources */,
+				2DDB23612940BB420017CDD0 /* ProximaNova-Thin.otf in Resources */,
+				2DDB23852940BBEB0017CDD0 /* Poppins-ExtraBold.ttf in Resources */,
+				2DDB238D2940BBEB0017CDD0 /* Poppins-Italic.ttf in Resources */,
+				2DDB23632940BB420017CDD0 /* ProximaNova-Semibold.otf in Resources */,
+				2DDB238A2940BBEB0017CDD0 /* Poppins-Black.ttf in Resources */,
+				2DDB23652940BB420017CDD0 /* ProximaNova-Medium.otf in Resources */,
+				2DDB23662940BB420017CDD0 /* ProximaNova-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,11 +316,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DDB23452940B1FA0017CDD0 /* UIColorExtensions.swift in Sources */,
 				2DDB233D29406F540017CDD0 /* UserDefaultsHelper.swift in Sources */,
 				2DDB233929406BD40017CDD0 /* StringExtensions.swift in Sources */,
+				2DDB23432940B1990017CDD0 /* UIViewExtensions.swift in Sources */,
+				2DDB233F2940ADF60017CDD0 /* UILabelExtensions.swift in Sources */,
 				2DDB232929406A3F0017CDD0 /* ViewController.swift in Sources */,
 				2DDB232529406A3F0017CDD0 /* AppDelegate.swift in Sources */,
 				2DDB232729406A3F0017CDD0 /* SceneDelegate.swift in Sources */,
+				2DDB23412940AE2B0017CDD0 /* UIButtonExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

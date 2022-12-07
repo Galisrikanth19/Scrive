@@ -8,9 +8,9 @@
 import Foundation
 
 enum UserDefaultKeys: String, CaseIterable {
- case userId
- case isAdmin
- case pinCode
+ case deviceToken
+ case userName
+ case password
 }
 
 struct UserDefaultsHelper {
@@ -35,18 +35,18 @@ struct UserDefaultsHelper {
 /*
  ************************************************************************************************
  $$$-save data
- UserDefaultsHelper.setData(value: "user-001", key: .userId)
- UserDefaultsHelper.setData(value: true, key: .isAdmin)
- UserDefaultsHelper.setData(value: 123, key: .pinCode)
+ UserDefaultsHelper.setData(value: "user-001", key: .deviceToken)
+ UserDefaultsHelper.setData(value: true, key: .userName)
+ UserDefaultsHelper.setData(value: 123, key: .password)
  
  
  $$$-get data
- let id = UserDefaultsHelper.getData(type: String.self, forKey: .userId)
- let userType = UserDefaultsHelper.getData(type: Bool.self, forKey: .isAdmin)
- let code = UserDefaultsHelper.getData(type: Int.self, forKey: .pinCode)
+ let id = UserDefaultsHelper.getData(type: String.self, forKey: .deviceToken)
+ let userType = UserDefaultsHelper.getData(type: Bool.self, forKey: .userName)
+ let code = UserDefaultsHelper.getData(type: Int.self, forKey: .password)
  
  
  $$$-clear data
- UserDefaultsHelper.removeData(key: .userId)
+ UserDefaultsHelper.removeData(key: .deviceToken)
  ************************************************************************************************
  */
