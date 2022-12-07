@@ -2,18 +2,15 @@
 //  ViewController.swift
 //  Scrive
 //
-//  Created by Webappclouds on 07/12/22.
+//  Created by Scrive on 01/01/22.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    var myStr = "Hello world"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
