@@ -36,4 +36,10 @@ extension String {
     var htmlToString: String {
         return htmlToAttributedString?.string ?? ""
     }
+    
+    func getMutableAttributedString(WithColor foregroundColor: UIColor, WithFont font: UIFont, ForString str: String) -> NSMutableAttributedString {
+        let attributes = [NSAttributedString.Key.foregroundColor: foregroundColor, NSAttributedString.Key.font: font]
+        let mutableAttributedString = NSMutableAttributedString(string: str, attributes: attributes)
+        return mutableAttributedString
+    }
 }

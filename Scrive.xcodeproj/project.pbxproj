@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2D1E8CC02940CD36002CFDFE /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23752940BBEB0017CDD0 /* Poppins-Regular.ttf */; };
+		2D2EC148295B11A600F52A28 /* GlobalPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EC147295B11A600F52A28 /* GlobalPrint.swift */; };
+		2D2EC14B295B11EE00F52A28 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EC149295B11EE00F52A28 /* AppFont.swift */; };
+		2D2EC14C295B11EE00F52A28 /* AppOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EC14A295B11EE00F52A28 /* AppOrientation.swift */; };
+		2D2EC14E295B121000F52A28 /* AppSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EC14D295B121000F52A28 /* AppSingleton.swift */; };
+		2D2EC150295B136B00F52A28 /* BackspaceTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EC14F295B136B00F52A28 /* BackspaceTextField.swift */; };
 		2DDB232529406A3F0017CDD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB232429406A3F0017CDD0 /* AppDelegate.swift */; };
 		2DDB232729406A3F0017CDD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB232629406A3F0017CDD0 /* SceneDelegate.swift */; };
 		2DDB232929406A3F0017CDD0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB232829406A3F0017CDD0 /* ViewController.swift */; };
@@ -48,6 +53,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D2EC147295B11A600F52A28 /* GlobalPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalPrint.swift; sourceTree = "<group>"; };
+		2D2EC149295B11EE00F52A28 /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		2D2EC14A295B11EE00F52A28 /* AppOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppOrientation.swift; sourceTree = "<group>"; };
+		2D2EC14D295B121000F52A28 /* AppSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSingleton.swift; sourceTree = "<group>"; };
+		2D2EC14F295B136B00F52A28 /* BackspaceTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackspaceTextField.swift; sourceTree = "<group>"; };
 		2DDB232129406A3F0017CDD0 /* Scrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDB232429406A3F0017CDD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DDB232629406A3F0017CDD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,7 +158,12 @@
 		2DDB233B29406F350017CDD0 /* HelperClasses */ = {
 			isa = PBXGroup;
 			children = (
+				2D2EC14F295B136B00F52A28 /* BackspaceTextField.swift */,
 				2DDB233C29406F540017CDD0 /* UserDefaultsHelper.swift */,
+				2D2EC147295B11A600F52A28 /* GlobalPrint.swift */,
+				2D2EC149295B11EE00F52A28 /* AppFont.swift */,
+				2D2EC14A295B11EE00F52A28 /* AppOrientation.swift */,
+				2D2EC14D295B121000F52A28 /* AppSingleton.swift */,
 			);
 			path = HelperClasses;
 			sourceTree = "<group>";
@@ -316,15 +331,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D2EC14C295B11EE00F52A28 /* AppOrientation.swift in Sources */,
 				2DDB23452940B1FA0017CDD0 /* UIColorExtensions.swift in Sources */,
+				2D2EC14E295B121000F52A28 /* AppSingleton.swift in Sources */,
 				2DDB233D29406F540017CDD0 /* UserDefaultsHelper.swift in Sources */,
 				2DDB233929406BD40017CDD0 /* StringExtensions.swift in Sources */,
 				2DDB23432940B1990017CDD0 /* UIViewExtensions.swift in Sources */,
+				2D2EC14B295B11EE00F52A28 /* AppFont.swift in Sources */,
 				2DDB233F2940ADF60017CDD0 /* UILabelExtensions.swift in Sources */,
 				2DDB232929406A3F0017CDD0 /* ViewController.swift in Sources */,
 				2DDB232529406A3F0017CDD0 /* AppDelegate.swift in Sources */,
 				2DDB232729406A3F0017CDD0 /* SceneDelegate.swift in Sources */,
+				2D2EC148295B11A600F52A28 /* GlobalPrint.swift in Sources */,
 				2DDB23412940AE2B0017CDD0 /* UIButtonExtensions.swift in Sources */,
+				2D2EC150295B136B00F52A28 /* BackspaceTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
