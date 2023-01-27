@@ -1,9 +1,6 @@
 //
 //  Observable.swift
-//  Scrive
-//
-//  Created by Webappclouds on 27/12/22.
-//
+//  Created by Srikanth on 01/01/23
 
 import UIKit
 
@@ -29,6 +26,7 @@ class Observable<T> {
 }
 
 /*
+ Usage sourceCode
 ************************************************************************************************
  var credentialsInputErrorMessage: Observable<String> = Observable("")
  var isUsernameTextFieldHighLighted: Observable<Bool> = Observable(false)

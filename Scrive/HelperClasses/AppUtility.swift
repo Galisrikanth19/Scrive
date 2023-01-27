@@ -1,9 +1,6 @@
 //
 //  AppUtility.swift
-//  Scrive
-//
-//  Created by Webappclouds on 27/12/22.
-//
+//  Created by Srikanth on 01/01/23
 
 import UIKit
 

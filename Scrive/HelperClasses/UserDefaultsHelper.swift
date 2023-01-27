@@ -1,16 +1,11 @@
 //
 //  UserDefaultsHelper.swift
-//  Scrive
-//
-//  Created by Scrive on 01/01/22.
-//
+//  Created by Srikanth on 01/01/23
 
 import Foundation
 
 enum UserDefaultKeys: String, CaseIterable {
- case deviceToken
- case userName
- case password
+ case apiToken
 }
 
 struct UserDefaultsHelper {
@@ -33,20 +28,21 @@ struct UserDefaultsHelper {
 
 
 /*
+ Usage sourceCode
  ************************************************************************************************
  $$$-save data
- UserDefaultsHelper.setData(value: "user-001", key: .deviceToken)
+ UserDefaultsHelper.setData(value: "user-001", key: .apiToken)
  UserDefaultsHelper.setData(value: true, key: .userName)
  UserDefaultsHelper.setData(value: 123, key: .password)
  
  
  $$$-get data
- let id = UserDefaultsHelper.getData(type: String.self, forKey: .deviceToken)
+ let id = UserDefaultsHelper.getData(type: String.self, forKey: .apiToken)
  let userType = UserDefaultsHelper.getData(type: Bool.self, forKey: .userName)
  let code = UserDefaultsHelper.getData(type: Int.self, forKey: .password)
  
  
  $$$-clear data
- UserDefaultsHelper.removeData(key: .deviceToken)
+ UserDefaultsHelper.removeData(key: .apiToken)
  ************************************************************************************************
  */

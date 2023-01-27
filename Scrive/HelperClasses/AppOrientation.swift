@@ -1,9 +1,6 @@
 //
 //  AppOrientation.swift
-//  RachelPaigeXO
-//
-//  Created by Webappclouds on 11/2/22.
-//
+//  Created by Srikanth on 01/01/23
 
 import UIKit
 

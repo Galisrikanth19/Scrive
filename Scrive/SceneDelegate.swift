@@ -1,9 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Scrive
-//
-//  Created by Scrive on 01/01/22.
-//
+//  Created by Srikanth on 01/01/23
 
 import UIKit
 

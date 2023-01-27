@@ -2,34 +2,34 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>Fonts provided by application</key>
-    <array>
-        <string>Poppins-Black.ttf</string>
-        <string>Poppins-Bold.ttf</string>
-        <string>Poppins-ExtraBold.ttf</string>
-        <string>Poppins-ExtraLight.ttf</string>
-        <string>Poppins-Italic.ttf</string>
-        <string>Poppins-Light.ttf</string>
-        <string>Poppins-Medium.ttf</string>
-        <string>Poppins-Regular.ttf</string>
-        <string>Poppins-SemiBold.ttf</string>
-        <string>Poppins-Thin.ttf</string>
-        <string>RoxboroughCF-Bold.otf</string>
-        <string>RoxboroughCF-DemiBold.otf</string>
-        <string>RoxboroughCF-ExtraBold.otf</string>
-        <string>RoxboroughCF-Heavy.otf</string>
-        <string>RoxboroughCF-Light.otf</string>
-        <string>RoxboroughCF-Medium.otf</string>
-        <string>RoxboroughCF-Regular.otf</string>
-        <string>RoxboroughCF-Thin.otf</string>
-        <string>ProximaNova-Black.otf</string>
-        <string>ProximaNova-Bold.otf</string>
-        <string>ProximaNova-Light.otf</string>
-        <string>ProximaNova-Medium.otf</string>
-        <string>ProximaNova-Regular.otf</string>
-        <string>ProximaNova-Semibold.otf</string>
-        <string>ProximaNova-Thin.otf</string>
-    </array>
+	<key>Fonts provided by application</key>
+	<array>
+		<string>Poppins-Black.ttf</string>
+		<string>Poppins-Bold.ttf</string>
+		<string>Poppins-ExtraBold.ttf</string>
+		<string>Poppins-ExtraLight.ttf</string>
+		<string>Poppins-Italic.ttf</string>
+		<string>Poppins-Light.ttf</string>
+		<string>Poppins-Medium.ttf</string>
+		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-SemiBold.ttf</string>
+		<string>Poppins-Thin.ttf</string>
+		<string>RoxboroughCF-Bold.otf</string>
+		<string>RoxboroughCF-DemiBold.otf</string>
+		<string>RoxboroughCF-ExtraBold.otf</string>
+		<string>RoxboroughCF-Heavy.otf</string>
+		<string>RoxboroughCF-Light.otf</string>
+		<string>RoxboroughCF-Medium.otf</string>
+		<string>RoxboroughCF-Regular.otf</string>
+		<string>RoxboroughCF-Thin.otf</string>
+		<string>ProximaNova-Black.otf</string>
+		<string>ProximaNova-Bold.otf</string>
+		<string>ProximaNova-Light.otf</string>
+		<string>ProximaNova-Medium.otf</string>
+		<string>ProximaNova-Regular.otf</string>
+		<string>ProximaNova-Semibold.otf</string>
+		<string>ProximaNova-Thin.otf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -44,7 +44,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
+					<string>HomeSB</string>
 				</dict>
 			</array>
 		</dict>

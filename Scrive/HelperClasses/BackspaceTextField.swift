@@ -1,9 +1,6 @@
 //
 //  BackspaceTextField.swift
-//  VerificationCode
-//
-//  Created by Webappclouds on 28/11/22.
-//
+//  Created by Srikanth on 01/01/23
 
 import UIKit
 
@@ -23,6 +20,7 @@ class BackspaceTextField: UITextField {
 }
 
 /*
+ Usage sourceCode
 ************************************************************************************************
  txtFld.backspaceTextFieldDelegate = self
  
@@ -34,6 +32,5 @@ class BackspaceTextField: UITextField {
         textFieldsArr[index - 1].becomeFirstResponder()
     }
  }
- 
  ************************************************************************************************
  */

@@ -1,15 +1,11 @@
 //
 //  AppSingleton.swift
-//  RachelPaigeXO
-//
-//  Created by Webappclouds on 10/26/22.
-//
+//  Created by Srikanth on 01/01/23
 
 import Foundation
 
 class AppSingleton {
     static let shared = AppSingleton()
-    //var instance: ClassName?
     
     private init() {
     }

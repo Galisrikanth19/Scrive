@@ -1,9 +1,6 @@
 //
 //  UIColorExtensions.swift
-//  RachelPaigeXO
-//
-//  Created by Webappclouds on 10/26/22.
-//
+//  Created by Srikanth on 01/01/23
 
 import Foundation
 import UIKit
