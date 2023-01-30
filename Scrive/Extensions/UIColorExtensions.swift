@@ -6,8 +6,9 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    /*000000*/ static let blackColor = UIColor(named: "BlackColor")
-    /*FFFFFF*/ static let whiteColor = UIColor(named: "WhiteColor")
+    /*000000*/ static let blackColor = UIColor(named: "BlackColor") ?? UIColor.gray
+    /*FFFFFF*/ static let whiteColor = UIColor(named: "WhiteColor") ?? UIColor.gray
+    /*FAF8F1*/ static let backgroundColor = UIColor(named: "BackgroundColor") ?? UIColor.gray
 }
 
 extension UIColor {

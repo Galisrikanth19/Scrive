@@ -17,6 +17,9 @@
 		2D2EC154295B18CB00F52A28 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EC153295B18CB00F52A28 /* AppUtility.swift */; };
 		2DA8B14E298404AE003A815C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8B14D298404AE003A815C /* HomeVC.swift */; };
 		2DA8B150298404C9003A815C /* HomeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA8B14F298404C9003A815C /* HomeSB.storyboard */; };
+		2DA8B15229841BEC003A815C /* Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8B15129841BEC003A815C /* Swizzle.swift */; };
+		2DA8B15429841F5E003A815C /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8B15329841F5E003A815C /* PushNotifications.swift */; };
+		2DA8B1562984201A003A815C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DA8B1552984201A003A815C /* GoogleService-Info.plist */; };
 		2DDB232529406A3F0017CDD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB232429406A3F0017CDD0 /* AppDelegate.swift */; };
 		2DDB232729406A3F0017CDD0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB232629406A3F0017CDD0 /* SceneDelegate.swift */; };
 		2DDB232929406A3F0017CDD0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDB232829406A3F0017CDD0 /* BaseViewController.swift */; };
@@ -53,6 +56,7 @@
 		2DDB238B2940BBEB0017CDD0 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23792940BBEB0017CDD0 /* Poppins-Thin.ttf */; };
 		2DDB238C2940BBEB0017CDD0 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB237A2940BBEB0017CDD0 /* Poppins-SemiBold.ttf */; };
 		2DDB238D2940BBEB0017CDD0 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB237B2940BBEB0017CDD0 /* Poppins-Italic.ttf */; };
+		37BA1662B4A09ADF91C31642 /* Pods_Scrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21A389C8F9BB7EC85C9AED2 /* Pods_Scrive.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +69,9 @@
 		2D2EC153295B18CB00F52A28 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		2DA8B14D298404AE003A815C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		2DA8B14F298404C9003A815C /* HomeSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeSB.storyboard; sourceTree = "<group>"; };
+		2DA8B15129841BEC003A815C /* Swizzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swizzle.swift; sourceTree = "<group>"; };
+		2DA8B15329841F5E003A815C /* PushNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushNotifications.swift; sourceTree = "<group>"; };
+		2DA8B1552984201A003A815C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DDB232129406A3F0017CDD0 /* Scrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DDB232429406A3F0017CDD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DDB232629406A3F0017CDD0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +111,9 @@
 		2DDB23792940BBEB0017CDD0 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
 		2DDB237A2940BBEB0017CDD0 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		2DDB237B2940BBEB0017CDD0 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		3591872F135A93F8DCF3FD1D /* Pods-Scrive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrive.release.xcconfig"; path = "Target Support Files/Pods-Scrive/Pods-Scrive.release.xcconfig"; sourceTree = "<group>"; };
+		D21A389C8F9BB7EC85C9AED2 /* Pods_Scrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE3AA987A6992EF18540A16B /* Pods-Scrive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrive.debug.xcconfig"; path = "Target Support Files/Pods-Scrive/Pods-Scrive.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37BA1662B4A09ADF91C31642 /* Pods_Scrive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +174,8 @@
 			children = (
 				2DDB232329406A3F0017CDD0 /* Scrive */,
 				2DDB232229406A3F0017CDD0 /* Products */,
+				AE112D8BD826AF41C3C01A9F /* Pods */,
+				781B9412BD0849BF8121CDB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,6 +199,7 @@
 				2DDB23692940BB470017CDD0 /* Resources */,
 				2DDB232F29406A410017CDD0 /* LaunchScreen.storyboard */,
 				2DDB233229406A410017CDD0 /* Info.plist */,
+				2DA8B1552984201A003A815C /* GoogleService-Info.plist */,
 			);
 			path = Scrive;
 			sourceTree = "<group>";
@@ -213,6 +227,8 @@
 				2D2EC14D295B121000F52A28 /* AppSingleton.swift */,
 				2D2EC151295B170900F52A28 /* Observable.swift */,
 				2D2EC153295B18CB00F52A28 /* AppUtility.swift */,
+				2DA8B15129841BEC003A815C /* Swizzle.swift */,
+				2DA8B15329841F5E003A815C /* PushNotifications.swift */,
 			);
 			path = HelperClasses;
 			sourceTree = "<group>";
@@ -283,6 +299,23 @@
 			path = Poppins;
 			sourceTree = "<group>";
 		};
+		781B9412BD0849BF8121CDB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D21A389C8F9BB7EC85C9AED2 /* Pods_Scrive.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE112D8BD826AF41C3C01A9F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE3AA987A6992EF18540A16B /* Pods-Scrive.debug.xcconfig */,
+				3591872F135A93F8DCF3FD1D /* Pods-Scrive.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,9 +323,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DDB233529406A410017CDD0 /* Build configuration list for PBXNativeTarget "Scrive" */;
 			buildPhases = (
+				FB6424CDA9129C511BAD9D77 /* [CP] Check Pods Manifest.lock */,
 				2DDB231D29406A3F0017CDD0 /* Sources */,
 				2DDB231E29406A3F0017CDD0 /* Frameworks */,
 				2DDB231F29406A3F0017CDD0 /* Resources */,
+				58CBF62B7C96EF64F6770D12 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -358,6 +393,7 @@
 				2DDB232E29406A410017CDD0 /* Assets.xcassets in Resources */,
 				2DDB23642940BB420017CDD0 /* ProximaNova-Bold.otf in Resources */,
 				2DDB23672940BB420017CDD0 /* ProximaNova-Regular.otf in Resources */,
+				2DA8B1562984201A003A815C /* GoogleService-Info.plist in Resources */,
 				2DDB23682940BB420017CDD0 /* Colors.xcassets in Resources */,
 				2DDB23592940BB420017CDD0 /* RoxboroughCF-Heavy.otf in Resources */,
 				2DDB235F2940BB420017CDD0 /* RoxboroughCF-ExtraBold.otf in Resources */,
@@ -375,14 +411,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		58CBF62B7C96EF64F6770D12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Scrive/Pods-Scrive-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Scrive/Pods-Scrive-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Scrive/Pods-Scrive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB6424CDA9129C511BAD9D77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Scrive-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2DDB231D29406A3F0017CDD0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA8B15229841BEC003A815C /* Swizzle.swift in Sources */,
 				2D2EC154295B18CB00F52A28 /* AppUtility.swift in Sources */,
 				2D2EC14C295B11EE00F52A28 /* AppOrientation.swift in Sources */,
 				2D2EC152295B170900F52A28 /* Observable.swift in Sources */,
+				2DA8B15429841F5E003A815C /* PushNotifications.swift in Sources */,
 				2DDB23452940B1FA0017CDD0 /* UIColorExtensions.swift in Sources */,
 				2D2EC14E295B121000F52A28 /* AppSingleton.swift in Sources */,
 				2DA8B14E298404AE003A815C /* HomeVC.swift in Sources */,
@@ -530,6 +610,7 @@
 		};
 		2DDB233629406A410017CDD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE3AA987A6992EF18540A16B /* Pods-Scrive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -548,7 +629,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Scrive.Scrive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Gss.Scrive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -558,6 +639,7 @@
 		};
 		2DDB233729406A410017CDD0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3591872F135A93F8DCF3FD1D /* Pods-Scrive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -576,7 +658,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Scrive.Scrive;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Gss.Scrive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

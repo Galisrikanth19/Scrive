@@ -5,7 +5,8 @@
 import Foundation
 
 enum UserDefaultKeys: String, CaseIterable {
- case apiToken
+    case apiToken
+    case apnsToken
 }
 
 struct UserDefaultsHelper {
