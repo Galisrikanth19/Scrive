@@ -79,12 +79,14 @@ PODS:
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.12)
   - Protobuf (3.21.12)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Firebase/Core
   - Firebase/Messaging
   - IQKeyboardManagerSwift
   - MBProgressHUD
+  - Toast-Swift
 
 SPEC REPOS:
   trunk:
@@ -103,6 +105,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - Protobuf
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Firebase: c23a36d9e4cdf7877dfcba8dd0c58add66358999
@@ -120,7 +123,8 @@ SPEC CHECKSUMS:
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   Protobuf: 120350fc38646e2dedc26f49ecba778184ea1de2
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: e0ce92be5c55b509c86a5f0deead6e790f0f51cf
+PODFILE CHECKSUM: a45d4ac9997d3ba76d8257bee93d2d5c1e75a789
 
 COCOAPODS: 1.11.3

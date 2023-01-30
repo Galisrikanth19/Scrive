@@ -15,6 +15,9 @@
 		2D2EC150295B136B00F52A28 /* BackspaceTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EC14F295B136B00F52A28 /* BackspaceTextField.swift */; };
 		2D2EC152295B170900F52A28 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EC151295B170900F52A28 /* Observable.swift */; };
 		2D2EC154295B18CB00F52A28 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EC153295B18CB00F52A28 /* AppUtility.swift */; };
+		2D9C9E7129880B6D006B6A3C /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C9E7029880B6D006B6A3C /* UIViewControllerExtensions.swift */; };
+		2D9C9E7429880C4B006B6A3C /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C9E7329880C4B006B6A3C /* CustomNavigationController.swift */; };
+		2D9C9E7629881052006B6A3C /* CustomAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C9E7529881052006B6A3C /* CustomAlerts.swift */; };
 		2DA8B14E298404AE003A815C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8B14D298404AE003A815C /* HomeVC.swift */; };
 		2DA8B150298404C9003A815C /* HomeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA8B14F298404C9003A815C /* HomeSB.storyboard */; };
 		2DA8B15229841BEC003A815C /* Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8B15129841BEC003A815C /* Swizzle.swift */; };
@@ -72,6 +75,9 @@
 		2D2EC14F295B136B00F52A28 /* BackspaceTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackspaceTextField.swift; sourceTree = "<group>"; };
 		2D2EC151295B170900F52A28 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		2D2EC153295B18CB00F52A28 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		2D9C9E7029880B6D006B6A3C /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		2D9C9E7329880C4B006B6A3C /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		2D9C9E7529881052006B6A3C /* CustomAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlerts.swift; sourceTree = "<group>"; };
 		2DA8B14D298404AE003A815C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		2DA8B14F298404C9003A815C /* HomeSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeSB.storyboard; sourceTree = "<group>"; };
 		2DA8B15129841BEC003A815C /* Swizzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swizzle.swift; sourceTree = "<group>"; };
@@ -138,9 +144,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D9C9E7229880C24006B6A3C /* CustomNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				2D9C9E7329880C4B006B6A3C /* CustomNavigationController.swift */,
+			);
+			path = CustomNavigationController;
+			sourceTree = "<group>";
+		};
 		2DA8B148298403B2003A815C /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				2D9C9E7229880C24006B6A3C /* CustomNavigationController */,
 				2DA8B14929840442003A815C /* Home */,
 				2DA8B1572987A720003A815C /* WKWebView */,
 			);
@@ -258,6 +273,7 @@
 				2DDB23402940AE2B0017CDD0 /* UIButtonExtensions.swift */,
 				2DDB23442940B1FA0017CDD0 /* UIColorExtensions.swift */,
 				2DA8B15F2987A91F003A815C /* WKWebViewExtensions.swift */,
+				2D9C9E7029880B6D006B6A3C /* UIViewControllerExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,6 +292,7 @@
 				2DA8B15129841BEC003A815C /* Swizzle.swift */,
 				2DA8B15329841F5E003A815C /* PushNotifications.swift */,
 				2DA8B1632987AB39003A815C /* ProgressHUD.swift */,
+				2D9C9E7529881052006B6A3C /* CustomAlerts.swift */,
 			);
 			path = HelperClasses;
 			sourceTree = "<group>";
@@ -514,18 +531,21 @@
 				2DA8B15429841F5E003A815C /* PushNotifications.swift in Sources */,
 				2DDB23452940B1FA0017CDD0 /* UIColorExtensions.swift in Sources */,
 				2DA8B1642987AB39003A815C /* ProgressHUD.swift in Sources */,
+				2D9C9E7429880C4B006B6A3C /* CustomNavigationController.swift in Sources */,
 				2D2EC14E295B121000F52A28 /* AppSingleton.swift in Sources */,
 				2DA8B14E298404AE003A815C /* HomeVC.swift in Sources */,
 				2DDB233D29406F540017CDD0 /* UserDefaultsHelper.swift in Sources */,
 				2DDB233929406BD40017CDD0 /* StringExtensions.swift in Sources */,
 				2DDB23432940B1990017CDD0 /* UIViewExtensions.swift in Sources */,
 				2D2EC14B295B11EE00F52A28 /* AppFont.swift in Sources */,
+				2D9C9E7629881052006B6A3C /* CustomAlerts.swift in Sources */,
 				2DA8B1602987A91F003A815C /* WKWebViewExtensions.swift in Sources */,
 				2DDB233F2940ADF60017CDD0 /* UILabelExtensions.swift in Sources */,
 				2DDB232929406A3F0017CDD0 /* BaseViewController.swift in Sources */,
 				2DDB232529406A3F0017CDD0 /* AppDelegate.swift in Sources */,
 				2DDB232729406A3F0017CDD0 /* SceneDelegate.swift in Sources */,
 				2D2EC148295B11A600F52A28 /* GlobalPrint.swift in Sources */,
+				2D9C9E7129880B6D006B6A3C /* UIViewControllerExtensions.swift in Sources */,
 				2DA8B15C2987A7F9003A815C /* WKWebVC.swift in Sources */,
 				2DDB23412940AE2B0017CDD0 /* UIButtonExtensions.swift in Sources */,
 				2D2EC150295B136B00F52A28 /* BackspaceTextField.swift in Sources */,
