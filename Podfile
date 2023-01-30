@@ -7,6 +7,7 @@ target 'Scrive' do
 
   # Pods for Scrive
   pod 'IQKeyboardManagerSwift'
+  pod 'MBProgressHUD'
   
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
