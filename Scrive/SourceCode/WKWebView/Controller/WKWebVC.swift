@@ -24,7 +24,7 @@ extension WKWebVC: WKNavigationDelegate {
     private func invokeWebView() {
         self.showProgressHUD(message: "")
         webView.navigationDelegate = self
-        webView.load(wkWebM?.urlStr ?? "")
+        webView.load(WithUrlStr: wkWebM?.urlStr ?? "")
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {

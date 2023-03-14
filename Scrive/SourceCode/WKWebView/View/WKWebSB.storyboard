@@ -19,7 +19,7 @@
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GwO-2G-Igf">
                                 <rect key="frame" x="0.0" y="48" width="414" height="814"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -27,7 +27,7 @@
                             </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b9i-XN-hD7"/>
-                        <color key="backgroundColor" name="bgColor"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GwO-2G-Igf" secondAttribute="trailing" id="Cce-lH-gDl"/>
                             <constraint firstItem="b9i-XN-hD7" firstAttribute="bottom" secondItem="GwO-2G-Igf" secondAttribute="bottom" id="T52-6X-85E"/>
@@ -45,8 +45,8 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="bgColor">
-            <color red="0.16470588235294117" green="0.16470588235294117" blue="0.16470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.98000001907348633" green="0.97299998998641968" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
