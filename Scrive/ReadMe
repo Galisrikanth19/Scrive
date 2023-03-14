@@ -1,0 +1,21 @@
+Change Initial Storyboard name in 2 places
+> In info.plist where "Storyboard Name" = "main" change to desired name or remove it
+> In Target>general>deploymentInfo>mainInterface = "main" change to desired name or remove it
+
+Change ios minimum version
+> In Project>info>ios deployment Target = change to your desired minimum version
+
+Change device family
+> In Project>build settings>Targeted device family
+> change above setting in target also
+
+change status bar color
+add below code in info.plist
+    <key>UIStatusBarStyle</key>
+    <string>UIStatusBarStyleLightContent</string>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <true/>
+    <key>UIStatusBarHidden</key>
+    <true/>
+Add below line in BaseViewController
+UIApplication.shared.isStatusBarHidden = false

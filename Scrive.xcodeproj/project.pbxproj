@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1DCBD129C0B06A0079E2D8 /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = 2D1DCBD029C0B06A0079E2D8 /* ReadMe */; };
 		2D1E8CC02940CD36002CFDFE /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DDB23752940BBEB0017CDD0 /* Poppins-Regular.ttf */; };
 		2D2EC148295B11A600F52A28 /* GlobalPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EC147295B11A600F52A28 /* GlobalPrint.swift */; };
 		2D2EC14B295B11EE00F52A28 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2EC149295B11EE00F52A28 /* AppFont.swift */; };
@@ -18,7 +19,7 @@
 		2D4B45B2298842A100A015AB /* ScreenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B45B1298842A100A015AB /* ScreenManager.swift */; };
 		2D4B45B42988431400A015AB /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4B45B32988431400A015AB /* NSObjectExtensions.swift */; };
 		2D9C9E7129880B6D006B6A3C /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C9E7029880B6D006B6A3C /* UIViewControllerExtensions.swift */; };
-		2D9C9E7429880C4B006B6A3C /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C9E7329880C4B006B6A3C /* CustomNavigationController.swift */; };
+		2D9C9E7429880C4B006B6A3C /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C9E7329880C4B006B6A3C /* NavController.swift */; };
 		2D9C9E7629881052006B6A3C /* CustomAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C9E7529881052006B6A3C /* CustomAlerts.swift */; };
 		2DA7396829BB176D00A8B428 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA7396729BB176D00A8B428 /* CheckBoxButton.swift */; };
 		2DA8B14E298404AE003A815C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8B14D298404AE003A815C /* HomeVC.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D1DCBD029C0B06A0079E2D8 /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
 		2D2EC147295B11A600F52A28 /* GlobalPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalPrint.swift; sourceTree = "<group>"; };
 		2D2EC149295B11EE00F52A28 /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		2D2EC14A295B11EE00F52A28 /* AppOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppOrientation.swift; sourceTree = "<group>"; };
@@ -81,7 +83,7 @@
 		2D4B45B1298842A100A015AB /* ScreenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenManager.swift; sourceTree = "<group>"; };
 		2D4B45B32988431400A015AB /* NSObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
 		2D9C9E7029880B6D006B6A3C /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
-		2D9C9E7329880C4B006B6A3C /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		2D9C9E7329880C4B006B6A3C /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		2D9C9E7529881052006B6A3C /* CustomAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlerts.swift; sourceTree = "<group>"; };
 		2DA7396729BB176D00A8B428 /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		2DA8B14D298404AE003A815C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -150,18 +152,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2D9C9E7229880C24006B6A3C /* CustomNavigationController */ = {
+		2D1DCBD229C0B3870079E2D8 /* NavController */ = {
 			isa = PBXGroup;
 			children = (
-				2D9C9E7329880C4B006B6A3C /* CustomNavigationController.swift */,
+				2D9C9E7329880C4B006B6A3C /* NavController.swift */,
 			);
-			path = CustomNavigationController;
+			path = NavController;
 			sourceTree = "<group>";
 		};
 		2DA8B148298403B2003A815C /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
-				2D9C9E7229880C24006B6A3C /* CustomNavigationController */,
+				2D1DCBD229C0B3870079E2D8 /* NavController */,
 				2DA8B14929840442003A815C /* Home */,
 				2DA8B1572987A720003A815C /* WKWebView */,
 			);
@@ -266,6 +268,7 @@
 				2DDB232F29406A410017CDD0 /* LaunchScreen.storyboard */,
 				2DDB233229406A410017CDD0 /* Info.plist */,
 				2DA8B1552984201A003A815C /* GoogleService-Info.plist */,
+				2D1DCBD029C0B06A0079E2D8 /* ReadMe */,
 			);
 			path = Scrive;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				2DDB23672940BB420017CDD0 /* ProximaNova-Regular.otf in Resources */,
 				2DA8B1562984201A003A815C /* GoogleService-Info.plist in Resources */,
 				2DDB23682940BB420017CDD0 /* Colors.xcassets in Resources */,
+				2D1DCBD129C0B06A0079E2D8 /* ReadMe in Resources */,
 				2DDB23592940BB420017CDD0 /* RoxboroughCF-Heavy.otf in Resources */,
 				2DDB235F2940BB420017CDD0 /* RoxboroughCF-ExtraBold.otf in Resources */,
 				2DDB23812940BBEB0017CDD0 /* Poppins-Light.ttf in Resources */,
@@ -540,7 +544,7 @@
 				2DA8B15429841F5E003A815C /* PushNotifications.swift in Sources */,
 				2DDB23452940B1FA0017CDD0 /* UIColorExtensions.swift in Sources */,
 				2DA8B1642987AB39003A815C /* ProgressHUD.swift in Sources */,
-				2D9C9E7429880C4B006B6A3C /* CustomNavigationController.swift in Sources */,
+				2D9C9E7429880C4B006B6A3C /* NavController.swift in Sources */,
 				2D2EC14E295B121000F52A28 /* AppSingleton.swift in Sources */,
 				2DA8B14E298404AE003A815C /* HomeVC.swift in Sources */,
 				2D4B45B42988431400A015AB /* NSObjectExtensions.swift in Sources */,

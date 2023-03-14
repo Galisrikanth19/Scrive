@@ -78,11 +78,11 @@ extension ScreenManager {
     }
     
     class func getNavigationController(_ viewController: UIViewController? = nil) -> UINavigationController {
-        let navigationController = CustomNavigationController()
+        let navController = NavController()
         if let controller = viewController {
-            navigationController.viewControllers = [controller]
+            navController.viewControllers = [controller]
         }
-        return navigationController
+        return navController
     }
 
     class func getController(storyboard:Storyboard, controller:UIViewController) -> UIViewController {

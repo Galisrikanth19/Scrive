@@ -1,10 +1,10 @@
 //
-//  CustomNavigationController.swift
+//  NavController.swift
 //  Created by Srikanth on 01/01/23
 
 import UIKit
 
-class CustomNavigationController: UINavigationController {
+class NavController: UINavigationController {
     override var childForStatusBarStyle: UIViewController? {
         return visibleViewController
     }
