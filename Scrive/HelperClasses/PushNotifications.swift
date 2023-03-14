@@ -5,6 +5,6 @@
 import Foundation
 
 enum PushNotificationType: String {
-    case announcement = "Announcement"
-    case overAllRankForQuarter = "Overall_rank_for_quarter"
+    case notifications = "Notifications"
+    case settings = "Settings"
 }

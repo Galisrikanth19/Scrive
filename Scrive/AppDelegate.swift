@@ -100,10 +100,10 @@ extension AppDelegate: MessagingDelegate, UNUserNotificationCenterDelegate {
             guard let _ = UserDefaultsHelper.getData(type: String.self, forKey: .apiToken) else { return }
             
             switch notificationType {
-                case PushNotificationType.announcement.rawValue:
+                case PushNotificationType.notifications.rawValue:
                     print("Navigate to NotificationsVC")
                     //NotificationsVC.push(storyboard: .notificationsSB)
-                case PushNotificationType.overAllRankForQuarter.rawValue:
+                case PushNotificationType.settings.rawValue:
                     print("Navigate to SettingsVC")
                     //SettingsVC.push(storyboard: .settingsSB)
                 default:
