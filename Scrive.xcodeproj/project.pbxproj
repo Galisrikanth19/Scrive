@@ -21,6 +21,17 @@
 		2D9C9E7129880B6D006B6A3C /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C9E7029880B6D006B6A3C /* UIViewControllerExtensions.swift */; };
 		2D9C9E7429880C4B006B6A3C /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C9E7329880C4B006B6A3C /* NavController.swift */; };
 		2D9C9E7629881052006B6A3C /* CustomAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C9E7529881052006B6A3C /* CustomAlerts.swift */; };
+		2DA615C829C1BCCD00B750E4 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA615C729C1BCCD00B750E4 /* HomeModel.swift */; };
+		2DA615CB29C1BEE000B750E4 /* HomeTbvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA615CA29C1BEE000B750E4 /* HomeTbvCell.swift */; };
+		2DA615D129C1C09800B750E4 /* TableviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA615D029C1C09800B750E4 /* TableviewVC.swift */; };
+		2DA615D429C1C15000B750E4 /* TbvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA615D329C1C15000B750E4 /* TbvCell.swift */; };
+		2DA615D629C1C19800B750E4 /* TbvModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA615D529C1C19800B750E4 /* TbvModel.swift */; };
+		2DA615D829C1C2BF00B750E4 /* TableviewSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA615D729C1C2BF00B750E4 /* TableviewSB.storyboard */; };
+		2DA615DC29C1C4BB00B750E4 /* TopBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA615DA29C1C4BB00B750E4 /* TopBar.xib */; };
+		2DA615DD29C1C4BB00B750E4 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA615DB29C1C4BB00B750E4 /* TopBar.swift */; };
+		2DA615DF29C1CB8A00B750E4 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA615DE29C1CB8A00B750E4 /* UITableViewExtensions.swift */; };
+		2DA615E329C1CBC800B750E4 /* NoDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA615E129C1CBC800B750E4 /* NoDataView.swift */; };
+		2DA615E429C1CBC800B750E4 /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA615E229C1CBC800B750E4 /* NoDataView.xib */; };
 		2DA7396829BB176D00A8B428 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA7396729BB176D00A8B428 /* CheckBoxButton.swift */; };
 		2DA8B14E298404AE003A815C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA8B14D298404AE003A815C /* HomeVC.swift */; };
 		2DA8B150298404C9003A815C /* HomeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DA8B14F298404C9003A815C /* HomeSB.storyboard */; };
@@ -85,6 +96,17 @@
 		2D9C9E7029880B6D006B6A3C /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		2D9C9E7329880C4B006B6A3C /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		2D9C9E7529881052006B6A3C /* CustomAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlerts.swift; sourceTree = "<group>"; };
+		2DA615C729C1BCCD00B750E4 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		2DA615CA29C1BEE000B750E4 /* HomeTbvCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTbvCell.swift; sourceTree = "<group>"; };
+		2DA615D029C1C09800B750E4 /* TableviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableviewVC.swift; sourceTree = "<group>"; };
+		2DA615D329C1C15000B750E4 /* TbvCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TbvCell.swift; sourceTree = "<group>"; };
+		2DA615D529C1C19800B750E4 /* TbvModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TbvModel.swift; sourceTree = "<group>"; };
+		2DA615D729C1C2BF00B750E4 /* TableviewSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TableviewSB.storyboard; sourceTree = "<group>"; };
+		2DA615DA29C1C4BB00B750E4 /* TopBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopBar.xib; sourceTree = "<group>"; };
+		2DA615DB29C1C4BB00B750E4 /* TopBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		2DA615DE29C1CB8A00B750E4 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		2DA615E129C1CBC800B750E4 /* NoDataView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoDataView.swift; sourceTree = "<group>"; };
+		2DA615E229C1CBC800B750E4 /* NoDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
 		2DA7396729BB176D00A8B428 /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		2DA8B14D298404AE003A815C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		2DA8B14F298404C9003A815C /* HomeSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeSB.storyboard; sourceTree = "<group>"; };
@@ -160,9 +182,80 @@
 			path = NavController;
 			sourceTree = "<group>";
 		};
+		2DA615C929C1BED100B750E4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2DA615CA29C1BEE000B750E4 /* HomeTbvCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2DA615CC29C1C06500B750E4 /* Tableview */ = {
+			isa = PBXGroup;
+			children = (
+				2DA615CF29C1C07F00B750E4 /* Model */,
+				2DA615CE29C1C07A00B750E4 /* View */,
+				2DA615CD29C1C07200B750E4 /* Controller */,
+			);
+			path = Tableview;
+			sourceTree = "<group>";
+		};
+		2DA615CD29C1C07200B750E4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DA615D229C1C13800B750E4 /* Cells */,
+				2DA615D029C1C09800B750E4 /* TableviewVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2DA615CE29C1C07A00B750E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DA615D729C1C2BF00B750E4 /* TableviewSB.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DA615CF29C1C07F00B750E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2DA615D529C1C19800B750E4 /* TbvModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DA615D229C1C13800B750E4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2DA615D329C1C15000B750E4 /* TbvCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2DA615D929C1C4BB00B750E4 /* TopBar */ = {
+			isa = PBXGroup;
+			children = (
+				2DA615DA29C1C4BB00B750E4 /* TopBar.xib */,
+				2DA615DB29C1C4BB00B750E4 /* TopBar.swift */,
+			);
+			path = TopBar;
+			sourceTree = "<group>";
+		};
+		2DA615E029C1CBC800B750E4 /* NoDataView */ = {
+			isa = PBXGroup;
+			children = (
+				2DA615E129C1CBC800B750E4 /* NoDataView.swift */,
+				2DA615E229C1CBC800B750E4 /* NoDataView.xib */,
+			);
+			path = NoDataView;
+			sourceTree = "<group>";
+		};
 		2DA8B148298403B2003A815C /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				2DA615D929C1C4BB00B750E4 /* TopBar */,
+				2DA615CC29C1C06500B750E4 /* Tableview */,
 				2D1DCBD229C0B3870079E2D8 /* NavController */,
 				2DA8B14929840442003A815C /* Home */,
 				2DA8B1572987A720003A815C /* WKWebView */,
@@ -183,6 +276,7 @@
 		2DA8B14A29840451003A815C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2DA615C729C1BCCD00B750E4 /* HomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +284,7 @@
 		2DA8B14B29840458003A815C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2DA615C929C1BED100B750E4 /* Cells */,
 				2DA8B14D298404AE003A815C /* HomeVC.swift */,
 			);
 			path = Controller;
@@ -284,6 +379,7 @@
 				2DA8B15F2987A91F003A815C /* WKWebViewExtensions.swift */,
 				2D9C9E7029880B6D006B6A3C /* UIViewControllerExtensions.swift */,
 				2D4B45B32988431400A015AB /* NSObjectExtensions.swift */,
+				2DA615DE29C1CB8A00B750E4 /* UITableViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -291,6 +387,7 @@
 		2DDB233B29406F350017CDD0 /* HelperClasses */ = {
 			isa = PBXGroup;
 			children = (
+				2DA615E029C1CBC800B750E4 /* NoDataView */,
 				2D2EC14F295B136B00F52A28 /* BackspaceTextField.swift */,
 				2DDB233C29406F540017CDD0 /* UserDefaultsHelper.swift */,
 				2D2EC147295B11A600F52A28 /* GlobalPrint.swift */,
@@ -467,6 +564,7 @@
 				2DDB23602940BB420017CDD0 /* RoxboroughCF-Regular.otf in Resources */,
 				2DDB235C2940BB420017CDD0 /* RoxboroughCF-Medium.otf in Resources */,
 				2DDB232E29406A410017CDD0 /* Assets.xcassets in Resources */,
+				2DA615DC29C1C4BB00B750E4 /* TopBar.xib in Resources */,
 				2DA8B1622987A9B5003A815C /* WKWebSB.storyboard in Resources */,
 				2DDB23642940BB420017CDD0 /* ProximaNova-Bold.otf in Resources */,
 				2DDB23672940BB420017CDD0 /* ProximaNova-Regular.otf in Resources */,
@@ -479,11 +577,13 @@
 				2DDB23612940BB420017CDD0 /* ProximaNova-Thin.otf in Resources */,
 				2DDB23852940BBEB0017CDD0 /* Poppins-ExtraBold.ttf in Resources */,
 				2DA8B150298404C9003A815C /* HomeSB.storyboard in Resources */,
+				2DA615D829C1C2BF00B750E4 /* TableviewSB.storyboard in Resources */,
 				2DDB238D2940BBEB0017CDD0 /* Poppins-Italic.ttf in Resources */,
 				2DDB23632940BB420017CDD0 /* ProximaNova-Semibold.otf in Resources */,
 				2DDB238A2940BBEB0017CDD0 /* Poppins-Black.ttf in Resources */,
 				2DDB23652940BB420017CDD0 /* ProximaNova-Medium.otf in Resources */,
 				2DDB23662940BB420017CDD0 /* ProximaNova-Black.otf in Resources */,
+				2DA615E429C1CBC800B750E4 /* NoDataView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,17 +636,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DA615D429C1C15000B750E4 /* TbvCell.swift in Sources */,
 				2DA8B15229841BEC003A815C /* Swizzle.swift in Sources */,
+				2DA615D629C1C19800B750E4 /* TbvModel.swift in Sources */,
 				2D2EC154295B18CB00F52A28 /* AppUtility.swift in Sources */,
+				2DA615E329C1CBC800B750E4 /* NoDataView.swift in Sources */,
 				2DA8B15E2987A85C003A815C /* WKWebModel.swift in Sources */,
 				2D2EC14C295B11EE00F52A28 /* AppOrientation.swift in Sources */,
 				2D2EC152295B170900F52A28 /* Observable.swift in Sources */,
+				2DA615DD29C1C4BB00B750E4 /* TopBar.swift in Sources */,
 				2DA8B15429841F5E003A815C /* PushNotifications.swift in Sources */,
 				2DDB23452940B1FA0017CDD0 /* UIColorExtensions.swift in Sources */,
 				2DA8B1642987AB39003A815C /* ProgressHUD.swift in Sources */,
+				2DA615D129C1C09800B750E4 /* TableviewVC.swift in Sources */,
+				2DA615C829C1BCCD00B750E4 /* HomeModel.swift in Sources */,
 				2D9C9E7429880C4B006B6A3C /* NavController.swift in Sources */,
 				2D2EC14E295B121000F52A28 /* AppSingleton.swift in Sources */,
+				2DA615DF29C1CB8A00B750E4 /* UITableViewExtensions.swift in Sources */,
 				2DA8B14E298404AE003A815C /* HomeVC.swift in Sources */,
+				2DA615CB29C1BEE000B750E4 /* HomeTbvCell.swift in Sources */,
 				2D4B45B42988431400A015AB /* NSObjectExtensions.swift in Sources */,
 				2DDB233D29406F540017CDD0 /* UserDefaultsHelper.swift in Sources */,
 				2DDB233929406BD40017CDD0 /* StringExtensions.swift in Sources */,

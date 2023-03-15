@@ -6,6 +6,7 @@ import UIKit
 
 enum Storyboard : String {
     case homeSB = "HomeSB"
+    case tableviewSB = "TableviewSB"
 }
 
 extension UIViewController {

@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,9 +17,60 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1FT-Zt-DKl">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeTbvCell" rowHeight="236" id="ZhP-ZV-7cz" customClass="HomeTbvCell" customModule="Scrive" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="236"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZhP-ZV-7cz" id="B75-SY-VGQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="236"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dY-XG-NLh">
+                                                    <rect key="frame" x="15" y="5" width="363" height="226"/>
+                                                    <color key="backgroundColor" name="TitleColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="vh8-UT-Lx5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="BgColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="iCornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="1dY-XG-NLh" secondAttribute="bottom" constant="5" id="1aK-qt-Ozu"/>
+                                                <constraint firstItem="1dY-XG-NLh" firstAttribute="leading" secondItem="B75-SY-VGQ" secondAttribute="leading" constant="15" id="2XI-gu-mlO"/>
+                                                <constraint firstItem="1dY-XG-NLh" firstAttribute="top" secondItem="B75-SY-VGQ" secondAttribute="top" constant="5" id="8SM-Qe-0K3"/>
+                                                <constraint firstAttribute="trailing" secondItem="1dY-XG-NLh" secondAttribute="trailing" constant="15" id="eCc-Ic-FkW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLbl" destination="1dY-XG-NLh" id="umk-tK-RTD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BgColor"/>
+                        <constraints>
+                            <constraint firstItem="1FT-Zt-DKl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="l2f-rB-EBU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1FT-Zt-DKl" secondAttribute="bottom" id="mCJ-E4-GoZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1FT-Zt-DKl" secondAttribute="trailing" id="nST-s2-tLz"/>
+                            <constraint firstItem="1FT-Zt-DKl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="z8b-Kn-QTF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tbv" destination="1FT-Zt-DKl" id="Hvg-sd-j8y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,7 +79,13 @@
     </scenes>
     <resources>
         <namedColor name="BgColor">
-            <color red="0.68235294117647061" green="0.76078431372549016" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68199998140335083" green="0.76099997758865356" blue="0.71399998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="TitleColor">
+            <color red="0.18000000715255737" green="0.2199999988079071" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
