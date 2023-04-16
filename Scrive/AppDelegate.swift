@@ -9,6 +9,8 @@ import Firebase
 import FirebaseMessaging
 import UserNotifications
 
+//isvalid
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var orientationLock = UIInterfaceOrientationMask.portrait
