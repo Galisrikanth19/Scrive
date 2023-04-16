@@ -6,6 +6,7 @@ import Foundation
 
 class AppSingleton {
     static let shared = AppSingleton()
+    var accessToken: String?
     
     private init() {
     }

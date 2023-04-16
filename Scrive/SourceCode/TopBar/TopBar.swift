@@ -33,8 +33,8 @@ class TopBar: UIView {
         guard let view = loadViewFromNib() else { return }
         view.frame = bounds
         addSubview(view)
-        let safeAreaTop = (UIApplication.shared.windows.first{$0.isKeyWindow }?.safeAreaInsets.top ?? 48.0) + 60.0
-        bgViewHeightConst.constant = safeAreaTop
+        let safeAreaTop = (UIApplication.shared.windows.first{$0.isKeyWindow }?.safeAreaInsets.top ?? 0.0)
+        bgViewHeightConst.constant = safeAreaTop + 40
     }
     
     func loadViewFromNib() -> UIView? {

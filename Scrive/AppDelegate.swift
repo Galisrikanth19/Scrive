@@ -9,8 +9,6 @@ import Firebase
 import FirebaseMessaging
 import UserNotifications
 
-//isvalid
-
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var orientationLock = UIInterfaceOrientationMask.portrait
@@ -46,6 +44,7 @@ extension AppDelegate {
     
     private func setIQKeyboardManager() {
         IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.toolbarTintColor = .bgColor
     }
     
     private func initializeSwizzle() {
@@ -76,7 +75,7 @@ extension AppDelegate: MessagingDelegate, UNUserNotificationCenterDelegate {
         Messaging.messaging().apnsToken = deviceToken
     }
     
-    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
         messaging.token { token, _ in
             guard let apnsToken = token else { return }
             UserDefaultsHelper.setData(value: apnsToken, key: .apnsToken)

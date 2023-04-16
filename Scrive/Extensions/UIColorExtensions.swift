@@ -6,10 +6,10 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    /*000000*/ static let blackColor = UIColor(named: "BlackColor") ?? UIColor.red
-    /*FFFFFF*/ static let whiteColor = UIColor(named: "WhiteColor") ?? UIColor.red
-    /*FAF8F1*/ static let bgColor = UIColor(named: "BgColor") ?? UIColor.red
-    /*FAF8F1*/ static let titleColor = UIColor(named: "TitleColor") ?? UIColor.red
+    /*#000000*/ static let blackColor = UIColor(named: "BlackColor") ?? UIColor.red
+    /*#FFFFFF*/ static let whiteColor = UIColor(named: "WhiteColor") ?? UIColor.red
+    /*#FAF8F1*/ static let bgColor = UIColor(named: "BgColor") ?? UIColor.red
+    /*#FAF8F1*/ static let titleColor = UIColor(named: "TitleColor") ?? UIColor.red
 }
 
 extension UIColor {
@@ -18,9 +18,9 @@ extension UIColor {
     }
     
     static var randomColor: UIColor {
-        let r:CGFloat  = .random(in: 0...1)
-        let g:CGFloat  = .random(in: 0...1)
-        let b:CGFloat  = .random(in: 0...1)
+        let r: CGFloat = .random(in: 0...1)
+        let g: CGFloat = .random(in: 0...1)
+        let b: CGFloat = .random(in: 0...1)
         return UIColor(red: r, green: g, blue: b, alpha: 1)
     }
     
@@ -35,7 +35,7 @@ extension UIColor {
             return UIColor.gray
         }
         
-        var rgbValue:UInt64 = 0
+        var rgbValue: UInt64 = 0
         Scanner(string: cString).scanHexInt64(&rgbValue)
         
         return UIColor(

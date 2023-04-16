@@ -11,7 +11,7 @@ class HomeVC: BaseViewController {
             tbv.reloadData()
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupVC()
@@ -53,11 +53,12 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         let homeModelTitleStr = dataArr[indexPath.row].titleStr
         
         switch homeModelTitleStr {
-        case dataArr[0].titleStr:
+        case "Tableview":
             TableviewVC.push(storyboard: .tableviewSB)
-            break
+        case "Textfeild":
+            TextFieldVC.push(storyboard: .textfieldSB)
         default:
-            print("No object selected")
+            self.showToast(WithMessage: "No object selected")
         }
     }
 }

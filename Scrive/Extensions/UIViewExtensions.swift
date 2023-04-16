@@ -128,4 +128,12 @@ extension UIView {
     var getCenterY: CGFloat {
         return self.center.y
     }
+    
+    var topSafeArea: CGFloat {
+        return self.safeAreaInsets.top
+    }
+    
+    var bottomSafeArea: CGFloat {
+        return self.safeAreaInsets.bottom
+    }
 }

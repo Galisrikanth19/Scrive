@@ -8,15 +8,15 @@ import Toast_Swift
 extension UIViewController {
     func showToast(WithMessage message:String)  {
         var style = ToastManager.shared.style
-        style.backgroundColor = UIColor.green
-        style.messageColor = UIColor.black
+        style.backgroundColor = UIColor.darkGray
+        style.messageColor = UIColor.whiteColor
         self.navigationController?.view.makeToast(message, duration: 2.0, position: .top, style:style)
     }
     
     func showErrorToast(WithMessage message:String)  {
         var style = ToastManager.shared.style
         style.backgroundColor = UIColor.red
-        style.messageColor = UIColor.black
+        style.messageColor = UIColor.whiteColor
         self.navigationController?.view.makeToast(message, duration: 2.0, position: .top, style:style)
     }
     

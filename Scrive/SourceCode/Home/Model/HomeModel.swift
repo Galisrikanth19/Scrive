@@ -13,6 +13,7 @@ struct HomeListData {
         HomeModel(titleStr: "Tableview"),
         HomeModel(titleStr: "CollectionView"),
         HomeModel(titleStr: "Button"),
-        HomeModel(titleStr: "Label")
+        HomeModel(titleStr: "Label"),
+        HomeModel(titleStr: "Textfeild")
     ]
 }
