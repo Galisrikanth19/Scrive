@@ -23,7 +23,7 @@ class HomeVC: BaseViewController {
     }
     
     private func loadStaticData() {
-        dataArr = HomeListData.homeModelArr
+        dataArr = HomeModelData.homeModelArr
     }
 }
 
@@ -50,15 +50,13 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let homeModelTitleStr = dataArr[indexPath.row].titleStr
+        let menuItem = dataArr[indexPath.row].menu
         
-        switch homeModelTitleStr {
-        case "Tableview":
-            break
-            //TableviewVC.push(storyboard: .tableviewSB)
-        case "Textfeild":
-            break
-            //TextFieldVC.push(storyboard: .textfieldSB)
+        switch menuItem {
+        case .tableview:
+            TableviewVC.push(storyboard: .tableviewSB)
+        case .textfeild:
+            TextFieldVC.push(storyboard: .textfieldSB)
         default:
             self.showToast(WithMessage: "No object selected")
         }

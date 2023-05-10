@@ -46,10 +46,10 @@ extension UITextField {
 
 extension UITextField {
     func enablePasswordToggle() {
-        let paddingView = UIView(frame: CGRect(x: (self.getWidth - 30), y: 0, width: 30, height: self.getHeight))
+        let paddingView = UIView(frame: CGRect(x: (self.getWidth - 40), y: 0, width: 40, height: self.getHeight))
         let button = UIButton(type: .custom)
         
-        button.frame = CGRect(x: 0, y: 5, width: 20, height: 20)
+        button.frame = CGRect(x: 10, y: 5, width: 20, height: 20)
         setPasswordToggleImage(button)
         button.addTarget(self, action: #selector(self.togglePasswordView), for: .touchUpInside)
         paddingView.addSubview(button)

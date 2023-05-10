@@ -9,18 +9,6 @@ Change device family
 > In Project>build settings>Targeted device family
 > change above setting in target also
 
-change status bar color
-> add below code in info.plist
-    <key>UIStatusBarStyle</key>
-    <string>UIStatusBarStyleLightContent</string>
-    <key>UIViewControllerBasedStatusBarAppearance</key>
-    <true/>
-    <key>UIStatusBarHidden</key>
-    <true/>
-    
-Add below line in BaseViewController
-> UIApplication.shared.isStatusBarHidden = false
-
 
 Adobe-XD
 

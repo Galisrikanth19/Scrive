@@ -83,6 +83,12 @@
 		2D64B6CD29D4B1E0000CBDB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64B6CC29D4B1E0000CBDB8 /* AppDelegate.swift */; };
 		2D64B6CF29D4B1E0000CBDB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64B6CE29D4B1E0000CBDB8 /* SceneDelegate.swift */; };
 		2D64B6D129D4B1E0000CBDB8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64B6D029D4B1E0000CBDB8 /* BaseViewController.swift */; };
+		2D6E7D612A0C0FE700A7BD3B /* TbvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E7D5B2A0C0FE700A7BD3B /* TbvCell.swift */; };
+		2D6E7D622A0C0FE700A7BD3B /* TableviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E7D5C2A0C0FE700A7BD3B /* TableviewVC.swift */; };
+		2D6E7D632A0C0FE700A7BD3B /* TbvModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E7D5E2A0C0FE700A7BD3B /* TbvModel.swift */; };
+		2D6E7D642A0C0FE700A7BD3B /* TableviewSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6E7D602A0C0FE700A7BD3B /* TableviewSB.storyboard */; };
+		2D6E7D6A2A0C101F00A7BD3B /* TextFieldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E7D672A0C101F00A7BD3B /* TextFieldVC.swift */; };
+		2D6E7D6B2A0C101F00A7BD3B /* TextfieldSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6E7D692A0C101F00A7BD3B /* TextfieldSB.storyboard */; };
 		7FB917D7882B8C2E085D2BFF /* Pods_Scrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F76732EE737779F8110F72 /* Pods_Scrive.framework */; };
 /* End PBXBuildFile section */
 
@@ -165,6 +171,12 @@
 		2D64B6CE29D4B1E0000CBDB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2D64B6D029D4B1E0000CBDB8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		2D64B6DA29D4B1E2000CBDB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D6E7D5B2A0C0FE700A7BD3B /* TbvCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TbvCell.swift; sourceTree = "<group>"; };
+		2D6E7D5C2A0C0FE700A7BD3B /* TableviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableviewVC.swift; sourceTree = "<group>"; };
+		2D6E7D5E2A0C0FE700A7BD3B /* TbvModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TbvModel.swift; sourceTree = "<group>"; };
+		2D6E7D602A0C0FE700A7BD3B /* TableviewSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TableviewSB.storyboard; sourceTree = "<group>"; };
+		2D6E7D672A0C101F00A7BD3B /* TextFieldVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldVC.swift; sourceTree = "<group>"; };
+		2D6E7D692A0C101F00A7BD3B /* TextfieldSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TextfieldSB.storyboard; sourceTree = "<group>"; };
 		39F76732EE737779F8110F72 /* Pods_Scrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFD70DE1405E10376FF15EB /* Pods-Scrive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrive.debug.xcconfig"; path = "Target Support Files/Pods-Scrive/Pods-Scrive.debug.xcconfig"; sourceTree = "<group>"; };
 		B5F65044677EB0C4D0D8E215 /* Pods-Scrive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrive.release.xcconfig"; path = "Target Support Files/Pods-Scrive/Pods-Scrive.release.xcconfig"; sourceTree = "<group>"; };
@@ -194,8 +206,10 @@
 		2D3B4A8029D4BF4500E433D8 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
-				2D3B4A8129D4BF4500E433D8 /* Home */,
 				2D3B4A9A29D4BF4500E433D8 /* NavController */,
+				2D3B4A8129D4BF4500E433D8 /* Home */,
+				2D6E7D582A0C0FE700A7BD3B /* Tableview */,
+				2D6E7D652A0C101F00A7BD3B /* Textfield */,
 				2D3B4A9329D4BF4500E433D8 /* WKWebView */,
 				2D3B4A9C29D4BF4500E433D8 /* TopBar */,
 			);
@@ -248,9 +262,9 @@
 		2D3B4A9329D4BF4500E433D8 /* WKWebView */ = {
 			isa = PBXGroup;
 			children = (
-				2D3B4A9429D4BF4500E433D8 /* Controller */,
 				2D3B4A9629D4BF4500E433D8 /* Model */,
 				2D3B4A9829D4BF4500E433D8 /* View */,
+				2D3B4A9429D4BF4500E433D8 /* Controller */,
 			);
 			path = WKWebView;
 			sourceTree = "<group>";
@@ -290,8 +304,8 @@
 		2D3B4A9C29D4BF4500E433D8 /* TopBar */ = {
 			isa = PBXGroup;
 			children = (
-				2D3B4A9E29D4BF4500E433D8 /* TopBar.swift */,
 				2D3B4A9D29D4BF4500E433D8 /* TopBar.xib */,
+				2D3B4A9E29D4BF4500E433D8 /* TopBar.swift */,
 			);
 			path = TopBar;
 			sourceTree = "<group>";
@@ -426,8 +440,8 @@
 		2D3B4B1729D4C06500E433D8 /* NoDataView */ = {
 			isa = PBXGroup;
 			children = (
-				2D3B4B1829D4C06500E433D8 /* NoDataView.swift */,
 				2D3B4B1929D4C06500E433D8 /* NoDataView.xib */,
+				2D3B4B1829D4C06500E433D8 /* NoDataView.swift */,
 			);
 			path = NoDataView;
 			sourceTree = "<group>";
@@ -467,6 +481,74 @@
 				2D3B4A7E29D4BE1200E433D8 /* ReadMe */,
 			);
 			path = Scrive;
+			sourceTree = "<group>";
+		};
+		2D6E7D582A0C0FE700A7BD3B /* Tableview */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E7D5D2A0C0FE700A7BD3B /* Model */,
+				2D6E7D5F2A0C0FE700A7BD3B /* View */,
+				2D6E7D592A0C0FE700A7BD3B /* Controller */,
+			);
+			path = Tableview;
+			sourceTree = "<group>";
+		};
+		2D6E7D592A0C0FE700A7BD3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E7D5A2A0C0FE700A7BD3B /* Cells */,
+				2D6E7D5C2A0C0FE700A7BD3B /* TableviewVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D6E7D5A2A0C0FE700A7BD3B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E7D5B2A0C0FE700A7BD3B /* TbvCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2D6E7D5D2A0C0FE700A7BD3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E7D5E2A0C0FE700A7BD3B /* TbvModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D6E7D5F2A0C0FE700A7BD3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E7D602A0C0FE700A7BD3B /* TableviewSB.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D6E7D652A0C101F00A7BD3B /* Textfield */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E7D682A0C101F00A7BD3B /* View */,
+				2D6E7D662A0C101F00A7BD3B /* Controller */,
+			);
+			path = Textfield;
+			sourceTree = "<group>";
+		};
+		2D6E7D662A0C101F00A7BD3B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E7D672A0C101F00A7BD3B /* TextFieldVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D6E7D682A0C101F00A7BD3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E7D692A0C101F00A7BD3B /* TextfieldSB.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		433858C234380181705477B2 /* Frameworks */ = {
@@ -560,6 +642,7 @@
 				2D3B4AFE29D4C05800E433D8 /* ProximaNova-Thin.otf in Resources */,
 				2D3B4B0C29D4C05800E433D8 /* Poppins-Thin.ttf in Resources */,
 				2D3B4AFC29D4C05800E433D8 /* RoxboroughCF-ExtraBold.otf in Resources */,
+				2D6E7D6B2A0C101F00A7BD3B /* TextfieldSB.storyboard in Resources */,
 				2D3B4B0229D4C05800E433D8 /* ProximaNova-Medium.otf in Resources */,
 				2D3B4B0D29D4C05800E433D8 /* Poppins-SemiBold.ttf in Resources */,
 				2D3B4B0429D4C05800E433D8 /* ProximaNova-Regular.otf in Resources */,
@@ -570,6 +653,7 @@
 				2D3B4AA229D4BF4500E433D8 /* HomeSB.storyboard in Resources */,
 				2D3B4AF729D4C05800E433D8 /* RoxboroughCF-Bold.otf in Resources */,
 				2D3B4AFF29D4C05800E433D8 /* ProximaNova-Light.otf in Resources */,
+				2D6E7D642A0C0FE700A7BD3B /* TableviewSB.storyboard in Resources */,
 				2D3B4B2929D4C06500E433D8 /* NoDataView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,6 +707,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6E7D632A0C0FE700A7BD3B /* TbvModel.swift in Sources */,
 				2D3B4B2729D4C06500E433D8 /* AppOrientation.swift in Sources */,
 				2D3B4AB929D4BF5400E433D8 /* UITableViewExtensions.swift in Sources */,
 				2D041BF729DFFF9900234843 /* UITextFieldExtensions.swift in Sources */,
@@ -631,8 +716,10 @@
 				2D3B4B2A29D4C06500E433D8 /* PushNotifications.swift in Sources */,
 				2D3B4B2829D4C06500E433D8 /* NoDataView.swift in Sources */,
 				2D3B4B2629D4C06500E433D8 /* GlobalPrint.swift in Sources */,
+				2D6E7D622A0C0FE700A7BD3B /* TableviewVC.swift in Sources */,
 				2D3B4AA829D4BF4500E433D8 /* WKWebModel.swift in Sources */,
 				2D3B4ABC29D4BF5400E433D8 /* UIViewControllerExtensions.swift in Sources */,
+				2D6E7D612A0C0FE700A7BD3B /* TbvCell.swift in Sources */,
 				2D3B4AA729D4BF4500E433D8 /* WKWebVC.swift in Sources */,
 				2D3B4ABF29D4BF5400E433D8 /* UIButtonExtensions.swift in Sources */,
 				2D3B4B2529D4C06500E433D8 /* ScreenManager.swift in Sources */,
@@ -650,6 +737,7 @@
 				2D3B4B2D29D4C06500E433D8 /* ProgressHUD.swift in Sources */,
 				2D3B4B2429D4C06500E433D8 /* UserDefaultsHelper.swift in Sources */,
 				2D3B4ACE29D4BF6A00E433D8 /* ApiResponse.swift in Sources */,
+				2D6E7D6A2A0C101F00A7BD3B /* TextFieldVC.swift in Sources */,
 				2D3B4B2329D4C06500E433D8 /* CustomAlerts.swift in Sources */,
 				2D3B4ABE29D4BF5400E433D8 /* UILabelExtensions.swift in Sources */,
 				2D3B4ACF29D4BF6A00E433D8 /* DecodableDefault.swift in Sources */,

@@ -4,16 +4,24 @@
 
 import Foundation
 
-struct HomeModel {
-    let titleStr: String?
+enum MenuType: String {
+    case tableview = "Tableview"
+    case collectionView = "CollectionView"
+    case button = "Button"
+    case label = "Label"
+    case textfeild = "Textfeild"
 }
 
-struct HomeListData {
+struct HomeModel {
+    let menu: MenuType?
+}
+
+struct HomeModelData {
     static let homeModelArr: [HomeModel] = [
-        HomeModel(titleStr: "Tableview"),
-        HomeModel(titleStr: "CollectionView"),
-        HomeModel(titleStr: "Button"),
-        HomeModel(titleStr: "Label"),
-        HomeModel(titleStr: "Textfeild")
+        HomeModel(menu: .tableview),
+        HomeModel(menu: .collectionView),
+        HomeModel(menu: .button),
+        HomeModel(menu: .label),
+        HomeModel(menu: .textfeild)
     ]
 }

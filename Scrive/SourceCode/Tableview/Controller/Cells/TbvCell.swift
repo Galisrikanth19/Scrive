@@ -1,10 +1,10 @@
 //
-//  HomeTbvCell.swift
+//  TbvCell.swift
 //  Created by Srikanth on 15/03/23.
 
 import UIKit
 
-class HomeTbvCell: UITableViewCell {
+class TbvCell: UITableViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     
     override func awakeFromNib() {
@@ -15,10 +15,11 @@ class HomeTbvCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configureCell(WithHomeModel homeM: HomeModel) {
+    func configureCell(WithTbvModel tbvM: TbvModel) {
         self.backgroundColor = .clear
         self.selectionStyle = .none
         
-        titleLbl.text = "     \(homeM.menu?.rawValue ?? "")"
+        titleLbl.text = "     \(tbvM.titleStr ?? "")"
     }
 }
+
