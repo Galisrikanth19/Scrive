@@ -54,9 +54,11 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         
         switch homeModelTitleStr {
         case "Tableview":
-            TableviewVC.push(storyboard: .tableviewSB)
+            break
+            //TableviewVC.push(storyboard: .tableviewSB)
         case "Textfeild":
-            TextFieldVC.push(storyboard: .textfieldSB)
+            break
+            //TextFieldVC.push(storyboard: .textfieldSB)
         default:
             self.showToast(WithMessage: "No object selected")
         }
