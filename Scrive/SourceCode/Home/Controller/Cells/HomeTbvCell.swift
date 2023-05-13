@@ -19,6 +19,7 @@ class HomeTbvCell: UITableViewCell {
         self.backgroundColor = .clear
         self.selectionStyle = .none
         
-        titleLbl.text = "     \(homeM.menu?.rawValue ?? "")"
+        let emptySpace = "     "
+        titleLbl.text = emptySpace + (homeM.menu?.rawValue ?? "")
     }
 }

@@ -16,11 +16,11 @@ class TableviewVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTopBar()
         setupVC()
     }
     
     private func setupVC() {
+        setupTopBar()
         setupTbv()
         loadStaticData()
     }
@@ -56,7 +56,7 @@ extension TableviewVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //dataArr.count == 0 ? self.tbv.showNoDataView() : self.tbv.hideNoDataView()
-        //dataArr.count == 0 ? self.tbv.setEmptyMessage("No data found") : self.tbv.restore()
+        dataArr.count == 0 ? self.tbv.setEmptyMessage("No data found") : self.tbv.restore()
         return dataArr.count
     }
     

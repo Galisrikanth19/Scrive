@@ -14,11 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var orientationLock = UIInterfaceOrientationMask.portrait
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        makeApplicationSleep(ForNumberOfSeconds: 3)
-        setIQKeyboardManager()
-        
-        initializeSwizzle()
-        //configurePushNotifications(WithUIApplication: application)
+        setupApplication()
         return true
     }
 
@@ -38,6 +34,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 // MARK: SetUpAppearance
 extension AppDelegate {
+    private func setupApplication() {
+        makeApplicationSleep(ForNumberOfSeconds: 1)
+        setIQKeyboardManager()
+        
+        initializeSwizzle()
+        tableViewSectionHeaderTopPadding()
+        //configurePushNotifications(WithUIApplication: application)
+    }
+    
     private func makeApplicationSleep(ForNumberOfSeconds seconds: UInt32) {
         sleep(seconds)
     }
@@ -45,10 +50,17 @@ extension AppDelegate {
     private func setIQKeyboardManager() {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.toolbarTintColor = .bgColor
+        IQKeyboardManager.shared.keyboardDistanceFromTextField = 50.0
     }
     
     private func initializeSwizzle() {
         UIViewController.swizzle()
+    }
+    
+    func tableViewSectionHeaderTopPadding() {
+        if #available(iOS 15.0, *) {
+            UITableView.appearance().sectionHeaderTopPadding = 0
+        }
     }
     
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {

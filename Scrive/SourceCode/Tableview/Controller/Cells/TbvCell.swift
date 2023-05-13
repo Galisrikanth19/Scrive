@@ -19,7 +19,8 @@ class TbvCell: UITableViewCell {
         self.backgroundColor = .clear
         self.selectionStyle = .none
         
-        titleLbl.text = "     \(tbvM.titleStr ?? "")"
+        let emptySpace = "     "
+        titleLbl.text = emptySpace + (tbvM.titleStr ?? "")
     }
 }
 
