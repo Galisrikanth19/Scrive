@@ -59,6 +59,8 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
             CollectionViewVC.push(storyboard: .collectionViewSB)
         case .textfeild:
             TextFieldVC.push(storyboard: .textfieldSB)
+        case .checkbox:
+            CheckBoxVC.push(storyboard: .checkBoxSB)
         default:
             self.showToast(WithMessage: "No object selected")
         }

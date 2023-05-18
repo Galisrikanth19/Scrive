@@ -8,6 +8,8 @@ class CheckBoxButton: UIButton {
     let checkedImage: UIImage! = UIImage(named: "CheckedBox")
     let uncheckedImage: UIImage! = UIImage(named: "UncheckedBox")
     
+    var chkBoxBtnStateUpdated: (()->())?
+    
     var isChecked: Bool = false {
         didSet {
             if isChecked == true {
@@ -27,5 +29,6 @@ class CheckBoxButton: UIButton {
         if sender == self {
             isChecked = !isChecked
         }
+        chkBoxBtnStateUpdated?()
     }
 }

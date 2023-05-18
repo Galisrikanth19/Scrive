@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Check BoxVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CheckBoxVC" id="Y6W-OH-hqX" customClass="CheckBoxVC" customModule="Scrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XeG-vM-b5L">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhf-Ac-WXc" customClass="CheckBoxButton" customModule="Scrive" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="100" width="25" height="25"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="MVV-RR-uZQ"/>
+                                            <constraint firstAttribute="width" constant="25" id="k9D-gh-Kym"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept terms and conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbY-rv-dDU">
+                                        <rect key="frame" x="49.999999999999986" y="102.66666666666666" width="202.66666666666663" height="19.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
+                                        <color key="textColor" name="TitleColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="DbY-rv-dDU" firstAttribute="leading" secondItem="lhf-Ac-WXc" secondAttribute="trailing" constant="5" id="ECt-rA-pNX"/>
+                                    <constraint firstItem="lhf-Ac-WXc" firstAttribute="leading" secondItem="XeG-vM-b5L" secondAttribute="leading" constant="20" id="KbC-4x-Fld"/>
+                                    <constraint firstItem="lhf-Ac-WXc" firstAttribute="top" secondItem="XeG-vM-b5L" secondAttribute="top" constant="100" id="Y2N-O8-eTi"/>
+                                    <constraint firstItem="DbY-rv-dDU" firstAttribute="centerY" secondItem="lhf-Ac-WXc" secondAttribute="centerY" id="mrb-Ns-Eev"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BgColor"/>
+                        <constraints>
+                            <constraint firstItem="XeG-vM-b5L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="A3j-ct-vzJ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XeG-vM-b5L" secondAttribute="bottom" id="Np0-PH-bVr"/>
+                            <constraint firstItem="XeG-vM-b5L" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="UbE-jC-61H"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XeG-vM-b5L" secondAttribute="trailing" id="uHL-3l-Vi7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="chkBoxBtn" destination="lhf-Ac-WXc" id="rkt-B4-lCC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="59" y="4"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="lhf-Ac-WXc">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="BgColor">
+            <color red="0.68199998140335083" green="0.76099997758865356" blue="0.71399998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TitleColor">
+            <color red="0.18000000715255737" green="0.2199999988079071" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

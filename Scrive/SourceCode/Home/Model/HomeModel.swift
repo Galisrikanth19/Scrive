@@ -10,6 +10,7 @@ enum MenuType: String {
     case button = "Button"
     case label = "Label"
     case textfeild = "Textfeild"
+    case checkbox = "Checkbox"
 }
 
 struct HomeModel {
@@ -22,6 +23,7 @@ struct HomeModelData {
         HomeModel(menu: .collectionView),
         HomeModel(menu: .button),
         HomeModel(menu: .label),
-        HomeModel(menu: .textfeild)
+        HomeModel(menu: .textfeild),
+        HomeModel(menu: .checkbox)
     ]
 }

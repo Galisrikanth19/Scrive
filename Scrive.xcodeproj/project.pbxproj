@@ -89,6 +89,8 @@
 		2D6E7D642A0C0FE700A7BD3B /* TableviewSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6E7D602A0C0FE700A7BD3B /* TableviewSB.storyboard */; };
 		2D6E7D6A2A0C101F00A7BD3B /* TextFieldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E7D672A0C101F00A7BD3B /* TextFieldVC.swift */; };
 		2D6E7D6B2A0C101F00A7BD3B /* TextfieldSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6E7D692A0C101F00A7BD3B /* TextfieldSB.storyboard */; };
+		2DBD52912A1646FE003F83BF /* CheckBoxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBD52902A1646FE003F83BF /* CheckBoxVC.swift */; };
+		2DBD52932A16472A003F83BF /* CheckBoxSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DBD52922A16472A003F83BF /* CheckBoxSB.storyboard */; };
 		2DCFAF382A0F744300E6986C /* CollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFAF372A0F744300E6986C /* CollectionViewVC.swift */; };
 		2DCFAF3A2A0F748E00E6986C /* CollcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFAF392A0F748E00E6986C /* CollcViewModel.swift */; };
 		2DCFAF3D2A0F758200E6986C /* CollcViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFAF3C2A0F758200E6986C /* CollcViewCell.swift */; };
@@ -182,6 +184,8 @@
 		2D6E7D602A0C0FE700A7BD3B /* TableviewSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TableviewSB.storyboard; sourceTree = "<group>"; };
 		2D6E7D672A0C101F00A7BD3B /* TextFieldVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldVC.swift; sourceTree = "<group>"; };
 		2D6E7D692A0C101F00A7BD3B /* TextfieldSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TextfieldSB.storyboard; sourceTree = "<group>"; };
+		2DBD52902A1646FE003F83BF /* CheckBoxVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxVC.swift; sourceTree = "<group>"; };
+		2DBD52922A16472A003F83BF /* CheckBoxSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CheckBoxSB.storyboard; sourceTree = "<group>"; };
 		2DCFAF372A0F744300E6986C /* CollectionViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewVC.swift; sourceTree = "<group>"; };
 		2DCFAF392A0F748E00E6986C /* CollcViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollcViewModel.swift; sourceTree = "<group>"; };
 		2DCFAF3C2A0F758200E6986C /* CollcViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollcViewCell.swift; sourceTree = "<group>"; };
@@ -222,6 +226,7 @@
 				2DCFAF332A0F73F800E6986C /* CollectionView */,
 				2D6E7D652A0C101F00A7BD3B /* Textfield */,
 				2D3B4A9329D4BF4500E433D8 /* WKWebView */,
+				2DBD528D2A1646B3003F83BF /* Checkbox */,
 				2D3B4A9C29D4BF4500E433D8 /* TopBar */,
 			);
 			path = SourceCode;
@@ -563,9 +568,42 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2DBD528C2A164657003F83BF /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CheckBox;
+			sourceTree = "<group>";
+		};
+		2DBD528D2A1646B3003F83BF /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				2DBD528F2A1646C1003F83BF /* View */,
+				2DBD528E2A1646BA003F83BF /* Controller */,
+			);
+			path = Checkbox;
+			sourceTree = "<group>";
+		};
+		2DBD528E2A1646BA003F83BF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DBD52902A1646FE003F83BF /* CheckBoxVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2DBD528F2A1646C1003F83BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DBD52922A16472A003F83BF /* CheckBoxSB.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2DCFAF332A0F73F800E6986C /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				2DBD528C2A164657003F83BF /* CheckBox */,
 				2DCFAF362A0F742D00E6986C /* Model */,
 				2DCFAF352A0F742800E6986C /* View */,
 				2DCFAF342A0F741F00E6986C /* Controller */,
@@ -676,6 +714,7 @@
 			files = (
 				2D3B4AFA29D4C05800E433D8 /* RoxboroughCF-Light.otf in Resources */,
 				2D3B4B0629D4C05800E433D8 /* Poppins-Light.ttf in Resources */,
+				2DBD52932A16472A003F83BF /* CheckBoxSB.storyboard in Resources */,
 				2D3B4AD329D4C02700E433D8 /* LaunchScreen.storyboard in Resources */,
 				2D3B4A7F29D4BE1200E433D8 /* ReadMe in Resources */,
 				2D3B4AF929D4C05800E433D8 /* RoxboroughCF-Medium.otf in Resources */,
@@ -776,6 +815,7 @@
 				2D6E7D622A0C0FE700A7BD3B /* TableviewVC.swift in Sources */,
 				2D3B4AA829D4BF4500E433D8 /* WKWebModel.swift in Sources */,
 				2D3B4ABC29D4BF5400E433D8 /* UIViewControllerExtensions.swift in Sources */,
+				2DBD52912A1646FE003F83BF /* CheckBoxVC.swift in Sources */,
 				2D6E7D612A0C0FE700A7BD3B /* TbvCell.swift in Sources */,
 				2DCFAF3D2A0F758200E6986C /* CollcViewCell.swift in Sources */,
 				2D3B4AA729D4BF4500E433D8 /* WKWebVC.swift in Sources */,

@@ -59,6 +59,16 @@ extension TextFieldVC: UITextFieldDelegate {
         pwdTxtFld.setAttributedStr(WithSpacing: 3)
     }
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if range.location == 0 && (string == " ") {
+            return false
+        } else {
+            let resultantString = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? string.lowercased()
+            let formattedString = resultantString.trimmingCharacters(in: CharacterSet.whitespaces)
+        }
+        return true
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
     }
