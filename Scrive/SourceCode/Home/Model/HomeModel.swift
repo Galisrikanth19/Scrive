@@ -11,6 +11,7 @@ enum MenuType: String {
     case label = "Label"
     case textfeild = "Textfeild"
     case checkbox = "Checkbox"
+    case enums = "Enum"
 }
 
 struct HomeModel {
@@ -24,6 +25,7 @@ struct HomeModelData {
         HomeModel(menu: .button),
         HomeModel(menu: .label),
         HomeModel(menu: .textfeild),
-        HomeModel(menu: .checkbox)
+        HomeModel(menu: .checkbox),
+        HomeModel(menu: .enums)
     ]
 }

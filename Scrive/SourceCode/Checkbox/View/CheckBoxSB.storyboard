@@ -23,10 +23,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XeG-vM-b5L">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="107" width="393" height="711"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhf-Ac-WXc" customClass="CheckBoxButton" customModule="Scrive" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="100" width="25" height="25"/>
+                                        <rect key="frame" x="20" y="30" width="25" height="25"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="MVV-RR-uZQ"/>
@@ -34,7 +34,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accept terms and conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbY-rv-dDU">
-                                        <rect key="frame" x="49.999999999999986" y="102.66666666666666" width="202.66666666666663" height="19.666666666666671"/>
+                                        <rect key="frame" x="49.999999999999986" y="32.666666666666657" width="202.66666666666663" height="19.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                         <color key="textColor" name="TitleColor"/>
                                         <nil key="highlightedColor"/>
@@ -44,22 +44,33 @@
                                 <constraints>
                                     <constraint firstItem="DbY-rv-dDU" firstAttribute="leading" secondItem="lhf-Ac-WXc" secondAttribute="trailing" constant="5" id="ECt-rA-pNX"/>
                                     <constraint firstItem="lhf-Ac-WXc" firstAttribute="leading" secondItem="XeG-vM-b5L" secondAttribute="leading" constant="20" id="KbC-4x-Fld"/>
-                                    <constraint firstItem="lhf-Ac-WXc" firstAttribute="top" secondItem="XeG-vM-b5L" secondAttribute="top" constant="100" id="Y2N-O8-eTi"/>
+                                    <constraint firstItem="lhf-Ac-WXc" firstAttribute="top" secondItem="XeG-vM-b5L" secondAttribute="top" constant="30" id="Y2N-O8-eTi"/>
                                     <constraint firstItem="DbY-rv-dDU" firstAttribute="centerY" secondItem="lhf-Ac-WXc" secondAttribute="centerY" id="mrb-Ns-Eev"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kci-XU-pg6" customClass="TopBar" customModule="Scrive" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="107"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="107" id="XWz-WF-ucE"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BgColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kci-XU-pg6" secondAttribute="trailing" id="7TV-xF-DTY"/>
                             <constraint firstItem="XeG-vM-b5L" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="A3j-ct-vzJ"/>
+                            <constraint firstItem="kci-XU-pg6" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Kkz-ix-rpm"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XeG-vM-b5L" secondAttribute="bottom" id="Np0-PH-bVr"/>
-                            <constraint firstItem="XeG-vM-b5L" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="UbE-jC-61H"/>
+                            <constraint firstItem="XeG-vM-b5L" firstAttribute="top" secondItem="kci-XU-pg6" secondAttribute="bottom" id="Tf2-2D-CCr"/>
+                            <constraint firstItem="kci-XU-pg6" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="tTF-7m-aLz"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XeG-vM-b5L" secondAttribute="trailing" id="uHL-3l-Vi7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="chkBoxBtn" destination="lhf-Ac-WXc" id="rkt-B4-lCC"/>
+                        <outlet property="topBar" destination="kci-XU-pg6" id="SEI-qw-Le8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -67,11 +78,6 @@
             <point key="canvasLocation" x="59" y="4"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="lhf-Ac-WXc">
-            <size key="intrinsicContentSize" width="30" height="34"/>
-        </designable>
-    </designables>
     <resources>
         <namedColor name="BgColor">
             <color red="0.68199998140335083" green="0.76099997758865356" blue="0.71399998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

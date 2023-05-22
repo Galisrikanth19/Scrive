@@ -96,6 +96,8 @@
 		2DCFAF3D2A0F758200E6986C /* CollcViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFAF3C2A0F758200E6986C /* CollcViewCell.swift */; };
 		2DCFAF3F2A0F760600E6986C /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFAF3E2A0F760600E6986C /* UICollectionViewExtensions.swift */; };
 		2DCFAF412A0F771000E6986C /* CollectionViewSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DCFAF402A0F771000E6986C /* CollectionViewSB.storyboard */; };
+		2DD951162A177AE500A0AF8E /* EnumSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD951152A177AE500A0AF8E /* EnumSB.storyboard */; };
+		2DD951182A177B0500A0AF8E /* EnumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD951172A177B0500A0AF8E /* EnumVC.swift */; };
 		7FB917D7882B8C2E085D2BFF /* Pods_Scrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F76732EE737779F8110F72 /* Pods_Scrive.framework */; };
 /* End PBXBuildFile section */
 
@@ -191,6 +193,8 @@
 		2DCFAF3C2A0F758200E6986C /* CollcViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollcViewCell.swift; sourceTree = "<group>"; };
 		2DCFAF3E2A0F760600E6986C /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		2DCFAF402A0F771000E6986C /* CollectionViewSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewSB.storyboard; sourceTree = "<group>"; };
+		2DD951152A177AE500A0AF8E /* EnumSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnumSB.storyboard; sourceTree = "<group>"; };
+		2DD951172A177B0500A0AF8E /* EnumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumVC.swift; sourceTree = "<group>"; };
 		39F76732EE737779F8110F72 /* Pods_Scrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFD70DE1405E10376FF15EB /* Pods-Scrive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrive.debug.xcconfig"; path = "Target Support Files/Pods-Scrive/Pods-Scrive.debug.xcconfig"; sourceTree = "<group>"; };
 		B5F65044677EB0C4D0D8E215 /* Pods-Scrive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrive.release.xcconfig"; path = "Target Support Files/Pods-Scrive/Pods-Scrive.release.xcconfig"; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 		2D3B4A8029D4BF4500E433D8 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				2DD951142A177ACE00A0AF8E /* Enum */,
 				2D3B4A9A29D4BF4500E433D8 /* NavController */,
 				2D3B4A8129D4BF4500E433D8 /* Home */,
 				2D6E7D582A0C0FE700A7BD3B /* Tableview */,
@@ -568,13 +573,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		2DBD528C2A164657003F83BF /* CheckBox */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CheckBox;
-			sourceTree = "<group>";
-		};
 		2DBD528D2A1646B3003F83BF /* Checkbox */ = {
 			isa = PBXGroup;
 			children = (
@@ -603,7 +601,6 @@
 		2DCFAF332A0F73F800E6986C /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				2DBD528C2A164657003F83BF /* CheckBox */,
 				2DCFAF362A0F742D00E6986C /* Model */,
 				2DCFAF352A0F742800E6986C /* View */,
 				2DCFAF342A0F741F00E6986C /* Controller */,
@@ -642,6 +639,15 @@
 				2DCFAF3C2A0F758200E6986C /* CollcViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		2DD951142A177ACE00A0AF8E /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				2DD951152A177AE500A0AF8E /* EnumSB.storyboard */,
+				2DD951172A177B0500A0AF8E /* EnumVC.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		433858C234380181705477B2 /* Frameworks */ = {
@@ -712,6 +718,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD951162A177AE500A0AF8E /* EnumSB.storyboard in Resources */,
 				2D3B4AFA29D4C05800E433D8 /* RoxboroughCF-Light.otf in Resources */,
 				2D3B4B0629D4C05800E433D8 /* Poppins-Light.ttf in Resources */,
 				2DBD52932A16472A003F83BF /* CheckBoxSB.storyboard in Resources */,
@@ -843,6 +850,7 @@
 				2D3B4B2B29D4C06500E433D8 /* AppSingleton.swift in Sources */,
 				2D3B4AC129D4BF5400E433D8 /* UIColorExtensions.swift in Sources */,
 				2D3B4AA029D4BF4500E433D8 /* HomeVC.swift in Sources */,
+				2DD951182A177B0500A0AF8E /* EnumVC.swift in Sources */,
 				2D3B4B2129D4C06500E433D8 /* CheckBoxButton.swift in Sources */,
 				2D3B4B2C29D4C06500E433D8 /* AppUtility.swift in Sources */,
 				2D3B4AA129D4BF4500E433D8 /* HomeModel.swift in Sources */,

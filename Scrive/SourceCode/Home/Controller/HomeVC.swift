@@ -61,6 +61,8 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
             TextFieldVC.push(storyboard: .textfieldSB)
         case .checkbox:
             CheckBoxVC.push(storyboard: .checkBoxSB)
+        case .enums:
+            EnumVC.push(storyboard: .enumSB)
         default:
             self.showToast(WithMessage: "No object selected")
         }

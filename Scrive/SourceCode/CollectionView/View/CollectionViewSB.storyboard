@@ -29,24 +29,24 @@
                                 <rect key="frame" x="15" y="107" width="363" height="711"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Rb9-wN-DPq">
-                                    <size key="itemSize" width="195" height="181"/>
+                                    <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollcViewCell" id="rTJ-tH-vOu" customClass="CollcViewCell" customModule="Scrive" customModuleProvider="target">
-                                        <rect key="frame" x="84" y="0.0" width="195" height="181"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PyO-LP-dlE">
-                                            <rect key="frame" x="0.0" y="0.0" width="195" height="181"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0PE-jS-ZGh">
-                                                    <rect key="frame" x="5" y="5" width="185" height="171"/>
+                                                    <rect key="frame" x="5" y="5" width="140" height="140"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Scenery" translatesAutoresizingMaskIntoConstraints="NO" id="zIQ-53-OJr">
-                                                            <rect key="frame" x="15" y="15" width="155" height="141"/>
+                                                            <rect key="frame" x="15" y="15" width="110" height="110"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" name="TitleColor"/>
