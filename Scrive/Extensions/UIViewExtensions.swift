@@ -51,6 +51,26 @@ import UIKit
             layer.borderWidth = newValue
         }
     }
+    
+    @IBInspectable var topCorners: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+        }
+    }
+    
+    @IBInspectable var bottomCorners: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.maskedCorners = [.layerMinXMaxYCorner,.layerMaxXMaxYCorner]
+        }
+    }
 }
 
 // MARK: Shadows And Rounded Corners won't work at the same time use CustomView class to work both at the same time
