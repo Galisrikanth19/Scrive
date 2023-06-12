@@ -2,124 +2,20 @@
 //  APIManager.swift
 //  Created by Srikanth on 17/03/23.
 
-import UIKit
+import Foundation
 import Alamofire
 
 class APIManager {
     static let shared = APIManager()
     private init() { }
     
-    func get(WithUrlStr urlStr: String,
-             WithHeaders headers: HTTPHeaders? = nil,
-             WithParameters parameters: Parameters? = nil,
-             WithCompletionCallback completionCallback: @escaping(AnyObject) -> Void,
-             WithSuccessCallback successCallback: @escaping(AnyObject) -> Void,
-             WithFailureCallback failureCallback: @escaping(String) -> Void) {
-        request(WithUrlStr: urlStr,
-                WithHttpMethod: .get,
-                WithHeaders: headers,
-                WithParameters: parameters,
-                WithCompletionCallback: completionCallback,
-                WithSuccessCallback: successCallback,
-                WithFailureCallback: failureCallback)
-    }
-    
-    func get<T: Decodable>(WithUrlStr urlStr: String,
-                           WithHeaders headers: HTTPHeaders? = nil,
-                           WithParameters parameters: Parameters? = nil,
-                           WithCompletionCallback completionCallback: @escaping(AnyObject) -> Void,
-                           WithSuccessCallback successCallback: @escaping(T) -> Void,
-                           WithFailureCallback failureCallback: @escaping(String) -> Void) {
-        request(WithUrlStr: urlStr,
-                WithHttpMethod: .get,
-                WithHeaders: headers,
-                WithParameters: parameters,
-                WithCompletionCallback: completionCallback,
-                WithSuccessCallback: { (responseJson) in
-            if let responseDict = responseJson as? [String:Any] {
-                successCallback(T.decode(responseDict))
-            }
-        },
-                WithFailureCallback: failureCallback)
-    }
-    
-    func post(WithUrlStr urlStr: String,
-              WithHeaders headers: HTTPHeaders? = nil,
-              WithParameters parameters: Parameters? = nil,
-              WithCompletionCallback completionCallback: @escaping(AnyObject) -> Void,
-              WithSuccessCallback successCallback: @escaping(AnyObject) -> Void,
-              WithFailureCallback failureCallback: @escaping(String) -> Void) {
-        request(WithUrlStr: urlStr,
-                WithHttpMethod: .post,
-                WithHeaders: headers,
-                WithParameters: parameters,
-                WithCompletionCallback: completionCallback,
-                WithSuccessCallback: successCallback,
-                WithFailureCallback: failureCallback)
-    }
-    
-    func post<T: Decodable>(WithUrlStr urlStr: String,
-                            WithHeaders headers: HTTPHeaders? = nil,
-                            WithParameters parameters: Parameters? = nil,
-                            WithCompletionCallback completionCallback: @escaping(AnyObject) -> Void,
-                            WithSuccessCallback successCallback: @escaping(T) -> Void,
-                            WithFailureCallback failureCallback: @escaping(String) -> Void) {
-        request(WithUrlStr: urlStr,
-                WithHttpMethod: .post,
-                WithHeaders: headers,
-                WithParameters: parameters,
-                WithCompletionCallback: completionCallback,
-                WithSuccessCallback: { (responseJson) in
-            if let responseDict = responseJson as? [String:Any] {
-                successCallback(T.decode(responseDict))
-            }
-        },
-                WithFailureCallback: failureCallback)
-    }
-    
-    func delete(WithUrlStr urlStr: String,
-                WithHeaders headers: HTTPHeaders? = nil,
-                WithParameters parameters: Parameters? = nil,
-                WithCompletionCallback completionCallback: @escaping(AnyObject) -> Void,
-                WithSuccessCallback successCallback: @escaping(AnyObject) -> Void,
-                WithFailureCallback failureCallback: @escaping(String) -> Void) {
-        request(WithUrlStr: urlStr,
-                WithHttpMethod: .delete,
-                WithHeaders: headers,
-                WithParameters: parameters,
-                WithCompletionCallback: completionCallback,
-                WithSuccessCallback: successCallback,
-                WithFailureCallback: failureCallback)
-    }
-    
-    func delete<T: Decodable>(WithUrlStr urlStr: String,
-                              WithHeaders headers: HTTPHeaders? = nil,
-                              WithParameters parameters: Parameters? = nil,
-                              WithCompletionCallback completionCallback: @escaping(AnyObject) -> Void,
-                              WithSuccessCallback successCallback: @escaping(T) -> Void,
-                              WithFailureCallback failureCallback: @escaping(String) -> Void) {
-        request(WithUrlStr: urlStr,
-                WithHttpMethod: .delete,
-                WithHeaders: headers,
-                WithParameters: parameters,
-                WithCompletionCallback: completionCallback,
-                WithSuccessCallback: { (responseJson) in
-            if let responseDict = responseJson as? [String:Any] {
-                successCallback(T.decode(responseDict))
-            }
-        },
-                WithFailureCallback: failureCallback)
-    }
-}
-
-extension APIManager {
-    func request(WithUrlStr urlStr: String,
-                 WithHttpMethod httpMethod: HTTPMethod,
-                 WithHeaders httpHeaders: HTTPHeaders? = nil,
-                 WithParameters parameters: Parameters? = nil,
-                 WithCompletionCallback completionCallback: @escaping(AnyObject) -> Void,
-                 WithSuccessCallback successCallback: @escaping(AnyObject) -> Void,
-                 WithFailureCallback failureCallback: @escaping(String) -> Void) {
+    func request<T: Decodable>(WithUrlStr urlStr: String,
+                               WithHttpMethod httpMethod: HTTPMethod,
+                               WithHeaders httpHeaders: HTTPHeaders? = nil,
+                               WithParameters parameters: Parameters? = nil,
+                               WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
+                               WithSuccessCallback successCallback: @escaping(T?) -> Void,
+                               WithFailureCallback failureCallback: @escaping(String?) -> Void) {
         //Removing all cached responses if any
         URLCache.shared.removeAllCachedResponses()
         
@@ -141,27 +37,23 @@ extension APIManager {
             encoding = JSONEncoding.default
         }
         
-        AF.request(urlStr, method: httpMethod, parameters: parameters, encoding: encoding, headers: httpHeaders).responseJSON { (afDataResponse) in
+        AF.request(urlStr, method: httpMethod, parameters: parameters, encoding: encoding, headers: httpHeaders).responseDecodable(of: T.self) { (afDataResponse) in
             //Debug response
             self.debugResponse(WithResponse: afDataResponse)
             
             //Calling callback as request processed
-            completionCallback(afDataResponse as AnyObject)
+            completionCallback(afDataResponse.data)
             
-            switch afDataResponse.result {
-            case .success(let responseDict):
-                if let requestStatus = (responseDict as AnyObject)["status"] as? Bool, requestStatus == true {
-                    successCallback(responseDict as AnyObject)
-                } else {
-                    failureCallback(((responseDict as AnyObject)["message"] as? String) ?? "")
-                }
+            switch(afDataResponse.result) {
+            case .success:
+                successCallback(afDataResponse.value)
             case .failure(let error):
-                failureCallback(error.localizedDescription)
+                failureCallback(error.errorDescription)
             }
         }
     }
     
-    private func debugResponse(WithResponse response: AFDataResponse<Any>) {
+    private func debugResponse<T: Decodable>(WithResponse response: AFDataResponse<T>) {
         print("\n\n")
         print("*************************************************************************************")
         print("Requested URL -> \(response.request?.url?.absoluteString ?? "")")

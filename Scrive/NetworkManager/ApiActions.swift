@@ -11,44 +11,33 @@ struct ApiActions {
 }
 
 struct SampleActions {
-    func sampleGetRequest(parameters: Parameters? = nil,
-                          headers: HTTPHeaders? = nil,
-                          WithCompletionCallback completionCallback: @escaping(AnyObject) -> Void,
-                          WithSuccessCallback successCallback: @escaping(ApiResponseObject<ApiResponse>) -> Void,
-                          WithFailureCallback failureCallback: @escaping(String) -> Void) {
-        APIManager.shared.get(WithUrlStr: ApiEndPoints.login.url,
-                              WithHeaders: headers,
-                              WithParameters: parameters,
-                              WithCompletionCallback: completionCallback,
-                              WithSuccessCallback: successCallback,
-                              WithFailureCallback: failureCallback)
-    }
-    
-    func samplePostRequest(parameters: Parameters? = nil,
-                           headers: HTTPHeaders? = nil,
-                           WithCompletionCallback completionCallback: @escaping(AnyObject) -> Void,
-                           WithSuccessCallback successCallback: @escaping(ApiResponseObject<ApiResponse>) -> Void,
-                           WithFailureCallback failureCallback: @escaping(String) -> Void) {
-        APIManager.shared.post(WithUrlStr: ApiEndPoints.login.url,
-                               WithHeaders: headers,
-                               WithParameters: parameters,
-                               WithCompletionCallback: completionCallback,
-                               WithSuccessCallback: successCallback,
-                               WithFailureCallback: failureCallback)
+    func sampleRequest(WithHTTPHeaders httpheaders: HTTPHeaders? = nil,
+                      WithParameters parameters: Parameters? = nil,
+                      WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
+                      WithSuccessCallback successCallback: @escaping(ApiResponse?) -> Void,
+                      WithFailureCallback failureCallback: @escaping(String?) -> Void) {
+        APIManager.shared.request(WithUrlStr: ApiEndPoints.login.url,
+                                  WithHttpMethod: .post,
+                                  WithHeaders: httpheaders,
+                                  WithParameters: parameters,
+                                  WithCompletionCallback: completionCallback,
+                                  WithSuccessCallback: successCallback,
+                                  WithFailureCallback: failureCallback)
     }
 }
 
 struct CommonActions {
-    func loginRequest(parameters: Parameters? = nil,
-                      headers: HTTPHeaders? = nil,
-                      WithCompletionCallback completionCallback: @escaping(AnyObject) -> Void,
-                      WithSuccessCallback successCallback: @escaping(ApiResponseObject<ApiResponse>) -> Void,
-                      WithFailureCallback failureCallback: @escaping(String) -> Void) {
-        APIManager.shared.post(WithUrlStr: ApiEndPoints.login.url,
-                               WithHeaders: headers,
-                               WithParameters: parameters,
-                               WithCompletionCallback: completionCallback,
-                               WithSuccessCallback: successCallback,
-                               WithFailureCallback: failureCallback)
+    func loginRequest(WithHTTPHeaders httpheaders: HTTPHeaders? = nil,
+                      WithParameters parameters: Parameters? = nil,
+                      WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
+                      WithSuccessCallback successCallback: @escaping(ApiResponse?) -> Void,
+                      WithFailureCallback failureCallback: @escaping(String?) -> Void) {
+        APIManager.shared.request(WithUrlStr: ApiEndPoints.login.url,
+                                  WithHttpMethod: .post,
+                                  WithHeaders: httpheaders,
+                                  WithParameters: parameters,
+                                  WithCompletionCallback: completionCallback,
+                                  WithSuccessCallback: successCallback,
+                                  WithFailureCallback: failureCallback)
     }
 }
