@@ -23,4 +23,3 @@ class TbvCell: UITableViewCell {
         titleLbl.text = emptySpace + (tbvM.titleStr ?? "")
     }
 }
-

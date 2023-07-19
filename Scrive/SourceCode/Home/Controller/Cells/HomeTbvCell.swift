@@ -5,6 +5,7 @@
 import UIKit
 
 class HomeTbvCell: UITableViewCell {
+    @IBOutlet weak var imgV: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     
     override func awakeFromNib() {
@@ -19,7 +20,7 @@ class HomeTbvCell: UITableViewCell {
         self.backgroundColor = .clear
         self.selectionStyle = .none
         
-        let emptySpace = "     "
-        titleLbl.text = emptySpace + (homeM.menu?.rawValue ?? "")
+        imgV.image = UIImage(named: (homeM.menu?.rawValue ?? "Placeholder"))
+        titleLbl.text = (homeM.menu?.rawValue ?? "")
     }
 }

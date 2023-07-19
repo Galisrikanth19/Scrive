@@ -19,7 +19,6 @@
 		2D3B4AAA29D4BF4500E433D8 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4A9B29D4BF4500E433D8 /* NavController.swift */; };
 		2D3B4AAB29D4BF4500E433D8 /* TopBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3B4A9D29D4BF4500E433D8 /* TopBar.xib */; };
 		2D3B4AAC29D4BF4500E433D8 /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4A9E29D4BF4500E433D8 /* TopBar.swift */; };
-		2D3B4AB829D4BF5400E433D8 /* JsonDecoderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4AAE29D4BF5400E433D8 /* JsonDecoderExtensions.swift */; };
 		2D3B4AB929D4BF5400E433D8 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4AAF29D4BF5400E433D8 /* UITableViewExtensions.swift */; };
 		2D3B4ABA29D4BF5400E433D8 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4AB029D4BF5400E433D8 /* StringExtensions.swift */; };
 		2D3B4ABB29D4BF5400E433D8 /* WKWebViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4AB129D4BF5400E433D8 /* WKWebViewExtensions.swift */; };
@@ -80,6 +79,7 @@
 		2D3B4B2E29D4C06500E433D8 /* BackspaceTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4B1E29D4C06500E433D8 /* BackspaceTextField.swift */; };
 		2D3B4B2F29D4C06500E433D8 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4B1F29D4C06500E433D8 /* Observable.swift */; };
 		2D3B4B3029D4C06500E433D8 /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4B2029D4C06500E433D8 /* AppFont.swift */; };
+		2D60979B2A4D94C8004D1ED1 /* EnumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D60979A2A4D94C8004D1ED1 /* EnumModel.swift */; };
 		2D64B6CD29D4B1E0000CBDB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64B6CC29D4B1E0000CBDB8 /* AppDelegate.swift */; };
 		2D64B6CF29D4B1E0000CBDB8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64B6CE29D4B1E0000CBDB8 /* SceneDelegate.swift */; };
 		2D64B6D129D4B1E0000CBDB8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D64B6D029D4B1E0000CBDB8 /* BaseViewController.swift */; };
@@ -89,6 +89,10 @@
 		2D6E7D642A0C0FE700A7BD3B /* TableviewSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6E7D602A0C0FE700A7BD3B /* TableviewSB.storyboard */; };
 		2D6E7D6A2A0C101F00A7BD3B /* TextFieldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E7D672A0C101F00A7BD3B /* TextFieldVC.swift */; };
 		2D6E7D6B2A0C101F00A7BD3B /* TextfieldSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6E7D692A0C101F00A7BD3B /* TextfieldSB.storyboard */; };
+		2D6E814C2A67C63000F6E33E /* SampleActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E814B2A67C63000F6E33E /* SampleActions.swift */; };
+		2D6E814E2A67C65700F6E33E /* CommonActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E814D2A67C65700F6E33E /* CommonActions.swift */; };
+		2D6E81532A67C82200F6E33E /* ScrollViewSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D6E81522A67C82200F6E33E /* ScrollViewSB.storyboard */; };
+		2D6E81552A67C83600F6E33E /* ScrollViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E81542A67C83600F6E33E /* ScrollViewVC.swift */; };
 		2D974DA22A36F9710081D369 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D974D932A36F9710081D369 /* OpenSans-SemiBold.ttf */; };
 		2D974DA32A36F9710081D369 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D974D942A36F9710081D369 /* OpenSans-Light.ttf */; };
 		2D974DA42A36F9710081D369 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D974D952A36F9710081D369 /* OpenSans-Italic.ttf */; };
@@ -128,7 +132,6 @@
 		2D3B4A9B29D4BF4500E433D8 /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		2D3B4A9D29D4BF4500E433D8 /* TopBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopBar.xib; sourceTree = "<group>"; };
 		2D3B4A9E29D4BF4500E433D8 /* TopBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
-		2D3B4AAE29D4BF5400E433D8 /* JsonDecoderExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDecoderExtensions.swift; sourceTree = "<group>"; };
 		2D3B4AAF29D4BF5400E433D8 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		2D3B4AB029D4BF5400E433D8 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		2D3B4AB129D4BF5400E433D8 /* WKWebViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewExtensions.swift; sourceTree = "<group>"; };
@@ -189,6 +192,7 @@
 		2D3B4B1E29D4C06500E433D8 /* BackspaceTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackspaceTextField.swift; sourceTree = "<group>"; };
 		2D3B4B1F29D4C06500E433D8 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		2D3B4B2029D4C06500E433D8 /* AppFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		2D60979A2A4D94C8004D1ED1 /* EnumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumModel.swift; sourceTree = "<group>"; };
 		2D64B6C929D4B1E0000CBDB8 /* Scrive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scrive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D64B6CC29D4B1E0000CBDB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D64B6CE29D4B1E0000CBDB8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +204,10 @@
 		2D6E7D602A0C0FE700A7BD3B /* TableviewSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TableviewSB.storyboard; sourceTree = "<group>"; };
 		2D6E7D672A0C101F00A7BD3B /* TextFieldVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldVC.swift; sourceTree = "<group>"; };
 		2D6E7D692A0C101F00A7BD3B /* TextfieldSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TextfieldSB.storyboard; sourceTree = "<group>"; };
+		2D6E814B2A67C63000F6E33E /* SampleActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleActions.swift; sourceTree = "<group>"; };
+		2D6E814D2A67C65700F6E33E /* CommonActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonActions.swift; sourceTree = "<group>"; };
+		2D6E81522A67C82200F6E33E /* ScrollViewSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScrollViewSB.storyboard; sourceTree = "<group>"; };
+		2D6E81542A67C83600F6E33E /* ScrollViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewVC.swift; sourceTree = "<group>"; };
 		2D974D932A36F9710081D369 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		2D974D942A36F9710081D369 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		2D974D952A36F9710081D369 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -252,15 +260,16 @@
 		2D3B4A8029D4BF4500E433D8 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				2D6E814F2A67C77300F6E33E /* ScrollView */,
 				2DD951142A177ACE00A0AF8E /* Enum */,
-				2D3B4A9A29D4BF4500E433D8 /* NavController */,
-				2D3B4A8129D4BF4500E433D8 /* Home */,
 				2D6E7D582A0C0FE700A7BD3B /* Tableview */,
 				2DCFAF332A0F73F800E6986C /* CollectionView */,
 				2D6E7D652A0C101F00A7BD3B /* Textfield */,
 				2D3B4A9329D4BF4500E433D8 /* WKWebView */,
 				2DBD528D2A1646B3003F83BF /* Checkbox */,
 				2D3B4A9C29D4BF4500E433D8 /* TopBar */,
+				2D3B4A8129D4BF4500E433D8 /* Home */,
+				2D3B4A9A29D4BF4500E433D8 /* NavController */,
 			);
 			path = SourceCode;
 			sourceTree = "<group>";
@@ -362,7 +371,6 @@
 		2D3B4AAD29D4BF5400E433D8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2D3B4AAE29D4BF5400E433D8 /* JsonDecoderExtensions.swift */,
 				2D3B4AAF29D4BF5400E433D8 /* UITableViewExtensions.swift */,
 				2D3B4AB029D4BF5400E433D8 /* StringExtensions.swift */,
 				2D3B4AB129D4BF5400E433D8 /* WKWebViewExtensions.swift */,
@@ -382,9 +390,9 @@
 			isa = PBXGroup;
 			children = (
 				2D3B4AC729D4BF6A00E433D8 /* ResponseWrappers */,
+				2D6E814A2A67C61200F6E33E /* ApiActions */,
 				2D3B4AC329D4BF6A00E433D8 /* ApiConstants.swift */,
 				2D3B4AC429D4BF6A00E433D8 /* ApiEndPoints.swift */,
-				2D3B4AC629D4BF6A00E433D8 /* ApiActions.swift */,
 				2D3B4AC529D4BF6A00E433D8 /* APIManager.swift */,
 			);
 			path = NetworkManager;
@@ -402,9 +410,9 @@
 		2D3B4AD429D4C05800E433D8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2D3B4AD729D4C05800E433D8 /* Fonts */,
 				2D3B4AD529D4C05800E433D8 /* Colors.xcassets */,
 				2D3B4AD629D4C05800E433D8 /* Assets.xcassets */,
-				2D3B4AD729D4C05800E433D8 /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -496,6 +504,30 @@
 				2D3B4B1829D4C06500E433D8 /* NoDataView.swift */,
 			);
 			path = NoDataView;
+			sourceTree = "<group>";
+		};
+		2D6097992A4D94B7004D1ED1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D60979A2A4D94C8004D1ED1 /* EnumModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D60979C2A4D9518004D1ED1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DD951152A177AE500A0AF8E /* EnumSB.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D60979D2A4D9528004D1ED1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DD951172A177B0500A0AF8E /* EnumVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		2D64B6C029D4B1E0000CBDB8 = {
@@ -603,6 +635,41 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2D6E814A2A67C61200F6E33E /* ApiActions */ = {
+			isa = PBXGroup;
+			children = (
+				2D3B4AC629D4BF6A00E433D8 /* ApiActions.swift */,
+				2D6E814B2A67C63000F6E33E /* SampleActions.swift */,
+				2D6E814D2A67C65700F6E33E /* CommonActions.swift */,
+			);
+			path = ApiActions;
+			sourceTree = "<group>";
+		};
+		2D6E814F2A67C77300F6E33E /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E81512A67C81000F6E33E /* View */,
+				2D6E81502A67C80700F6E33E /* Controller */,
+			);
+			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		2D6E81502A67C80700F6E33E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E81542A67C83600F6E33E /* ScrollViewVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D6E81512A67C81000F6E33E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D6E81522A67C82200F6E33E /* ScrollViewSB.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2D974D922A36F9710081D369 /* OpenSans */ = {
 			isa = PBXGroup;
 			children = (
@@ -702,8 +769,9 @@
 		2DD951142A177ACE00A0AF8E /* Enum */ = {
 			isa = PBXGroup;
 			children = (
-				2DD951152A177AE500A0AF8E /* EnumSB.storyboard */,
-				2DD951172A177B0500A0AF8E /* EnumVC.swift */,
+				2D6097992A4D94B7004D1ED1 /* Model */,
+				2D60979C2A4D9518004D1ED1 /* View */,
+				2D60979D2A4D9528004D1ED1 /* Controller */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -805,6 +873,7 @@
 				2D974DA82A36F9710081D369 /* OpenSans-Regular.ttf in Resources */,
 				2D974DA92A36F9710081D369 /* Roboto-Medium.ttf in Resources */,
 				2D974DA62A36F9710081D369 /* OpenSans-Bold.ttf in Resources */,
+				2D6E81532A67C82200F6E33E /* ScrollViewSB.storyboard in Resources */,
 				2D3B4B0E29D4C05800E433D8 /* Poppins-Italic.ttf in Resources */,
 				2D3B4AA929D4BF4500E433D8 /* WKWebSB.storyboard in Resources */,
 				2D3B4AF829D4C05800E433D8 /* RoxboroughCF-Thin.otf in Resources */,
@@ -886,10 +955,10 @@
 				2D3B4AB929D4BF5400E433D8 /* UITableViewExtensions.swift in Sources */,
 				2D041BF729DFFF9900234843 /* UITextFieldExtensions.swift in Sources */,
 				2DCFAF382A0F744300E6986C /* CollectionViewVC.swift in Sources */,
-				2D3B4AB829D4BF5400E433D8 /* JsonDecoderExtensions.swift in Sources */,
 				2D3B4B3029D4C06500E433D8 /* AppFont.swift in Sources */,
 				2D3B4B2A29D4C06500E433D8 /* PushNotifications.swift in Sources */,
 				2D3B4B2829D4C06500E433D8 /* NoDataView.swift in Sources */,
+				2D6E814C2A67C63000F6E33E /* SampleActions.swift in Sources */,
 				2D3B4B2629D4C06500E433D8 /* GlobalPrint.swift in Sources */,
 				2D6E7D622A0C0FE700A7BD3B /* TableviewVC.swift in Sources */,
 				2D3B4AA829D4BF4500E433D8 /* WKWebModel.swift in Sources */,
@@ -914,14 +983,17 @@
 				2D3B4AC029D4BF5400E433D8 /* NSObjectExtensions.swift in Sources */,
 				2D3B4B2D29D4C06500E433D8 /* ProgressHUD.swift in Sources */,
 				2D3B4B2429D4C06500E433D8 /* UserDefaultsHelper.swift in Sources */,
+				2D6E81552A67C83600F6E33E /* ScrollViewVC.swift in Sources */,
 				2D3B4ACE29D4BF6A00E433D8 /* ApiResponse.swift in Sources */,
 				2D6E7D6A2A0C101F00A7BD3B /* TextFieldVC.swift in Sources */,
 				2D3B4B2329D4C06500E433D8 /* CustomAlerts.swift in Sources */,
+				2D60979B2A4D94C8004D1ED1 /* EnumModel.swift in Sources */,
 				2D3B4ABE29D4BF5400E433D8 /* UILabelExtensions.swift in Sources */,
 				2D3B4ACF29D4BF6A00E433D8 /* DecodableDefault.swift in Sources */,
 				2D3B4B2B29D4C06500E433D8 /* AppSingleton.swift in Sources */,
 				2D3B4AC129D4BF5400E433D8 /* UIColorExtensions.swift in Sources */,
 				2D3B4AA029D4BF4500E433D8 /* HomeVC.swift in Sources */,
+				2D6E814E2A67C65700F6E33E /* CommonActions.swift in Sources */,
 				2DD951182A177B0500A0AF8E /* EnumVC.swift in Sources */,
 				2D3B4B2129D4C06500E433D8 /* CheckBoxButton.swift in Sources */,
 				2D3B4B2C29D4C06500E433D8 /* AppUtility.swift in Sources */,

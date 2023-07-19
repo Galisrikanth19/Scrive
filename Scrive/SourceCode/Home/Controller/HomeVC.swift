@@ -63,6 +63,8 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
             CheckBoxVC.push(storyboard: .checkBoxSB)
         case .enums:
             EnumVC.push(storyboard: .enumSB)
+        case .scrollView:
+            ScrollViewVC.push(storyboard: .scrollViewSB)
         default:
             self.showToast(WithMessage: "No object selected")
         }
