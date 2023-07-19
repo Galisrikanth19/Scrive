@@ -5,6 +5,8 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupVC()
@@ -21,6 +23,13 @@ class BaseViewController: UIViewController {
     private func setupVC() {
         self.navigationController?.navigationBar.isHidden = true
         hideKeyboardOnTapView()
+        setupScrollview()
+    }
+    
+    private func setupScrollview() {
+        if let scrollView = scrollView {
+            scrollView.contentInsetAdjustmentBehavior = .never
+        }
     }
 }
 
