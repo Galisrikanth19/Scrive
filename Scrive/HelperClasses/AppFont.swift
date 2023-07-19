@@ -4,19 +4,20 @@
 
 import UIKit
 
-private let familyName = "ProximaNova"
-
 enum AppFont: String {
-    case regular = "Regular"
+    case poppinsRegular = "Poppins-Regular"
 
     func size(_ size: CGFloat) -> UIFont {
-        if let font = UIFont(name: fullFontName, size: size) {
+        if let font = UIFont(name: rawValue, size: size) {
             return font
         }
-        fatalError("Font '\(fullFontName)' does not exist.")
-    }
-    
-    private var fullFontName: String {
-        return rawValue.isEmpty ? familyName : familyName + "-" + rawValue
+        return UIFont.systemFont(ofSize: 50)
     }
 }
+
+/*
+ Usage sourceCode
+************************************************************************************************
+    self.titleLbl.font = AppFont.poppinsRegular.size(16)
+************************************************************************************************
+*/
