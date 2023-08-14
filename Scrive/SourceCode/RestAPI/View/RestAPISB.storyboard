@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--RestAPIVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="RestAPIVC" id="Y6W-OH-hqX" customClass="RestAPIVC" customModule="Scrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="toI-HV-VuL" customClass="TopBar" customModule="Scrive" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="100" id="Vzg-58-V4X"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcM-vW-EtD">
+                                <rect key="frame" x="20" y="120" width="353" height="50"/>
+                                <color key="backgroundColor" name="TitleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1t9-9h-kGR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login Request">
+                                    <color key="titleColor" name="BgColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iCornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginRequest:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vYO-CH-Ylq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BgColor"/>
+                        <constraints>
+                            <constraint firstItem="toI-HV-VuL" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6qL-qH-59k"/>
+                            <constraint firstItem="NcM-vW-EtD" firstAttribute="top" secondItem="toI-HV-VuL" secondAttribute="bottom" constant="20" id="AXt-c3-pvl"/>
+                            <constraint firstItem="toI-HV-VuL" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="BaU-14-Xf0"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NcM-vW-EtD" secondAttribute="trailing" constant="20" id="YZw-zD-U5o"/>
+                            <constraint firstItem="NcM-vW-EtD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="lfp-pL-mYN"/>
+                            <constraint firstItem="toI-HV-VuL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="pMq-5e-jkP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="topBar" destination="toI-HV-VuL" id="9VD-U7-MPQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BgColor">
+            <color red="0.68235294117647061" green="0.76078431372549016" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TitleColor">
+            <color red="0.18000000715255737" green="0.2199999988079071" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

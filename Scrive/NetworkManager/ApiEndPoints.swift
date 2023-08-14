@@ -5,9 +5,9 @@
 import Foundation
 
 enum ApiEndPoints: String {
-    case baseUrl = "http://18.116.128.93/skoah-ob/public/api/"
+    case baseUrl = "https://stx.yoursalonapp.com:3050/api/"
     
-    case login = "user-login"
+    case login = "users/login"
     
     var url: String {
         return ApiEndPoints.baseUrl.rawValue + self.rawValue

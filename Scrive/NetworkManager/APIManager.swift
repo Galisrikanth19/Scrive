@@ -139,8 +139,9 @@ class APIManager {
     private func debugResponse<T: Decodable>(WithResponse response: AFDataResponse<T>) {
         print("\n\n")
         print("*************************************************************************************")
-        print("Requested URL -> \(response.request?.url?.absoluteString ?? "")")
+        print("RequestedURL -> \(response.request?.url?.absoluteString ?? "")")
         print("StatusCode -> \(response.response?.statusCode ?? 0)")
+        print("RequestDurationInSecs: \(response.metrics?.taskInterval.duration ?? 0.0) Secs")
         
         print("\n")
         print("AllHTTPHeaderFields -> ")

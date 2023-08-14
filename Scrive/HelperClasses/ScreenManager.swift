@@ -12,6 +12,7 @@ enum Storyboard : String {
     case checkBoxSB = "CheckBoxSB"
     case enumSB = "EnumSB"
     case scrollViewSB = "ScrollViewSB"
+    case restAPISB = "RestAPISB"
 }
 
 extension UIViewController {

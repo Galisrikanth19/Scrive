@@ -9,7 +9,7 @@ struct CommonActions {
     func loginRequest(WithHTTPHeaders httpheaders: HTTPHeaders? = nil,
                       WithParameters parameters: Parameters? = nil,
                       WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
-                      WithSuccessCallback successCallback: @escaping(ApiResponse?) -> Void,
+                      WithSuccessCallback successCallback: @escaping(LoginResponseModel?) -> Void,
                       WithFailureCallback failureCallback: @escaping(String?) -> Void) {
         APIManager.shared.request(WithUrlStr: ApiEndPoints.login.url,
                                   WithHttpMethod: .post,

@@ -65,6 +65,8 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
             EnumVC.push(storyboard: .enumSB)
         case .scrollView:
             ScrollViewVC.push(storyboard: .scrollViewSB)
+        case .restApi:
+            RestAPIVC.push(storyboard: .restAPISB)
         default:
             self.showToast(WithMessage: "No object selected")
         }

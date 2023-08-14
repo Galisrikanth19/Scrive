@@ -13,6 +13,7 @@ enum MenuType: String {
     case checkbox = "Checkbox"
     case enums = "Enum"
     case scrollView = "ScrollView"
+    case restApi = "RestAPI"
 }
 
 struct HomeModel {
@@ -28,6 +29,7 @@ struct HomeModelData {
         HomeModel(menu: .textfeild),
         HomeModel(menu: .checkbox),
         HomeModel(menu: .enums),
-        HomeModel(menu: .scrollView)
+        HomeModel(menu: .scrollView),
+        HomeModel(menu: .restApi)
     ]
 }
