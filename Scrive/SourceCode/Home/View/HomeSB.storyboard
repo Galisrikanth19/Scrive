@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1FT-Zt-DKl">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="693"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeTbvCell" rowHeight="60" id="ZhP-ZV-7cz" customClass="HomeTbvCell" customModule="Scrive" customModuleProvider="target">
@@ -76,17 +76,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zIB-rD-EtJ" customClass="BottomBar" customModule="STXCloud" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="752" width="393" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="100" id="kSC-Lp-zry"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="BgColor"/>
                         <constraints>
+                            <constraint firstItem="zIB-rD-EtJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="AfI-ye-9Lj"/>
+                            <constraint firstAttribute="trailing" secondItem="zIB-rD-EtJ" secondAttribute="trailing" id="JaW-Ui-nL3"/>
+                            <constraint firstItem="zIB-rD-EtJ" firstAttribute="top" secondItem="1FT-Zt-DKl" secondAttribute="bottom" id="fh9-bB-4aH"/>
                             <constraint firstItem="1FT-Zt-DKl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="l2f-rB-EBU"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="1FT-Zt-DKl" secondAttribute="bottom" id="mCJ-E4-GoZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1FT-Zt-DKl" secondAttribute="trailing" id="nST-s2-tLz"/>
+                            <constraint firstAttribute="bottom" secondItem="zIB-rD-EtJ" secondAttribute="bottom" id="noC-Ny-p1u"/>
                             <constraint firstItem="1FT-Zt-DKl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="z8b-Kn-QTF"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomBar" destination="zIB-rD-EtJ" id="Gr2-zU-vkU"/>
                         <outlet property="tbv" destination="1FT-Zt-DKl" id="Hvg-sd-j8y"/>
                     </connections>
                 </viewController>
@@ -98,10 +108,10 @@
     <resources>
         <image name="Placeholder" width="32" height="32"/>
         <namedColor name="BgColor">
-            <color red="0.68199998140335083" green="0.76099997758865356" blue="0.71399998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68235294117647061" green="0.76078431372549016" blue="0.71372549019607845" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TitleColor">
-            <color red="0.18000000715255737" green="0.2199999988079071" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.1803921568627451" green="0.2196078431372549" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

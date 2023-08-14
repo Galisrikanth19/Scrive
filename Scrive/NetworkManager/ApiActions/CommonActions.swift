@@ -19,4 +19,18 @@ struct CommonActions {
                                   WithSuccessCallback: successCallback,
                                   WithFailureCallback: failureCallback)
     }
+    
+    func loginRequest(WithHTTPHeaders httpheaders: HTTPHeaders? = nil,
+                      WithData data: Data? = nil,
+                      WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
+                      WithSuccessCallback successCallback: @escaping(LoginResponseModel?) -> Void,
+                      WithFailureCallback failureCallback: @escaping(String?) -> Void) {
+        APIManager.shared.request(WithUrlStr: ApiEndPoints.login.url,
+                                  WithHttpMethod: .post,
+                                  WithHeaders: httpheaders,
+                                  WithData: data,
+                                  WithCompletionCallback: completionCallback,
+                                  WithSuccessCallback: successCallback,
+                                  WithFailureCallback: failureCallback)
+    }
 }

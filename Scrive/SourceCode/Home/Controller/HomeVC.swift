@@ -5,6 +5,8 @@
 import UIKit
 
 class HomeVC: BaseViewController {
+    @IBOutlet weak var bottomBar: BottomBar!
+    
     @IBOutlet weak var tbv: UITableView!
     var dataArr:[HomeModel] = [HomeModel]() {
         didSet{
@@ -20,6 +22,7 @@ class HomeVC: BaseViewController {
     private func setupVC() {
         setupTbv()
         loadStaticData()
+        updateHeaderAndBottomBar()
     }
     
     private func loadStaticData() {
@@ -70,5 +73,25 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         default:
             self.showToast(WithMessage: "No object selected")
         }
+    }
+}
+
+// MARK: Topbar & Bottombar
+extension HomeVC {
+    private func updateHeaderAndBottomBar() {
+        let randomInt = Int.random(in: 1..<5)
+        switch randomInt {
+        case 1:
+            bottomBar.selectBottomBarBtn(WithBottomBarItem: .home)
+        case 2:
+            bottomBar.selectBottomBarBtn(WithBottomBarItem: .appts)
+        case 3:
+            bottomBar.selectBottomBarBtn(WithBottomBarItem: .checkout)
+        case 4:
+            bottomBar.selectBottomBarBtn(WithBottomBarItem: .clients)
+        default:
+            print("")
+        }
+        
     }
 }

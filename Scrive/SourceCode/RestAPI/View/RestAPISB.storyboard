@@ -40,11 +40,31 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="iCornerRadius">
-                                        <real key="value" value="5"/>
+                                        <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginRequest:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="vYO-CH-Ylq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29r-Uu-zxy">
+                                <rect key="frame" x="20" y="190" width="353" height="50"/>
+                                <color key="backgroundColor" name="TitleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bkb-VZ-7M2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Login Request With Body">
+                                    <color key="titleColor" name="BgColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iCornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginRequestWithBody:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cF2-zD-YIQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,9 +74,13 @@
                             <constraint firstItem="toI-HV-VuL" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="6qL-qH-59k"/>
                             <constraint firstItem="NcM-vW-EtD" firstAttribute="top" secondItem="toI-HV-VuL" secondAttribute="bottom" constant="20" id="AXt-c3-pvl"/>
                             <constraint firstItem="toI-HV-VuL" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="BaU-14-Xf0"/>
+                            <constraint firstItem="29r-Uu-zxy" firstAttribute="leading" secondItem="NcM-vW-EtD" secondAttribute="leading" id="C2w-xf-9oS"/>
+                            <constraint firstItem="29r-Uu-zxy" firstAttribute="height" secondItem="NcM-vW-EtD" secondAttribute="height" id="VTW-Cr-NbU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NcM-vW-EtD" secondAttribute="trailing" constant="20" id="YZw-zD-U5o"/>
+                            <constraint firstItem="29r-Uu-zxy" firstAttribute="top" secondItem="NcM-vW-EtD" secondAttribute="bottom" constant="20" id="kzr-PK-Gvt"/>
                             <constraint firstItem="NcM-vW-EtD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="lfp-pL-mYN"/>
                             <constraint firstItem="toI-HV-VuL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="pMq-5e-jkP"/>
+                            <constraint firstItem="29r-Uu-zxy" firstAttribute="trailing" secondItem="NcM-vW-EtD" secondAttribute="trailing" id="v1N-im-nu5"/>
                         </constraints>
                     </view>
                     <connections>

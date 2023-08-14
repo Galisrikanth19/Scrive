@@ -96,6 +96,9 @@
 		2D89A8422A8A0043008A2CFB /* RestAPIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89A8412A8A0043008A2CFB /* RestAPIVC.swift */; };
 		2D89A8442A8A006F008A2CFB /* RestAPISB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D89A8432A8A006F008A2CFB /* RestAPISB.storyboard */; };
 		2D89A8462A8A07C8008A2CFB /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89A8452A8A07C8008A2CFB /* LoginResponseModel.swift */; };
+		2D89A8482A8A1628008A2CFB /* LoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89A8472A8A1628008A2CFB /* LoginRequestModel.swift */; };
+		2D89A84C2A8A3949008A2CFB /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89A84A2A8A3949008A2CFB /* BottomBar.swift */; };
+		2D89A84D2A8A3949008A2CFB /* BottomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D89A84B2A8A3949008A2CFB /* BottomBar.xib */; };
 		2D974DA22A36F9710081D369 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D974D932A36F9710081D369 /* OpenSans-SemiBold.ttf */; };
 		2D974DA32A36F9710081D369 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D974D942A36F9710081D369 /* OpenSans-Light.ttf */; };
 		2D974DA42A36F9710081D369 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D974D952A36F9710081D369 /* OpenSans-Italic.ttf */; };
@@ -214,6 +217,9 @@
 		2D89A8412A8A0043008A2CFB /* RestAPIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPIVC.swift; sourceTree = "<group>"; };
 		2D89A8432A8A006F008A2CFB /* RestAPISB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestAPISB.storyboard; sourceTree = "<group>"; };
 		2D89A8452A8A07C8008A2CFB /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
+		2D89A8472A8A1628008A2CFB /* LoginRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestModel.swift; sourceTree = "<group>"; };
+		2D89A84A2A8A3949008A2CFB /* BottomBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
+		2D89A84B2A8A3949008A2CFB /* BottomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomBar.xib; sourceTree = "<group>"; };
 		2D974D932A36F9710081D369 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		2D974D942A36F9710081D369 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		2D974D952A36F9710081D369 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -275,6 +281,7 @@
 				2D3B4A9329D4BF4500E433D8 /* WKWebView */,
 				2DBD528D2A1646B3003F83BF /* Checkbox */,
 				2D3B4A9C29D4BF4500E433D8 /* TopBar */,
+				2D89A8492A8A3949008A2CFB /* BottomBar */,
 				2D3B4A8129D4BF4500E433D8 /* Home */,
 				2D3B4A9A29D4BF4500E433D8 /* NavController */,
 			);
@@ -707,8 +714,18 @@
 			isa = PBXGroup;
 			children = (
 				2D89A8452A8A07C8008A2CFB /* LoginResponseModel.swift */,
+				2D89A8472A8A1628008A2CFB /* LoginRequestModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2D89A8492A8A3949008A2CFB /* BottomBar */ = {
+			isa = PBXGroup;
+			children = (
+				2D89A84B2A8A3949008A2CFB /* BottomBar.xib */,
+				2D89A84A2A8A3949008A2CFB /* BottomBar.swift */,
+			);
+			path = BottomBar;
 			sourceTree = "<group>";
 		};
 		2D974D922A36F9710081D369 /* OpenSans */ = {
@@ -925,6 +942,7 @@
 				2D3B4AFC29D4C05800E433D8 /* RoxboroughCF-ExtraBold.otf in Resources */,
 				2D6E7D6B2A0C101F00A7BD3B /* TextfieldSB.storyboard in Resources */,
 				2D3B4B0229D4C05800E433D8 /* ProximaNova-Medium.otf in Resources */,
+				2D89A84D2A8A3949008A2CFB /* BottomBar.xib in Resources */,
 				2D3B4B0D29D4C05800E433D8 /* Poppins-SemiBold.ttf in Resources */,
 				2D974DA72A36F9710081D369 /* OpenSans-Medium.ttf in Resources */,
 				2D974DAC2A36F9710081D369 /* Roboto-Italic.ttf in Resources */,
@@ -995,6 +1013,7 @@
 				2D6E7D632A0C0FE700A7BD3B /* TbvModel.swift in Sources */,
 				2D3B4B2729D4C06500E433D8 /* AppOrientation.swift in Sources */,
 				2D3B4AB929D4BF5400E433D8 /* UITableViewExtensions.swift in Sources */,
+				2D89A8482A8A1628008A2CFB /* LoginRequestModel.swift in Sources */,
 				2D041BF729DFFF9900234843 /* UITextFieldExtensions.swift in Sources */,
 				2DCFAF382A0F744300E6986C /* CollectionViewVC.swift in Sources */,
 				2D3B4B3029D4C06500E433D8 /* AppFont.swift in Sources */,
@@ -1009,6 +1028,7 @@
 				2DBD52912A1646FE003F83BF /* CheckBoxVC.swift in Sources */,
 				2D6E7D612A0C0FE700A7BD3B /* TbvCell.swift in Sources */,
 				2DCFAF3D2A0F758200E6986C /* CollcViewCell.swift in Sources */,
+				2D89A84C2A8A3949008A2CFB /* BottomBar.swift in Sources */,
 				2D3B4AA729D4BF4500E433D8 /* WKWebVC.swift in Sources */,
 				2D3B4ABF29D4BF5400E433D8 /* UIButtonExtensions.swift in Sources */,
 				2D3B4B2529D4C06500E433D8 /* ScreenManager.swift in Sources */,

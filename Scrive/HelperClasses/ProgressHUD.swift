@@ -14,6 +14,10 @@ extension UIViewController {
         progressHUD = nil
         progressHUD = MBProgressHUD.showAdded(to: view, animated: true)
         
+        progressHUD?.bezelView.color = .titleColor
+        progressHUD?.bezelView.style = .solidColor
+        progressHUD?.contentColor = .bgColor
+        
         if let message = message {
             progressHUD?.label.text = message
             progressHUD?.label.numberOfLines = 0

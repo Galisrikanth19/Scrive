@@ -22,6 +22,10 @@ extension RestAPIVC {
     @IBAction func loginRequest(_ sender: UIButton) {
         loginRequest()
     }
+    
+    @IBAction func loginRequestWithBody(_ sender: UIButton) {
+        loginRequestWithBody()
+    }
 }
 
 // MARK: Topbar
@@ -41,8 +45,32 @@ extension RestAPIVC {
         let parameters: Dictionary<String, Any> = ["userName" : "dina12@gmail.com",
                                                    "password" : "1234",
                                                    "Pushtoken": ""]
+        self.showProgressHUD()
         
         ApiActions.common.loginRequest(WithParameters: parameters) { [weak self] (resData) in
+            guard let strongSelf = self else { return }
+            strongSelf.hideProgressHUD()
+        } WithSuccessCallback: { [weak self] (resM) in
+            guard let strongSelf = self, let resM = resM else { return }
+            if resM.status == true {
+                strongSelf.showToast(WithMessage: (resM.message ?? ""))
+            } else {
+                strongSelf.showErrorToast(WithMessage: (resM.message ?? ""))
+            }
+        } WithFailureCallback: { [weak self] (errMsg) in
+            guard let strongSelf = self, let errMsg = errMsg else { return }
+            strongSelf.showErrorToast(WithMessage: errMsg)
+        }
+    }
+    
+    private func loginRequestWithBody() {
+        let loginRequestM = LoginRequestModel(userName: "dina12@gmail.com",
+                                                       password: "1234",
+                                                       Pushtoken: "")
+        let data: Data? = try? JSONEncoder().encode(loginRequestM)
+        self.showProgressHUD()
+        
+        ApiActions.common.loginRequest(WithData: data) { [weak self] (resData) in
             guard let strongSelf = self else { return }
             strongSelf.hideProgressHUD()
         } WithSuccessCallback: { [weak self] (resM) in

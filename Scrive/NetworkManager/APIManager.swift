@@ -18,6 +18,56 @@ class APIManager {
     func request<T: Decodable>(WithUrlStr urlStr: String,
                                WithHttpMethod httpMethod: HTTPMethod,
                                WithHeaders httpHeaders: HTTPHeaders? = nil,
+                               WithData data: Data? = nil,
+                               WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
+                               WithSuccessCallback successCallback: @escaping(T?) -> Void,
+                               WithFailureCallback failureCallback: @escaping(String?) -> Void) {
+        //Removing all cached responses if any
+        URLCache.shared.removeAllCachedResponses()
+        
+        var urlRequest = URLRequest(url: try! urlStr.asURL())
+        urlRequest.httpMethod = httpMethod.rawValue
+        urlRequest.httpBody = data
+        
+        //Setting ParameterEncoding
+        var encoding:ParameterEncoding!
+        if httpMethod == .get {
+            encoding = URLEncoding.Destination.methodDependent as? ParameterEncoding ?? URLEncoding.default
+        } else {
+            encoding = JSONEncoding.default
+        }
+        urlRequest = try! encoding.encode(urlRequest, with: nil)
+        
+        //Adding HttpHeaders
+        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        if let accessToken = AppSingleton.shared.accessToken {
+            urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: ApiParamKeys.authorization)
+        }
+        if let httpHeaders = httpHeaders {
+            for httpH in httpHeaders {
+                urlRequest.setValue(httpH.value, forHTTPHeaderField: httpH.name)
+            }
+        }
+        
+        AF.request(urlRequest).responseDecodable(of: T.self, decoder: camelCaseDecoder) { (afDataResponse) in
+            //Debug response
+            self.debugResponse(WithResponse: afDataResponse)
+            
+            //Calling callback as request processed
+            completionCallback(afDataResponse.data)
+            
+            switch(afDataResponse.result) {
+                case .success:
+                    successCallback(afDataResponse.value)
+                case .failure(let error):
+                    failureCallback(error.errorDescription)
+            }
+        }
+    }
+    
+    func request<T: Decodable>(WithUrlStr urlStr: String,
+                               WithHttpMethod httpMethod: HTTPMethod,
+                               WithHeaders httpHeaders: HTTPHeaders? = nil,
                                WithParameters parameters: Parameters? = nil,
                                WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
                                WithSuccessCallback successCallback: @escaping(T?) -> Void,
@@ -141,7 +191,7 @@ class APIManager {
         print("*************************************************************************************")
         print("RequestedURL -> \(response.request?.url?.absoluteString ?? "")")
         print("StatusCode -> \(response.response?.statusCode ?? 0)")
-        print("RequestDurationInSecs: \(response.metrics?.taskInterval.duration ?? 0.0) Secs")
+        print("RequestDuration: \(response.metrics?.taskInterval.duration ?? 0.0) Secs")
         
         print("\n")
         print("AllHTTPHeaderFields -> ")
