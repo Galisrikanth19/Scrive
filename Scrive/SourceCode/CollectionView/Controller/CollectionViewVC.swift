@@ -47,7 +47,7 @@ extension CollectionViewVC: UICollectionViewDelegate, UICollectionViewDataSource
         collcView.backgroundColor = .clear
         collcView.delegate = self
         collcView.dataSource = self
-        collcView.setNoDataView(WithErrorImage: "NoData", WithErrorStr: "No data found")
+        collcView.setNoDataView(WithErrorImage: "NoData", WithErrorStr: "No Data Found!")
         
         collcView.showsHorizontalScrollIndicator = false
         collcView.showsVerticalScrollIndicator = false
