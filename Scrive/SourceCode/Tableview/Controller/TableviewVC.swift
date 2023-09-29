@@ -51,6 +51,8 @@ extension TableviewVC: UITableViewDataSource, UITableViewDelegate {
         tbv.separatorColor = .clear
         
         tbv.showsVerticalScrollIndicator = false
+        tbv.keyboardDismissMode = .onDrag
+        tbv.alwaysBounceVertical = false
         //tbv.setNoDataView(WithImageName: "NoData", WithTitleStr: "No data found")
     }
     

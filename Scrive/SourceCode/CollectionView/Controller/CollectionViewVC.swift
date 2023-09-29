@@ -45,6 +45,7 @@ extension CollectionViewVC {
 extension CollectionViewVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     private func setupCollcView() {
         collcView.backgroundColor = .clear
+        collcView.keyboardDismissMode = .onDrag
         collcView.delegate = self
         collcView.dataSource = self
         collcView.setNoDataView(WithErrorImage: "NoData", WithErrorStr: "No Data Found!")

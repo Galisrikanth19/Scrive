@@ -40,6 +40,7 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         tbv.separatorColor = .clear
         
         tbv.showsVerticalScrollIndicator = false
+        tbv.keyboardDismissMode = .onDrag
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
