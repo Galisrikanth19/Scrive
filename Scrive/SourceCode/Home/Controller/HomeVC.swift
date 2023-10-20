@@ -26,7 +26,7 @@ class HomeVC: BaseViewController {
     }
     
     private func loadStaticData() {
-        dataArr = HomeModelData.homeModelArr
+        dataArr = HomeData.homeModelArr
     }
 }
 
@@ -71,6 +71,8 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
             ScrollViewVC.push(storyboard: .scrollViewSB)
         case .restApi:
             RestAPIVC.push(storyboard: .restAPISB)
+        case .containerView:
+            ParentVC.push(storyboard: .containerViewSB)
         default:
             self.showToast(WithMessage: "No object selected")
         }

@@ -11,7 +11,7 @@
 		2D3B4A7F29D4BE1200E433D8 /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = 2D3B4A7E29D4BE1200E433D8 /* ReadMe */; };
 		2D3B4A9F29D4BF4500E433D8 /* HomeTbvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4A8429D4BF4500E433D8 /* HomeTbvCell.swift */; };
 		2D3B4AA029D4BF4500E433D8 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4A8529D4BF4500E433D8 /* HomeVC.swift */; };
-		2D3B4AA129D4BF4500E433D8 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4A8729D4BF4500E433D8 /* HomeModel.swift */; };
+		2D3B4AA129D4BF4500E433D8 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4A8729D4BF4500E433D8 /* HomeData.swift */; };
 		2D3B4AA229D4BF4500E433D8 /* HomeSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D3B4A8929D4BF4500E433D8 /* HomeSB.storyboard */; };
 		2D3B4AA729D4BF4500E433D8 /* WKWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4A9529D4BF4500E433D8 /* WKWebVC.swift */; };
 		2D3B4AA829D4BF4500E433D8 /* WKWebModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4A9729D4BF4500E433D8 /* WKWebModel.swift */; };
@@ -122,6 +122,9 @@
 		2DCFAF412A0F771000E6986C /* CollectionViewSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DCFAF402A0F771000E6986C /* CollectionViewSB.storyboard */; };
 		2DD951162A177AE500A0AF8E /* EnumSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD951152A177AE500A0AF8E /* EnumSB.storyboard */; };
 		2DD951182A177B0500A0AF8E /* EnumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD951172A177B0500A0AF8E /* EnumVC.swift */; };
+		2DE6206F2AE0C8AE00772B9B /* ContainerViewSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE6206E2AE0C8AE00772B9B /* ContainerViewSB.storyboard */; };
+		2DE620712AE0C8C600772B9B /* ParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE620702AE0C8C600772B9B /* ParentVC.swift */; };
+		2DE620732AE0C93500772B9B /* ChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE620722AE0C93500772B9B /* ChildVC.swift */; };
 		7FB917D7882B8C2E085D2BFF /* Pods_Scrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F76732EE737779F8110F72 /* Pods_Scrive.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,7 +133,7 @@
 		2D3B4A7E29D4BE1200E433D8 /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
 		2D3B4A8429D4BF4500E433D8 /* HomeTbvCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTbvCell.swift; sourceTree = "<group>"; };
 		2D3B4A8529D4BF4500E433D8 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		2D3B4A8729D4BF4500E433D8 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		2D3B4A8729D4BF4500E433D8 /* HomeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		2D3B4A8929D4BF4500E433D8 /* HomeSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeSB.storyboard; sourceTree = "<group>"; };
 		2D3B4A9529D4BF4500E433D8 /* WKWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebVC.swift; sourceTree = "<group>"; };
 		2D3B4A9729D4BF4500E433D8 /* WKWebModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebModel.swift; sourceTree = "<group>"; };
@@ -243,6 +246,9 @@
 		2DCFAF402A0F771000E6986C /* CollectionViewSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CollectionViewSB.storyboard; sourceTree = "<group>"; };
 		2DD951152A177AE500A0AF8E /* EnumSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnumSB.storyboard; sourceTree = "<group>"; };
 		2DD951172A177B0500A0AF8E /* EnumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumVC.swift; sourceTree = "<group>"; };
+		2DE6206E2AE0C8AE00772B9B /* ContainerViewSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContainerViewSB.storyboard; sourceTree = "<group>"; };
+		2DE620702AE0C8C600772B9B /* ParentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentVC.swift; sourceTree = "<group>"; };
+		2DE620722AE0C93500772B9B /* ChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildVC.swift; sourceTree = "<group>"; };
 		39F76732EE737779F8110F72 /* Pods_Scrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFD70DE1405E10376FF15EB /* Pods-Scrive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrive.debug.xcconfig"; path = "Target Support Files/Pods-Scrive/Pods-Scrive.debug.xcconfig"; sourceTree = "<group>"; };
 		B5F65044677EB0C4D0D8E215 /* Pods-Scrive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrive.release.xcconfig"; path = "Target Support Files/Pods-Scrive/Pods-Scrive.release.xcconfig"; sourceTree = "<group>"; };
@@ -272,6 +278,7 @@
 		2D3B4A8029D4BF4500E433D8 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				2DE6206A2AE0C87300772B9B /* ContainerView */,
 				2D89A83D2A8A0006008A2CFB /* RestAPI */,
 				2D6E814F2A67C77300F6E33E /* ScrollView */,
 				2DD951142A177ACE00A0AF8E /* Enum */,
@@ -318,7 +325,7 @@
 		2D3B4A8629D4BF4500E433D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2D3B4A8729D4BF4500E433D8 /* HomeModel.swift */,
+				2D3B4A8729D4BF4500E433D8 /* HomeData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -834,6 +841,40 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		2DE6206A2AE0C87300772B9B /* ContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				2DE6206D2AE0C89000772B9B /* Model */,
+				2DE6206C2AE0C88900772B9B /* View */,
+				2DE6206B2AE0C88100772B9B /* Controller */,
+			);
+			path = ContainerView;
+			sourceTree = "<group>";
+		};
+		2DE6206B2AE0C88100772B9B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2DE620702AE0C8C600772B9B /* ParentVC.swift */,
+				2DE620722AE0C93500772B9B /* ChildVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2DE6206C2AE0C88900772B9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2DE6206E2AE0C8AE00772B9B /* ContainerViewSB.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DE6206D2AE0C89000772B9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		433858C234380181705477B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -947,6 +988,7 @@
 				2D974DA72A36F9710081D369 /* OpenSans-Medium.ttf in Resources */,
 				2D974DAC2A36F9710081D369 /* Roboto-Italic.ttf in Resources */,
 				2D3B4B0429D4C05800E433D8 /* ProximaNova-Regular.otf in Resources */,
+				2DE6206F2AE0C8AE00772B9B /* ContainerViewSB.storyboard in Resources */,
 				2D3B4AFD29D4C05800E433D8 /* RoxboroughCF-Regular.otf in Resources */,
 				2D974DAA2A36F9710081D369 /* Roboto-Light.ttf in Resources */,
 				2D3B4AF529D4C05800E433D8 /* Assets.xcassets in Resources */,
@@ -1037,6 +1079,7 @@
 				2D3B4ACC29D4BF6A00E433D8 /* APIManager.swift in Sources */,
 				2D3B4AAC29D4BF4500E433D8 /* TopBar.swift in Sources */,
 				2DCFAF3A2A0F748E00E6986C /* CollcViewModel.swift in Sources */,
+				2DE620712AE0C8C600772B9B /* ParentVC.swift in Sources */,
 				2D64B6D129D4B1E0000CBDB8 /* BaseViewController.swift in Sources */,
 				2D3B4ABD29D4BF5400E433D8 /* UIViewExtensions.swift in Sources */,
 				2D3B4ABA29D4BF5400E433D8 /* StringExtensions.swift in Sources */,
@@ -1061,13 +1104,14 @@
 				2DD951182A177B0500A0AF8E /* EnumVC.swift in Sources */,
 				2D3B4B2129D4C06500E433D8 /* CheckBoxButton.swift in Sources */,
 				2D3B4B2C29D4C06500E433D8 /* AppUtility.swift in Sources */,
-				2D3B4AA129D4BF4500E433D8 /* HomeModel.swift in Sources */,
+				2D3B4AA129D4BF4500E433D8 /* HomeData.swift in Sources */,
 				2D3B4A9F29D4BF4500E433D8 /* HomeTbvCell.swift in Sources */,
 				2DCFAF3F2A0F760600E6986C /* UICollectionViewExtensions.swift in Sources */,
 				2D3B4ACA29D4BF6A00E433D8 /* ApiConstants.swift in Sources */,
 				2D64B6CD29D4B1E0000CBDB8 /* AppDelegate.swift in Sources */,
 				2D64B6CF29D4B1E0000CBDB8 /* SceneDelegate.swift in Sources */,
 				2D3B4AAA29D4BF4500E433D8 /* NavController.swift in Sources */,
+				2DE620732AE0C93500772B9B /* ChildVC.swift in Sources */,
 				2D3B4B2E29D4C06500E433D8 /* BackspaceTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

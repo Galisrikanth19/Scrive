@@ -13,6 +13,7 @@ enum Storyboard : String {
     case enumSB = "EnumSB"
     case scrollViewSB = "ScrollViewSB"
     case restAPISB = "RestAPISB"
+    case containerViewSB = "ContainerViewSB"
 }
 
 extension UIViewController {
