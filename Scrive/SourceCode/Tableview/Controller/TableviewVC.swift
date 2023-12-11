@@ -26,7 +26,7 @@ class TableviewVC: BaseViewController {
     }
     
     private func loadStaticData() {
-        dataArr = TbvListData.TbvModelArr
+        //dataArr = TbvListData.TbvModelArr
     }
 }
 
@@ -53,12 +53,12 @@ extension TableviewVC: UITableViewDataSource, UITableViewDelegate {
         tbv.showsVerticalScrollIndicator = false
         tbv.keyboardDismissMode = .onDrag
         tbv.alwaysBounceVertical = false
-        //tbv.setNoDataView(WithImageName: "NoData", WithTitleStr: "No data found")
+        tbv.setNoDataView(WithImageName: "Monkey", WithTitleStr: "No data found")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //dataArr.count == 0 ? self.tbv.showNoDataView() : self.tbv.hideNoDataView()
-        dataArr.count == 0 ? self.tbv.setEmptyMessage("No data found") : self.tbv.restore()
+        dataArr.count == 0 ? self.tbv.showNoDataView() : self.tbv.hideNoDataView()
+        //dataArr.count == 0 ? self.tbv.setEmptyMessage("No data found") : self.tbv.restore()
         return dataArr.count
     }
     

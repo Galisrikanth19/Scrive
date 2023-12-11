@@ -21,9 +21,14 @@ class BaseViewController: UIViewController {
     }
     
     private func setupVC() {
-        self.navigationController?.navigationBar.isHidden = true
-        hideKeyboardOnTapView()
+        setupNavigationController()
         setupScrollview()
+        hideKeyboardOnTapView()
+    }
+    
+    private func setupNavigationController() {
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
     private func setupScrollview() {
