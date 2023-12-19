@@ -150,10 +150,12 @@ extension UIView {
     }
     
     var topSafeArea: CGFloat {
-        return self.safeAreaInsets.top
+        let window = UIApplication.shared.windows.first
+        return window?.safeAreaInsets.top ?? 0
     }
     
     var bottomSafeArea: CGFloat {
-        return self.safeAreaInsets.bottom
+        let window = UIApplication.shared.windows.first
+        return window?.safeAreaInsets.bottom ?? 0
     }
 }

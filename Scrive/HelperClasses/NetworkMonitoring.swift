@@ -3,6 +3,7 @@
 //  Created by Srikanth on 01/01/23
 
 import Network
+import UIKit
 
 class NetworkMonitoring {
     static let shared = NetworkMonitoring()
@@ -61,8 +62,10 @@ class NetworkMonitoring {
                 } else if path.usesInterfaceType(NWInterface.InterfaceType.other) {
                     message = "Application connected via Virtual networks or unknown types."
                 }
+                self.removeNoInternetNotification()
             } else {
                 message = "Application not connected to the internet"
+                self.addNoInternetNotification()
             }
             print(message)
         }
@@ -82,5 +85,66 @@ class NetworkMonitoring {
     
     deinit {
         stopMonitoring()
+    }
+    
+    private func removeNoInternetNotification() {
+        DispatchQueue.main.async{
+            let sceneDelegate = UIApplication.shared.connectedScenes
+                .first!.delegate as! SceneDelegate
+            for subView in sceneDelegate.window?.subviews ?? [] {
+                if subView.tag == 99 {
+                    UIView.animate(withDuration: 1.0, delay: 0, options: .transitionCrossDissolve, animations: {
+                        var frame  = subView.frame
+                        frame.size.height = 0
+                        subView.frame = frame
+                    }, completion: { completed in
+                        if completed {
+                            subView.removeFromSuperview()
+                        }
+                    })
+                    return
+                }
+            }
+        }
+    }
+    
+    private func addNoInternetNotification() {
+        DispatchQueue.main.async{
+            let sceneDelegate = UIApplication.shared.connectedScenes
+                    .first!.delegate as! SceneDelegate
+              
+            for subView in sceneDelegate.window?.subviews ?? [] {
+                if subView.tag == 99 {
+                    return
+                }
+            }
+            
+            let window = UIApplication.shared.windows.first
+            let topSafeArea = window?.safeAreaInsets.top ?? 0
+            
+            let noInternetView = UIView(frame: CGRectMake(0,
+                                                          0,
+                                                          (sceneDelegate.window?.frame.size.width ?? 0),
+                                                          0))
+            noInternetView.backgroundColor = .red
+            noInternetView.tag = 99
+            noInternetView.clipsToBounds = true
+            sceneDelegate.window?.addSubview((noInternetView))
+            
+            let errorLbl = UILabel(frame: CGRectMake(0,
+                                                     (topSafeArea),
+                                                     (sceneDelegate.window?.frame.size.width ?? 0),
+                                                     50))
+            errorLbl.text = "No internet"
+            errorLbl.textColor = .white
+            errorLbl.textAlignment = .center
+            noInternetView.addSubview(errorLbl)
+            
+            UIView.animate(withDuration: 1.0, delay: 0, options: .transitionCrossDissolve, animations: {
+                var frame  = noInternetView.frame
+                frame.size.height = (topSafeArea+50)
+                noInternetView.frame = frame
+            }, completion: nil)
+        }
     }
 }
