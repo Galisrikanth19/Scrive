@@ -113,6 +113,7 @@
 		2D974DAD2A36F9710081D369 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D974D9F2A36F9710081D369 /* Roboto-Bold.ttf */; };
 		2D974DAE2A36F9710081D369 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D974DA02A36F9710081D369 /* Roboto-Thin.ttf */; };
 		2D974DAF2A36F9710081D369 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D974DA12A36F9710081D369 /* Roboto-Black.ttf */; };
+		2D9E451F2B28382B00A188AD /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E451E2B28382B00A188AD /* DoubleExtensions.swift */; };
 		2DBD52912A1646FE003F83BF /* CheckBoxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBD52902A1646FE003F83BF /* CheckBoxVC.swift */; };
 		2DBD52932A16472A003F83BF /* CheckBoxSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DBD52922A16472A003F83BF /* CheckBoxSB.storyboard */; };
 		2DCFAF382A0F744300E6986C /* CollectionViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCFAF372A0F744300E6986C /* CollectionViewVC.swift */; };
@@ -125,6 +126,7 @@
 		2DE6206F2AE0C8AE00772B9B /* ContainerViewSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE6206E2AE0C8AE00772B9B /* ContainerViewSB.storyboard */; };
 		2DE620712AE0C8C600772B9B /* ParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE620702AE0C8C600772B9B /* ParentVC.swift */; };
 		2DE620732AE0C93500772B9B /* ChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE620722AE0C93500772B9B /* ChildVC.swift */; };
+		2DEF9ACA2B31BAF600960995 /* NetworkMonitoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF9AC92B31BAF600960995 /* NetworkMonitoring.swift */; };
 		7FB917D7882B8C2E085D2BFF /* Pods_Scrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F76732EE737779F8110F72 /* Pods_Scrive.framework */; };
 /* End PBXBuildFile section */
 
@@ -237,6 +239,7 @@
 		2D974D9F2A36F9710081D369 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		2D974DA02A36F9710081D369 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		2D974DA12A36F9710081D369 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		2D9E451E2B28382B00A188AD /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		2DBD52902A1646FE003F83BF /* CheckBoxVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxVC.swift; sourceTree = "<group>"; };
 		2DBD52922A16472A003F83BF /* CheckBoxSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CheckBoxSB.storyboard; sourceTree = "<group>"; };
 		2DCFAF372A0F744300E6986C /* CollectionViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewVC.swift; sourceTree = "<group>"; };
@@ -249,6 +252,7 @@
 		2DE6206E2AE0C8AE00772B9B /* ContainerViewSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContainerViewSB.storyboard; sourceTree = "<group>"; };
 		2DE620702AE0C8C600772B9B /* ParentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentVC.swift; sourceTree = "<group>"; };
 		2DE620722AE0C93500772B9B /* ChildVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildVC.swift; sourceTree = "<group>"; };
+		2DEF9AC92B31BAF600960995 /* NetworkMonitoring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitoring.swift; sourceTree = "<group>"; };
 		39F76732EE737779F8110F72 /* Pods_Scrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFD70DE1405E10376FF15EB /* Pods-Scrive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrive.debug.xcconfig"; path = "Target Support Files/Pods-Scrive/Pods-Scrive.debug.xcconfig"; sourceTree = "<group>"; };
 		B5F65044677EB0C4D0D8E215 /* Pods-Scrive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrive.release.xcconfig"; path = "Target Support Files/Pods-Scrive/Pods-Scrive.release.xcconfig"; sourceTree = "<group>"; };
@@ -403,6 +407,7 @@
 				2D3B4AB729D4BF5400E433D8 /* UIColorExtensions.swift */,
 				2D041BF629DFFF9900234843 /* UITextFieldExtensions.swift */,
 				2DCFAF3E2A0F760600E6986C /* UICollectionViewExtensions.swift */,
+				2D9E451E2B28382B00A188AD /* DoubleExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -500,6 +505,7 @@
 			isa = PBXGroup;
 			children = (
 				2D3B4B1729D4C06500E433D8 /* NoDataView */,
+				2DEF9AC92B31BAF600960995 /* NetworkMonitoring.swift */,
 				2D3B4B1029D4C06500E433D8 /* CheckBoxButton.swift */,
 				2D3B4B1129D4C06500E433D8 /* Swizzle.swift */,
 				2D3B4B1229D4C06500E433D8 /* CustomAlerts.swift */,
@@ -1074,6 +1080,8 @@
 				2D3B4AA729D4BF4500E433D8 /* WKWebVC.swift in Sources */,
 				2D3B4ABF29D4BF5400E433D8 /* UIButtonExtensions.swift in Sources */,
 				2D3B4B2529D4C06500E433D8 /* ScreenManager.swift in Sources */,
+				2D9E451F2B28382B00A188AD /* DoubleExtensions.swift in Sources */,
+				2DEF9ACA2B31BAF600960995 /* NetworkMonitoring.swift in Sources */,
 				2D3B4ABB29D4BF5400E433D8 /* WKWebViewExtensions.swift in Sources */,
 				2D3B4ACB29D4BF6A00E433D8 /* ApiEndPoints.swift in Sources */,
 				2D3B4ACC29D4BF6A00E433D8 /* APIManager.swift in Sources */,

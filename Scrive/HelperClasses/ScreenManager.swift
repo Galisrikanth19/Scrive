@@ -113,3 +113,19 @@ extension ScreenManager {
         return storyBoard.instantiateInitialViewController()!
     }
 }
+
+
+/*
+ Usage sourceCode
+ ************************************************************************************************
+ Case1:
+ LoginVC.push(storyboard: .loginSB)
+ 
+ 
+ Case2:
+ LoginVC.push(storyboard: .loginSB) { (loginVC) -> LoginVC in
+     loginVC.selCountryM = selCountryM
+     return loginVC
+ }
+ ************************************************************************************************
+ */

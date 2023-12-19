@@ -191,7 +191,7 @@ class APIManager {
         print("*************************************************************************************")
         print("RequestedURL -> \(response.request?.url?.absoluteString ?? "")")
         print("StatusCode -> \(response.response?.statusCode ?? 0)")
-        print("RequestDuration: \(response.metrics?.taskInterval.duration ?? 0.0) Secs")
+        print("RequestDuration: \((response.metrics?.taskInterval.duration ?? 0.0).doubleSpecifier) Secs")
         
         print("\n")
         print("AllHTTPHeaderFields -> ")

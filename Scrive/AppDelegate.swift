@@ -40,6 +40,7 @@ extension AppDelegate {
         
         initializeSwizzle()
         tableViewSectionHeaderTopPadding()
+        setupNetworkMonitoring()
         //configurePushNotifications(WithUIApplication: application)
     }
     
@@ -65,6 +66,10 @@ extension AppDelegate {
     
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         return orientationLock
+    }
+    
+    private func setupNetworkMonitoring() {
+        NetworkMonitoring.shared.startMonitoring()
     }
 }
 

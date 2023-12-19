@@ -26,6 +26,7 @@ class TableviewVC: BaseViewController {
     }
     
     private func loadStaticData() {
+        dataArr = []
         //dataArr = TbvListData.TbvModelArr
     }
 }
@@ -53,7 +54,7 @@ extension TableviewVC: UITableViewDataSource, UITableViewDelegate {
         tbv.showsVerticalScrollIndicator = false
         tbv.keyboardDismissMode = .onDrag
         tbv.alwaysBounceVertical = false
-        tbv.setNoDataView(WithImageName: "Monkey", WithTitleStr: "No data found")
+        tbv.setNoDataView(WithImageName: "ErrorImage", WithTitleStr: "No data found")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
