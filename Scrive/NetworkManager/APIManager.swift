@@ -172,7 +172,7 @@ class APIManager {
             headers: httpHeaders)
         .responseDecodable(of: T.self, decoder: camelCaseDecoder) { (afDataResponse) in
             //Debug response
-            self.debugResponse(WithResponse: afDataResponse)
+            self.debugResponse(WithResponse: afDataResponse, WithParameters: parameters)
             
             //Calling callback as request processed
             completionCallback(afDataResponse.data)
@@ -186,7 +186,7 @@ class APIManager {
         }
     }
     
-    private func debugResponse<T: Decodable>(WithResponse response: AFDataResponse<T>) {
+    private func debugResponse<T: Decodable>(WithResponse response: AFDataResponse<T>, WithParameters parameters: Parameters? = nil) {
         print("\n\n")
         print("*************************************************************************************")
         print("RequestedURL -> \(response.request?.url?.absoluteString ?? "")")
@@ -207,13 +207,18 @@ class APIManager {
         } else if (response.request?.httpMethod ?? "") == "POST" {
             print("\n")
             print("HttpMethod -> POST")
-            if let responseData = response.request?.httpBody {
-                if let json = try? JSONSerialization.jsonObject(with: responseData, options: .mutableContainers),
-                   let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
-                    print("Parameters -> ")
-                    print(String(decoding: jsonData, as: UTF8.self))
-                } else {
-                    assertionFailure("Malformed JSON")
+            if let parameters = parameters {
+                print("Parameters -> ")
+                print(parameters)
+            } else {
+                if let responseData = response.request?.httpBody {
+                    if let json = try? JSONSerialization.jsonObject(with: responseData, options: .mutableContainers),
+                       let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
+                        print("Parameters -> ")
+                        print(String(decoding: jsonData, as: UTF8.self))
+                    } else {
+                        assertionFailure("Malformed JSON")
+                    }
                 }
             }
         }
@@ -225,21 +230,53 @@ class APIManager {
                 print("\n")
                 print("Response -> ")
                 print(String(decoding: jsonData, as: UTF8.self))
-                print("*************************************************************************************")
-                print("\n\n")
             } catch let parsingError as NSError {
                 print("\n")
                 print("Error -> ")
                 print(parsingError.localizedDescription)
-                print("*************************************************************************************")
-                print("\n\n")
             }
         } else {
             print("\n")
             print("Error -> ")
             print(response.error!.asAFError?.localizedDescription ?? "")
-            print("*************************************************************************************")
-            print("\n\n")
+        }
+        
+        //Checking if any error occurs while decoding data in failure cases
+        switch(response.result) {
+            case .success:
+                break
+            case .failure(let error):
+                self.validateResponse(dataIs: response.data, resultType: T.self)
+        }
+        print("*************************************************************************************")
+        print("\n\n")
+    }
+    
+    private func validateResponse<T: Decodable>(dataIs: Data?, resultType: T.Type) {
+        guard let dataIs = dataIs else {
+            print("Data object is nil")
+            return
+        }
+        print("\n")
+        print("Checking if any error occurs while decoding data ->")
+        
+        do {
+            let decoder = JSONDecoder()
+            let messages = try decoder.decode(resultType.self, from: dataIs)
+            //print(messages as Any)
+        } catch DecodingError.dataCorrupted(let context) {
+            print(context)
+        } catch DecodingError.keyNotFound(let key, let context) {
+            print("Key '\(key)' not found:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+        } catch DecodingError.valueNotFound(let value, let context) {
+            print("Value '\(value)' not found:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+        } catch DecodingError.typeMismatch(let type, let context) {
+            print("Type '\(type)' mismatch:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+        } catch {
+            print("error: ", error)
         }
     }
 }
