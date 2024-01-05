@@ -73,6 +73,8 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
             RestAPIVC.push(storyboard: .restAPISB)
         case .containerView:
             ParentVC.push(storyboard: .containerViewSB)
+        case .calendarView:
+            CalendarVC.push(storyboard: .calendarSB)
         default:
             self.showToast(WithMessage: "No object selected")
         }

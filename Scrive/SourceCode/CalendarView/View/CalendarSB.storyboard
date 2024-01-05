@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--CalendarVC-->
+        <scene sceneID="7Id-PQ-6pp">
+            <objects>
+                <viewController storyboardIdentifier="CalendarVC" id="LeN-yz-YAg" customClass="CalendarVC" customModule="Scrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lbf-s7-2DQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgZ-Bv-8eY" customClass="TopBar" customModule="Scrive" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="107" id="qjy-gI-CYl"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiN-En-twm">
+                                <rect key="frame" x="20" y="127" width="353" height="50"/>
+                                <color key="backgroundColor" name="TitleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZDX-7j-osS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Add Event Single Calendar">
+                                    <color key="titleColor" name="BgColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iCornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addEventSingleCalendarBtnClicked:" destination="LeN-yz-YAg" eventType="touchUpInside" id="Upc-lL-8D6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hY2-BX-bKR">
+                                <rect key="frame" x="20" y="197" width="353" height="50"/>
+                                <color key="backgroundColor" name="TitleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="drQ-Vt-DQW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Add Event Multi Calendar">
+                                    <color key="titleColor" name="BgColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iCornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addEventMultiCalendarBtnClicked:" destination="LeN-yz-YAg" eventType="touchUpInside" id="64b-qA-bm5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7ft-dJ-jZX"/>
+                        <color key="backgroundColor" name="BgColor"/>
+                        <constraints>
+                            <constraint firstItem="hY2-BX-bKR" firstAttribute="leading" secondItem="hiN-En-twm" secondAttribute="leading" id="N92-Fz-Zuv"/>
+                            <constraint firstItem="zgZ-Bv-8eY" firstAttribute="trailing" secondItem="7ft-dJ-jZX" secondAttribute="trailing" id="WN6-bW-mHs"/>
+                            <constraint firstItem="hY2-BX-bKR" firstAttribute="top" secondItem="hiN-En-twm" secondAttribute="bottom" constant="20" id="Y1U-Ea-WL5"/>
+                            <constraint firstItem="hY2-BX-bKR" firstAttribute="trailing" secondItem="hiN-En-twm" secondAttribute="trailing" id="Ybq-IG-Vm9"/>
+                            <constraint firstItem="hiN-En-twm" firstAttribute="top" secondItem="zgZ-Bv-8eY" secondAttribute="bottom" constant="20" id="a0d-KU-jPG"/>
+                            <constraint firstItem="zgZ-Bv-8eY" firstAttribute="top" secondItem="Lbf-s7-2DQ" secondAttribute="top" id="b2E-34-eRs"/>
+                            <constraint firstItem="7ft-dJ-jZX" firstAttribute="trailing" secondItem="hiN-En-twm" secondAttribute="trailing" constant="20" id="ewC-tR-GQj"/>
+                            <constraint firstItem="hiN-En-twm" firstAttribute="leading" secondItem="7ft-dJ-jZX" secondAttribute="leading" constant="20" id="mAn-IV-oEG"/>
+                            <constraint firstItem="hY2-BX-bKR" firstAttribute="height" secondItem="hiN-En-twm" secondAttribute="height" id="nW8-el-xEl"/>
+                            <constraint firstItem="zgZ-Bv-8eY" firstAttribute="leading" secondItem="7ft-dJ-jZX" secondAttribute="leading" id="y04-KH-tkb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="topBar" destination="zgZ-Bv-8eY" id="OM3-aK-Xzm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8oJ-TM-Z8V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BgColor">
+            <color red="0.68199998140335083" green="0.76099997758865356" blue="0.71399998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TitleColor">
+            <color red="0.18000000715255737" green="0.2199999988079071" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

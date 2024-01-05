@@ -1,5 +1,5 @@
 //
-//  DateExtensions.swift
+//  DateHelper.swift
 //  Created by Srikanth on 11/10/23.
 
 import Foundation
@@ -20,7 +20,7 @@ import Foundation
  
  “HH”:    Represents the two-digit hour in a 24-hour format.
  24Hours: H(13), HH(13)
- 12Hours: h(11), HH(11)
+ 12Hours: h(11), hh(11)
  
  “mm”:    Represents the two-digit minute.
  Minutes: m(1), mm(01)
@@ -92,6 +92,10 @@ struct DateHelper {
             return DateHelper.today
         }
     }
+    
+    static func getDateOnAddingSeconds(WithDate selDate: Date = DateHelper.today, WithSeconds seconds: TimeInterval) -> Date {
+        return selDate.addingTimeInterval(seconds)
+    }
 }
 
 extension Date {
@@ -108,7 +112,7 @@ extension Date {
     func toString(WithDateFormat dateformat: DateFormat) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.calendar = .current
-        dateFormatter.locale = .current
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.timeZone = .current
         
         dateFormatter.dateFormat = dateformat.rawValue

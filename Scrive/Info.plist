@@ -74,5 +74,11 @@
 	<string>This app requires access to the photo library.</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+    <key>NSCalendarsUsageDescription</key>
+       <string>We need access to your calendar for scheduling events.</string>
+    <key>NSCalendarsFullAccessUsageDescription</key>
+       <string>We need access to your calendar for scheduling events.</string>
+    <key>NSCalendarsWriteOnlyAccessUsageDescription</key>
+       <string>We need access to your calendar for scheduling events.</string>
 </dict>
 </plist>

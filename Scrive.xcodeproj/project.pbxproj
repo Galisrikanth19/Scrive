@@ -99,6 +99,9 @@
 		2D89A8482A8A1628008A2CFB /* LoginRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89A8472A8A1628008A2CFB /* LoginRequestModel.swift */; };
 		2D89A84C2A8A3949008A2CFB /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89A84A2A8A3949008A2CFB /* BottomBar.swift */; };
 		2D89A84D2A8A3949008A2CFB /* BottomBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D89A84B2A8A3949008A2CFB /* BottomBar.xib */; };
+		2D8A9E6F2B47032800F05863 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A9E6E2B47032800F05863 /* CalendarVC.swift */; };
+		2D8A9E712B47034E00F05863 /* CalendarSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D8A9E702B47034E00F05863 /* CalendarSB.storyboard */; };
+		2D8A9E732B47038900F05863 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8A9E722B47038900F05863 /* CalendarManager.swift */; };
 		2D974DA22A36F9710081D369 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D974D932A36F9710081D369 /* OpenSans-SemiBold.ttf */; };
 		2D974DA32A36F9710081D369 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D974D942A36F9710081D369 /* OpenSans-Light.ttf */; };
 		2D974DA42A36F9710081D369 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2D974D952A36F9710081D369 /* OpenSans-Italic.ttf */; };
@@ -226,6 +229,9 @@
 		2D89A8472A8A1628008A2CFB /* LoginRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestModel.swift; sourceTree = "<group>"; };
 		2D89A84A2A8A3949008A2CFB /* BottomBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		2D89A84B2A8A3949008A2CFB /* BottomBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BottomBar.xib; sourceTree = "<group>"; };
+		2D8A9E6E2B47032800F05863 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		2D8A9E702B47034E00F05863 /* CalendarSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarSB.storyboard; sourceTree = "<group>"; };
+		2D8A9E722B47038900F05863 /* CalendarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 		2D974D932A36F9710081D369 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		2D974D942A36F9710081D369 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		2D974D952A36F9710081D369 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -284,6 +290,7 @@
 		2D3B4A8029D4BF4500E433D8 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				2D8A9E6A2B4702B300F05863 /* CalendarView */,
 				2DE6206A2AE0C87300772B9B /* ContainerView */,
 				2D89A83D2A8A0006008A2CFB /* RestAPI */,
 				2D6E814F2A67C77300F6E33E /* ScrollView */,
@@ -507,6 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				2D3B4B1729D4C06500E433D8 /* NoDataView */,
+				2D8A9E722B47038900F05863 /* CalendarManager.swift */,
 				2DEF9AC92B31BAF600960995 /* NetworkMonitoring.swift */,
 				2DE612D02B34B5D000C47137 /* DateHelper.swift */,
 				2D3B4B1029D4C06500E433D8 /* CheckBoxButton.swift */,
@@ -744,6 +752,39 @@
 			path = BottomBar;
 			sourceTree = "<group>";
 		};
+		2D8A9E6A2B4702B300F05863 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				2D8A9E6D2B4702E700F05863 /* Model */,
+				2D8A9E6C2B4702E000F05863 /* View */,
+				2D8A9E6B2B4702D500F05863 /* Controller */,
+			);
+			path = CalendarView;
+			sourceTree = "<group>";
+		};
+		2D8A9E6B2B4702D500F05863 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D8A9E6E2B47032800F05863 /* CalendarVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D8A9E6C2B4702E000F05863 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D8A9E702B47034E00F05863 /* CalendarSB.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D8A9E6D2B4702E700F05863 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		2D974D922A36F9710081D369 /* OpenSans */ = {
 			isa = PBXGroup;
 			children = (
@@ -971,6 +1012,7 @@
 				2D3B4B0029D4C05800E433D8 /* ProximaNova-Semibold.otf in Resources */,
 				2D3B4B0329D4C05800E433D8 /* ProximaNova-Black.otf in Resources */,
 				2D3B4AF629D4C05800E433D8 /* RoxboroughCF-Heavy.otf in Resources */,
+				2D8A9E712B47034E00F05863 /* CalendarSB.storyboard in Resources */,
 				2D3B4B0529D4C05800E433D8 /* Poppins-ExtraLight.ttf in Resources */,
 				2D3B4B0129D4C05800E433D8 /* ProximaNova-Bold.otf in Resources */,
 				2D974DA32A36F9710081D369 /* OpenSans-Light.ttf in Resources */,
@@ -1071,6 +1113,7 @@
 				2D3B4B2A29D4C06500E433D8 /* PushNotifications.swift in Sources */,
 				2D3B4B2829D4C06500E433D8 /* NoDataView.swift in Sources */,
 				2D6E814C2A67C63000F6E33E /* SampleActions.swift in Sources */,
+				2D8A9E6F2B47032800F05863 /* CalendarVC.swift in Sources */,
 				2D3B4B2629D4C06500E433D8 /* GlobalPrint.swift in Sources */,
 				2D6E7D622A0C0FE700A7BD3B /* TableviewVC.swift in Sources */,
 				2D89A8422A8A0043008A2CFB /* RestAPIVC.swift in Sources */,
@@ -1087,6 +1130,7 @@
 				2DEF9ACA2B31BAF600960995 /* NetworkMonitoring.swift in Sources */,
 				2D3B4ABB29D4BF5400E433D8 /* WKWebViewExtensions.swift in Sources */,
 				2D3B4ACB29D4BF6A00E433D8 /* ApiEndPoints.swift in Sources */,
+				2D8A9E732B47038900F05863 /* CalendarManager.swift in Sources */,
 				2D3B4ACC29D4BF6A00E433D8 /* APIManager.swift in Sources */,
 				2D3B4AAC29D4BF4500E433D8 /* TopBar.swift in Sources */,
 				2DCFAF3A2A0F748E00E6986C /* CollcViewModel.swift in Sources */,
