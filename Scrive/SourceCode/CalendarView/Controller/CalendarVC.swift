@@ -1,6 +1,6 @@
 //
 //  CalendarVC.swift
-//  Created by Webappclouds on 04/01/24.
+//  Created by Srikanth on 04/01/24.
 
 import UIKit
 
@@ -63,4 +63,3 @@ extension CalendarVC: CalendarEventDelegate {
         self.showErrorToast(WithMessage: errMsg)
     }
 }
-

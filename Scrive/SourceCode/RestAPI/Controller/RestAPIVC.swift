@@ -1,6 +1,6 @@
 //
 //  RestAPIVC.swift
-//  Created by Webappclouds on 14/08/23.
+//  Created by Srikanth on 14/08/23.
 
 import UIKit
 
@@ -42,7 +42,7 @@ extension RestAPIVC {
 // MARK: RestApis
 extension RestAPIVC {
     private func loginRequest() {
-        let parameters: Dictionary<String, Any> = ["userName" : "dina12@gmail.com",
+        let parameters: Dictionary<String, Any> = ["userName" : "dina@gmail.com",
                                                    "password" : "1234",
                                                    "Pushtoken": ""]
         self.showProgressHUD()
@@ -64,7 +64,7 @@ extension RestAPIVC {
     }
     
     private func loginRequestWithBody() {
-        let loginRequestM = LoginRequestModel(userName: "dina12@gmail.com",
+        let loginRequestM = LoginRequestModel(userName: "dina@gmail.com",
                                                        password: "1234",
                                                        Pushtoken: "")
         let data: Data? = try? JSONEncoder().encode(loginRequestM)

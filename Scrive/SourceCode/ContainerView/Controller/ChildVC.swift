@@ -18,3 +18,10 @@ extension ChildVC {
         didClickedOnChildVCCallBack?()
     }
 }
+
+//MARK: - LoadViewWithData
+extension ChildVC {
+    func loadViewWithData(WithData data: String) {
+        print(data)
+    }
+}

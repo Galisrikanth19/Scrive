@@ -19,15 +19,25 @@ class TableviewVC: BaseViewController {
         setupVC()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadData()
+    }
+    
+    deinit {
+        tbv.removeObserver(self, forKeyPath: "contentSize")
+    }
+}
+
+// MARK: - Customize screen
+extension TableviewVC {
     private func setupVC() {
         setupTopBar()
         setupTbv()
-        loadStaticData()
     }
     
-    private func loadStaticData() {
-        dataArr = []
-        //dataArr = TbvListData.TbvModelArr
+    private func loadData() {
+        loadStaticData()
     }
 }
 
@@ -54,7 +64,18 @@ extension TableviewVC: UITableViewDataSource, UITableViewDelegate {
         tbv.showsVerticalScrollIndicator = false
         tbv.keyboardDismissMode = .onDrag
         tbv.alwaysBounceVertical = false
+        tbv.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
         tbv.setNoDataView(WithImageName: "ErrorImage", WithTitleStr: "No data found")
+    }
+    
+    internal override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "contentSize" {
+            if let obj = object as? UITableView, obj == self.tbv {
+                if let newValue = change?[.newKey], let newSize = newValue as? CGSize {
+                    print("Tableview height: \(newSize.height)")
+                }
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,5 +88,13 @@ extension TableviewVC: UITableViewDataSource, UITableViewDelegate {
         let tbvCell = tableView.dequeueReusableCell(withIdentifier: TbvCell.className, for: indexPath) as! TbvCell
         tbvCell.configureCell(WithTbvModel: dataArr[indexPath.row])
         return tbvCell
+    }
+}
+
+// MARK: LoadData
+extension TableviewVC {
+    private func loadStaticData() {
+        dataArr = []
+        //dataArr = TbvListData.TbvModelArr
     }
 }

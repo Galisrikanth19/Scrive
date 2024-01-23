@@ -41,6 +41,13 @@ extension ParentVC {
 
 // MARK: Topbar
 extension ParentVC {
+    @IBAction func updateChildVCWithData(_ sender: UIButton) {
+        childVC?.loadViewWithData(WithData: "This is triggered from parent")
+    }
+}
+
+// MARK: ChildVC AllClosures
+extension ParentVC {
     private func allClosures() {
         childVC?.didClickedOnChildVCCallBack = { [weak self] () in
             guard let strongSelf = self else { return }

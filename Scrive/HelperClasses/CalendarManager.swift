@@ -32,7 +32,7 @@ protocol CalendarEventDelegate: AnyObject {
     func failedToAddEvent(WithErrorMsg errMsg: String)
 }
 
-class CalendarManager: NSObject, EKEventEditViewDelegate {
+final class CalendarManager: NSObject, EKEventEditViewDelegate {
     lazy var eventStore = EKEventStore()
     weak var viewController: UIViewController?
     weak var delegate: CalendarEventDelegate?

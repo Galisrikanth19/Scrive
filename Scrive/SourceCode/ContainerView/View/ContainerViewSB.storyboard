@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,6 +46,20 @@
                                     <segue destination="sXJ-Hg-yec" kind="embed" identifier="ChildVC" id="nkJ-v6-dMV"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRB-MI-IsV">
+                                <rect key="frame" x="30" y="130" width="150" height="30"/>
+                                <color key="backgroundColor" name="TitleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="xOI-4n-SMp"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Update childVC">
+                                    <color key="titleColor" name="BgColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateChildVCWithData:" destination="Djk-eW-H2z" eventType="touchUpInside" id="EtT-nu-CrP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wU1-WI-mdn"/>
                         <color key="backgroundColor" name="BgColor"/>
@@ -52,6 +67,8 @@
                             <constraint firstItem="vDa-ei-lto" firstAttribute="top" secondItem="TwC-tF-qtp" secondAttribute="top" id="C5O-fE-bDv"/>
                             <constraint firstItem="qkc-d6-pZP" firstAttribute="centerX" secondItem="TwC-tF-qtp" secondAttribute="centerX" id="FAc-bO-K8p"/>
                             <constraint firstItem="wU1-WI-mdn" firstAttribute="bottom" secondItem="x3R-cW-xjl" secondAttribute="bottom" id="W3A-1i-o1V"/>
+                            <constraint firstItem="cRB-MI-IsV" firstAttribute="top" secondItem="vDa-ei-lto" secondAttribute="bottom" constant="30" id="b33-zb-lea"/>
+                            <constraint firstItem="cRB-MI-IsV" firstAttribute="leading" secondItem="wU1-WI-mdn" secondAttribute="leading" constant="30" id="d4W-tm-Yqr"/>
                             <constraint firstItem="qkc-d6-pZP" firstAttribute="centerY" secondItem="TwC-tF-qtp" secondAttribute="centerY" id="jvt-gK-pyD"/>
                             <constraint firstItem="vDa-ei-lto" firstAttribute="trailing" secondItem="wU1-WI-mdn" secondAttribute="trailing" id="kj7-ZT-UGS"/>
                             <constraint firstItem="vDa-ei-lto" firstAttribute="leading" secondItem="wU1-WI-mdn" secondAttribute="leading" id="nr6-a1-Xi1"/>
@@ -83,7 +100,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4a-0P-yaA">
-                                <rect key="frame" x="313" y="150" width="60" height="30"/>
+                                <rect key="frame" x="313" y="116" width="60" height="30"/>
                                 <color key="backgroundColor" name="BgColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ofl-kn-1My"/>
