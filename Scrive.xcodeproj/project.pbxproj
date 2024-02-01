@@ -132,6 +132,7 @@
 		2DE620732AE0C93500772B9B /* ChildVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE620722AE0C93500772B9B /* ChildVC.swift */; };
 		2DEF9ACA2B31BAF600960995 /* NetworkMonitoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEF9AC92B31BAF600960995 /* NetworkMonitoring.swift */; };
 		7FB917D7882B8C2E085D2BFF /* Pods_Scrive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F76732EE737779F8110F72 /* Pods_Scrive.framework */; };
+		F32CA4442B6BDC9F00B26A2D /* CustomizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32CA4432B6BDC9F00B26A2D /* CustomizedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -264,6 +265,7 @@
 		39F76732EE737779F8110F72 /* Pods_Scrive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scrive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AFD70DE1405E10376FF15EB /* Pods-Scrive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrive.debug.xcconfig"; path = "Target Support Files/Pods-Scrive/Pods-Scrive.debug.xcconfig"; sourceTree = "<group>"; };
 		B5F65044677EB0C4D0D8E215 /* Pods-Scrive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scrive.release.xcconfig"; path = "Target Support Files/Pods-Scrive/Pods-Scrive.release.xcconfig"; sourceTree = "<group>"; };
+		F32CA4432B6BDC9F00B26A2D /* CustomizedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomizedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -514,6 +516,7 @@
 			isa = PBXGroup;
 			children = (
 				2D3B4B1729D4C06500E433D8 /* NoDataView */,
+				F32CA4432B6BDC9F00B26A2D /* CustomizedButton.swift */,
 				2D8A9E722B47038900F05863 /* CalendarManager.swift */,
 				2DEF9AC92B31BAF600960995 /* NetworkMonitoring.swift */,
 				2DE612D02B34B5D000C47137 /* DateHelper.swift */,
@@ -1165,6 +1168,7 @@
 				2DCFAF3F2A0F760600E6986C /* UICollectionViewExtensions.swift in Sources */,
 				2D3B4ACA29D4BF6A00E433D8 /* ApiConstants.swift in Sources */,
 				2D64B6CD29D4B1E0000CBDB8 /* AppDelegate.swift in Sources */,
+				F32CA4442B6BDC9F00B26A2D /* CustomizedButton.swift in Sources */,
 				2D64B6CF29D4B1E0000CBDB8 /* SceneDelegate.swift in Sources */,
 				2D3B4AAA29D4BF4500E433D8 /* NavController.swift in Sources */,
 				2DE620732AE0C93500772B9B /* ChildVC.swift in Sources */,
