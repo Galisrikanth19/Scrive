@@ -15,6 +15,8 @@ enum Storyboard : String {
     case restAPISB = "RestAPISB"
     case containerViewSB = "ContainerViewSB"
     case calendarSB = "CalendarSB"
+    case subMenuSB = "SubMenuSB"
+    case expandableSB = "ExpandableSB"
 }
 
 extension UIViewController {

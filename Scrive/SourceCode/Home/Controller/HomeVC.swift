@@ -58,7 +58,7 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         
         switch menuItem {
         case .tableview:
-            TableviewVC.push(storyboard: .tableviewSB)
+            SubMenuVC.push(storyboard: .subMenuSB)
         case .collectionView:
             CollectionViewVC.push(storyboard: .collectionViewSB)
         case .textfeild:
