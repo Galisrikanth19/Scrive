@@ -779,7 +779,6 @@
 		2D8A9E6A2B4702B300F05863 /* CalendarView */ = {
 			isa = PBXGroup;
 			children = (
-				2D8A9E6D2B4702E700F05863 /* Model */,
 				2D8A9E6C2B4702E000F05863 /* View */,
 				2D8A9E6B2B4702D500F05863 /* Controller */,
 			);
@@ -800,13 +799,6 @@
 				2D8A9E702B47034E00F05863 /* CalendarSB.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		2D8A9E6D2B4702E700F05863 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		2D974D922A36F9710081D369 /* OpenSans */ = {

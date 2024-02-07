@@ -24,7 +24,7 @@ class SubMenuVC: BaseViewController {
     }
 }
 
-// MARK: ConfigureViewController
+// MARK: CustomizeScreen
 extension SubMenuVC {
     private func setupVC() {
         setupTopBar()
@@ -36,7 +36,7 @@ extension SubMenuVC {
     }
 }
 
-// MARK: TopBar&BottomBar
+// MARK: TopBar
 extension SubMenuVC {
     private func setupTopBar() {
         topBar.updateTopBarTitle(WithLeftImage: "LeftArrow", WithTitleStr: "SubMenu")

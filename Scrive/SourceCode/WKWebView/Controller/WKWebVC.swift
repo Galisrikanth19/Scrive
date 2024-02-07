@@ -13,7 +13,10 @@ class WKWebVC: BaseViewController {
         super.viewDidLoad()
         setupVC()
     }
-    
+}
+
+// MARK: CustomizeScreen
+extension WKWebVC {
     private func setupVC() {
         invokeWebView()
     }

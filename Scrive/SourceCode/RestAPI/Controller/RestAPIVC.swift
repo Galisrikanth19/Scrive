@@ -11,7 +11,10 @@ class RestAPIVC: BaseViewController {
         super.viewDidLoad()
         setupVC()
     }
-    
+}
+
+// MARK: CustomizeScreen
+extension RestAPIVC {
     private func setupVC() {
         setupTopBar()
     }

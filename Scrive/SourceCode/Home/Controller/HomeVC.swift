@@ -19,10 +19,21 @@ class HomeVC: BaseViewController {
         setupVC()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadData()
+    }
+}
+
+// MARK: CustomizeScreen
+extension HomeVC {
     private func setupVC() {
         setupTbv()
+        updateBottomBar()
+    }
+    
+    private func loadData() {
         loadStaticData()
-        updateHeaderAndBottomBar()
     }
     
     private func loadStaticData() {
@@ -81,9 +92,9 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-// MARK: Topbar & Bottombar
+// MARK: Bottombar
 extension HomeVC {
-    private func updateHeaderAndBottomBar() {
+    private func updateBottomBar() {
         let randomInt = Int.random(in: 1..<5)
         switch randomInt {
         case 1:
@@ -97,6 +108,5 @@ extension HomeVC {
         default:
             print("")
         }
-        
     }
 }

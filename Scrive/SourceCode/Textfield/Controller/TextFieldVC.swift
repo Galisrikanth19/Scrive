@@ -14,7 +14,10 @@ class TextFieldVC: BaseViewController {
         super.viewDidLoad()
         setupVC()
     }
-    
+}
+
+// MARK: CustomizeScreen
+extension TextFieldVC {
     private func setupVC() {
         setupTopBar()
         setupTextFields()

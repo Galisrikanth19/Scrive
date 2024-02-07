@@ -19,9 +19,20 @@ class CollectionViewVC: UIViewController {
         setupVC()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadData()
+    }
+}
+
+// MARK: CustomizeScreen
+extension CollectionViewVC {
     private func setupVC() {
         setupTopBar()
         setupCollcView()
+    }
+    
+    private func loadData() {
         loadStaticData()
     }
     

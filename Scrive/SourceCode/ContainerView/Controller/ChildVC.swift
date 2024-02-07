@@ -12,14 +12,14 @@ class ChildVC: BaseViewController {
     }
 }
 
-//MARK: - IBActions
+//MARK: IBActions
 extension ChildVC {
     @IBAction func fireBtnClicked(_ sender: UIButton) {
         didClickedOnChildVCCallBack?()
     }
 }
 
-//MARK: - LoadViewWithData
+//MARK: LoadData
 extension ChildVC {
     func loadViewWithData(WithData data: String) {
         print(data)

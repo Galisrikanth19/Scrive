@@ -58,7 +58,7 @@ extension AppDelegate {
         UIViewController.swizzle()
     }
     
-    func tableViewSectionHeaderTopPadding() {
+    private func tableViewSectionHeaderTopPadding() {
         if #available(iOS 15.0, *) {
             UITableView.appearance().sectionHeaderTopPadding = 0
         }

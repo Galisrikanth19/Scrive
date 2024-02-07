@@ -11,7 +11,10 @@ class EnumVC: BaseViewController {
         super.viewDidLoad()
         setupVC()
     }
-    
+}
+
+// MARK: CustomizeScreen
+extension EnumVC {
     private func setupVC() {
         setupTopBar()
         
@@ -20,7 +23,21 @@ class EnumVC: BaseViewController {
         caseIterable()
         associatedValues()
     }
-    
+}
+
+// MARK: Topbar
+extension EnumVC {
+    private func setupTopBar() {
+        topBar.updateTopBarTitle(WithLeftImage: "LeftArrow", WithTitleStr: "Enum")
+        topBar.backBtnTapped = { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.navigationController?.popViewController(animated: true)
+        }
+    }
+}
+
+// MARK: Enum Usecases
+extension EnumVC {
     private func moveToDirection(WithCompassPoint compassPoint: CompassPoint) {
         switch compassPoint {
             case .north:
@@ -71,17 +88,6 @@ class EnumVC: BaseViewController {
                 print("UPC: \(numberSystem), \(manufacturer), \(product), \(check).")
             case .qrCode(let productCode):
                 print("QR code: \(productCode).")
-        }
-    }
-}
-
-// MARK: Topbar
-extension EnumVC {
-    private func setupTopBar() {
-        topBar.updateTopBarTitle(WithLeftImage: "LeftArrow", WithTitleStr: "Enum")
-        topBar.backBtnTapped = { [weak self] in
-            guard let strongSelf = self else { return }
-            strongSelf.navigationController?.popViewController(animated: true)
         }
     }
 }

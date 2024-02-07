@@ -29,7 +29,7 @@ class TableviewVC: BaseViewController {
     }
 }
 
-// MARK: - Customize screen
+// MARK: CustomizeScreen
 extension TableviewVC {
     private func setupVC() {
         setupTopBar()

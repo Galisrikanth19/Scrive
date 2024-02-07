@@ -18,14 +18,14 @@ class CalendarVC: BaseViewController {
     }
 }
 
-// MARK: - Customize screen
+// MARK: CustomizeScreen
 extension CalendarVC {
     private func setupVC() {
         setupTopBar()
     }
 }
 
-// MARK: - Topbar
+// MARK: Topbar
 extension CalendarVC {
     private func setupTopBar() {
         topBar.updateTopBarTitle(WithLeftImage: "LeftArrow", WithTitleStr: "CalendarVC")
@@ -36,7 +36,7 @@ extension CalendarVC {
     }
 }
 
-// MARK: - IBActions
+// MARK: IBActions
 extension CalendarVC {
     @IBAction func addEventSingleCalendarBtnClicked(_ sender: UIButton) {
         let calendarEventM = CalendarEventModel(title: "Single Calendar Event",
@@ -53,7 +53,7 @@ extension CalendarVC {
     }
 }
 
-// MARK: - CalendarEventDelegate
+// MARK: CalendarEventDelegate
 extension CalendarVC: CalendarEventDelegate {
     func eventAdded(WithMsg msg: String) {
         self.showToast(WithMessage: msg)

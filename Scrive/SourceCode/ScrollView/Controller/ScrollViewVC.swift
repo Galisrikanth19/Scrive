@@ -11,7 +11,10 @@ class ScrollViewVC: BaseViewController {
         super.viewDidLoad()
         setupVC()
     }
-    
+}
+
+// MARK: CustomizeScreen
+extension ScrollViewVC {
     private func setupVC() {
         setupTopBar()
     }

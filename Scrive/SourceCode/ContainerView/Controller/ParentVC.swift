@@ -15,16 +15,19 @@ class ParentVC: BaseViewController {
         setupVC()
     }
     
-    private func setupVC() {
-        setupTopBar()
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
         if identifier == ChildVC.className {
             childVC = segue.destination as? ChildVC
         }
         allClosures()
+    }
+}
+
+// MARK: CustomizeScreen
+extension ParentVC {
+    private func setupVC() {
+        setupTopBar()
     }
 }
 
@@ -39,7 +42,7 @@ extension ParentVC {
     }
 }
 
-// MARK: Topbar
+// MARK: IBActions
 extension ParentVC {
     @IBAction func updateChildVCWithData(_ sender: UIButton) {
         childVC?.loadViewWithData(WithData: "This is triggered from parent")

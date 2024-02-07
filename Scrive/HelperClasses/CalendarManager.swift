@@ -14,6 +14,9 @@ import EventKitUI
     <string>We need access to your calendar for scheduling events.</string>
  <key>NSCalendarsWriteOnlyAccessUsageDescription</key>
     <string>We need access to your calendar for scheduling events.</string>
+ 
+ <key>NSContactsUsageDescription</key>
+    <string>We need access to your contacts for scheduling events.</string>
  */
 
 enum CalendarType {

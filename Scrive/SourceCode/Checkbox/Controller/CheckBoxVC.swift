@@ -12,7 +12,10 @@ class CheckBoxVC: BaseViewController {
         super.viewDidLoad()
         setupVC()
     }
-    
+}
+
+// MARK: CustomizeScreen
+extension CheckBoxVC {
     private func setupVC() {
         setupTopBar()
         setCheckBox()

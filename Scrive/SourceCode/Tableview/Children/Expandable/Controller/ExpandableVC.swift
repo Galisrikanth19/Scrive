@@ -24,7 +24,7 @@ class ExpandableVC: BaseViewController {
     }
 }
 
-// MARK: ConfigureViewController
+// MARK: CustomizeScreen
 extension ExpandableVC {
     private func setupVC() {
         setupTopBar()
