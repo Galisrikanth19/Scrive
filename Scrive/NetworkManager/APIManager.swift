@@ -13,6 +13,21 @@ class APIManager {
         return decoder
     }()
     
+    private lazy var deviceInfo: (buildVersion: String, buildNumber: String, buildIdentifier: String, deviceType: String) = {
+        let mainBundle = Bundle.main
+        let infoDictionary = mainBundle.infoDictionary!
+        
+        let buildVersion        =   infoDictionary["CFBundleShortVersionString"] as! String
+        let buildNumber         =   infoDictionary["CFBundleVersion"] as! String
+        let bundleIdentifier    =   mainBundle.bundleIdentifier ?? ""
+        let deviceType          =   "ios"
+        
+        return (buildVersion,
+                buildNumber,
+                bundleIdentifier,
+                deviceType)
+    }()
+    
     private init() { }
     
     func request<T: Decodable>(WithUrlStr urlStr: String,
@@ -84,6 +99,11 @@ class APIManager {
         if let accessToken = AppSingleton.shared.accessToken {
             httpHeaders[ApiParamKeys.authorization] = "Bearer \(accessToken)"
         }
+        
+        httpHeaders[ApiHeaderKeys.buildVersion] = deviceInfo.buildVersion
+        httpHeaders[ApiHeaderKeys.buildNumber] = deviceInfo.buildNumber
+        httpHeaders[ApiHeaderKeys.buildIdentifier] = deviceInfo.buildIdentifier
+        httpHeaders[ApiHeaderKeys.deviceType] = deviceInfo.deviceType
         
         //Setting ParameterEncoding
         var encoding:ParameterEncoding!
