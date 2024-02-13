@@ -37,45 +37,54 @@ class APIManager {
                                WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
                                WithSuccessCallback successCallback: @escaping(T?) -> Void,
                                WithFailureCallback failureCallback: @escaping(String?) -> Void) {
-        //Removing all cached responses if any
-        URLCache.shared.removeAllCachedResponses()
-        
-        var urlRequest = URLRequest(url: try! urlStr.asURL())
-        urlRequest.httpMethod = httpMethod.rawValue
-        urlRequest.httpBody = data
-        
-        //Setting ParameterEncoding
-        var encoding:ParameterEncoding!
-        if httpMethod == .get {
-            encoding = URLEncoding.Destination.methodDependent as? ParameterEncoding ?? URLEncoding.default
-        } else {
-            encoding = JSONEncoding.default
-        }
-        urlRequest = try! encoding.encode(urlRequest, with: nil)
-        
-        //Adding HttpHeaders
-        urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        if let accessToken = AppSingleton.shared.accessToken {
-            urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: ApiParamKeys.authorization)
-        }
-        if let httpHeaders = httpHeaders {
-            for httpH in httpHeaders {
-                urlRequest.setValue(httpH.value, forHTTPHeaderField: httpH.name)
+        //Checking internet connection before making api-request
+        if checkInternetConnectivity(WithUrlStr: urlStr,
+                                     WithCompletionCallback: completionCallback,
+                                     WithFailureCallback: failureCallback) {
+            //Removing all cached responses if any
+            URLCache.shared.removeAllCachedResponses()
+            
+            var urlRequest = URLRequest(url: try! urlStr.asURL())
+            urlRequest.httpMethod = httpMethod.rawValue
+            urlRequest.httpBody = data
+            
+            //Setting ParameterEncoding
+            var encoding:ParameterEncoding!
+            if httpMethod == .get {
+                encoding = URLEncoding.Destination.methodDependent as? ParameterEncoding ?? URLEncoding.default
+            } else {
+                encoding = JSONEncoding.default
             }
-        }
-        
-        AF.request(urlRequest).responseDecodable(of: T.self, decoder: camelCaseDecoder) { (afDataResponse) in
-            //Debug response
-            self.debugResponse(WithResponse: afDataResponse)
+            urlRequest = try! encoding.encode(urlRequest, with: nil)
             
-            //Calling callback as request processed
-            completionCallback(afDataResponse.data)
+            //Adding HttpHeaders
+            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            if let accessToken = AppSingleton.shared.accessToken {
+                urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: ApiParamKeys.authorization)
+            }
+            if let httpHeaders = httpHeaders {
+                for httpH in httpHeaders {
+                    urlRequest.setValue(httpH.value, forHTTPHeaderField: httpH.name)
+                }
+            }
             
-            switch(afDataResponse.result) {
+            AF.request(urlRequest).responseDecodable(of: T.self, decoder: camelCaseDecoder) { (afDataResponse) in
+                //Debug response
+                let errorMsg: String? = self.debugResponse(WithResponse: afDataResponse)
+                
+                //Calling callback as request processed
+                completionCallback(afDataResponse.data)
+                
+                switch(afDataResponse.result) {
                 case .success:
                     successCallback(afDataResponse.value)
                 case .failure(let error):
-                    failureCallback(error.errorDescription)
+                    if let errorMsg = errorMsg {
+                        failureCallback(errorMsg)
+                    } else {
+                        failureCallback(error.errorDescription)
+                    }
+                }
             }
         }
     }
@@ -87,69 +96,82 @@ class APIManager {
                                WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
                                WithSuccessCallback successCallback: @escaping(T?) -> Void,
                                WithFailureCallback failureCallback: @escaping(String?) -> Void) {
-        //Removing all cached responses if any
-        URLCache.shared.removeAllCachedResponses()
-        
-        //Adding HttpHeaders
-        var httpHeaders: HTTPHeaders? = httpHeaders
-        if httpHeaders == nil {
-            httpHeaders = HTTPHeaders()
-        }
-        guard var httpHeaders = httpHeaders else { return }
-        if let accessToken = AppSingleton.shared.accessToken {
-            httpHeaders[ApiParamKeys.authorization] = "Bearer \(accessToken)"
-        }
-        
-        httpHeaders[ApiHeaderKeys.buildVersion] = deviceInfo.buildVersion
-        httpHeaders[ApiHeaderKeys.buildNumber] = deviceInfo.buildNumber
-        httpHeaders[ApiHeaderKeys.buildIdentifier] = deviceInfo.buildIdentifier
-        httpHeaders[ApiHeaderKeys.deviceType] = deviceInfo.deviceType
-        
-        //Setting ParameterEncoding
-        var encoding:ParameterEncoding!
-        if httpMethod == .get {
-            encoding = URLEncoding.Destination.methodDependent as? ParameterEncoding ?? URLEncoding.default
-        } else {
-            encoding = JSONEncoding.default
-        }
-        
-        AF.request(urlStr, method: httpMethod, parameters: parameters, encoding: encoding, headers: httpHeaders).responseDecodable(of: T.self, decoder: camelCaseDecoder) { (afDataResponse) in
-            //Debug response
-            self.debugResponse(WithResponse: afDataResponse)
+        //Checking internet connection before making api-request
+        if checkInternetConnectivity(WithUrlStr: urlStr,
+                                     WithCompletionCallback: completionCallback,
+                                     WithFailureCallback: failureCallback) {
+            //Removing all cached responses if any
+            URLCache.shared.removeAllCachedResponses()
             
-            //Calling callback as request processed
-            completionCallback(afDataResponse.data)
+            //Adding HttpHeaders
+            var httpHeaders: HTTPHeaders? = httpHeaders
+            if httpHeaders == nil {
+                httpHeaders = HTTPHeaders()
+            }
+            guard var httpHeaders = httpHeaders else { return }
+            if let accessToken = AppSingleton.shared.accessToken {
+                httpHeaders[ApiParamKeys.authorization] = "Bearer \(accessToken)"
+            }
             
-            switch(afDataResponse.result) {
+            httpHeaders[ApiHeaderKeys.buildVersion] = deviceInfo.buildVersion
+            httpHeaders[ApiHeaderKeys.buildNumber] = deviceInfo.buildNumber
+            httpHeaders[ApiHeaderKeys.buildIdentifier] = deviceInfo.buildIdentifier
+            httpHeaders[ApiHeaderKeys.deviceType] = deviceInfo.deviceType
+            
+            //Setting ParameterEncoding
+            var encoding:ParameterEncoding!
+            if httpMethod == .get {
+                encoding = URLEncoding.Destination.methodDependent as? ParameterEncoding ?? URLEncoding.default
+            } else {
+                encoding = JSONEncoding.default
+            }
+            
+            AF.request(urlStr, method: httpMethod, parameters: parameters, encoding: encoding, headers: httpHeaders).responseDecodable(of: T.self, decoder: camelCaseDecoder) { (afDataResponse) in
+                //Debug response
+                let errorMsg: String? = self.debugResponse(WithResponse: afDataResponse)
+                
+                //Calling callback as request processed
+                completionCallback(afDataResponse.data)
+                
+                switch(afDataResponse.result) {
                 case .success:
                     successCallback(afDataResponse.value)
                 case .failure(let error):
-                    failureCallback(error.errorDescription)
+                    if let errorMsg = errorMsg {
+                        failureCallback(errorMsg)
+                    } else {
+                        failureCallback(error.errorDescription)
+                    }
+                }
             }
         }
     }
     
     func multipartRequest<T: Decodable>(WithUrlStr urlStr: String,
-                               WithHttpMethod httpMethod: HTTPMethod,
-                               WithHeaders httpHeaders: HTTPHeaders? = nil,
-                               WithParameters parameters: Parameters? = nil,
-                               WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
-                               WithSuccessCallback successCallback: @escaping(T?) -> Void,
-                               WithFailureCallback failureCallback: @escaping(String?) -> Void) {
-        //Removing all cached responses if any
-        URLCache.shared.removeAllCachedResponses()
-        
-        //Adding HttpHeaders
-        var httpHeaders: HTTPHeaders? = httpHeaders
-        if httpHeaders == nil {
-            httpHeaders = HTTPHeaders()
-        }
-        guard var httpHeaders = httpHeaders else { return }
-        if let accessToken = AppSingleton.shared.accessToken {
-            httpHeaders[ApiParamKeys.authorization] = "Bearer \(accessToken)"
-        }
-        
-        AF.upload(multipartFormData: { multipartFormData in
+                                        WithHttpMethod httpMethod: HTTPMethod,
+                                        WithHeaders httpHeaders: HTTPHeaders? = nil,
+                                        WithParameters parameters: Parameters? = nil,
+                                        WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
+                                        WithSuccessCallback successCallback: @escaping(T?) -> Void,
+                                        WithFailureCallback failureCallback: @escaping(String?) -> Void) {
+        //Checking internet connection before making api-request
+        if checkInternetConnectivity(WithUrlStr: urlStr,
+                                     WithCompletionCallback: completionCallback,
+                                     WithFailureCallback: failureCallback) {
+            //Removing all cached responses if any
+            URLCache.shared.removeAllCachedResponses()
+            
+            //Adding HttpHeaders
+            var httpHeaders: HTTPHeaders? = httpHeaders
+            if httpHeaders == nil {
+                httpHeaders = HTTPHeaders()
+            }
+            guard var httpHeaders = httpHeaders else { return }
+            if let accessToken = AppSingleton.shared.accessToken {
+                httpHeaders[ApiParamKeys.authorization] = "Bearer \(accessToken)"
+            }
+            
+            AF.upload(multipartFormData: { multipartFormData in
                 if let parameters = parameters {
                     for (key, value) in parameters {
                         if value is UIImage {
@@ -187,26 +209,35 @@ class APIManager {
                     }
                 }
             },
-            to: urlStr,
-            method: httpMethod,
-            headers: httpHeaders)
-        .responseDecodable(of: T.self, decoder: camelCaseDecoder) { (afDataResponse) in
-            //Debug response
-            self.debugResponse(WithResponse: afDataResponse, WithParameters: parameters)
-            
-            //Calling callback as request processed
-            completionCallback(afDataResponse.data)
-            
-            switch(afDataResponse.result) {
+                      to: urlStr,
+                      method: httpMethod,
+                      headers: httpHeaders)
+            .responseDecodable(of: T.self, decoder: camelCaseDecoder) { (afDataResponse) in
+                //Debug response
+                let errorMsg: String? = self.debugResponse(WithResponse: afDataResponse, WithParameters: parameters)
+                
+                //Calling callback as request processed
+                completionCallback(afDataResponse.data)
+                
+                switch(afDataResponse.result) {
                 case .success:
                     successCallback(afDataResponse.value)
                 case .failure(let error):
-                    failureCallback(error.errorDescription)
+                    if let errorMsg = errorMsg {
+                        failureCallback(errorMsg)
+                    } else {
+                        failureCallback(error.errorDescription)
+                    }
+                }
             }
         }
     }
-    
-    private func debugResponse<T: Decodable>(WithResponse response: AFDataResponse<T>, WithParameters parameters: Parameters? = nil) {
+}
+
+extension APIManager {
+    private func debugResponse<T: Decodable>(WithResponse response: AFDataResponse<T>, WithParameters parameters: Parameters? = nil) -> String? {
+        var errorMsg: String?
+        
         print("\n\n")
         print("*************************************************************************************")
         print("RequestedURL -> \(response.request?.url?.absoluteString ?? "")")
@@ -266,37 +297,92 @@ class APIManager {
             case .success:
                 break
             case .failure(let error):
-                self.validateResponse(dataIs: response.data, resultType: T.self)
+                errorMsg = self.validateResponse(dataIs: response.data, resultType: T.self)
         }
         print("*************************************************************************************")
         print("\n\n")
+        
+        return errorMsg
     }
     
-    private func validateResponse<T: Decodable>(dataIs: Data?, resultType: T.Type) {
+    private func validateResponse<T: Decodable>(dataIs: Data?, resultType: T.Type) -> String? {
+        var errorMsg: String?
+        
         guard let dataIs = dataIs else {
             print("Data object is nil")
-            return
+            errorMsg = "Data object is nil"
+            return errorMsg
         }
         print("\n")
         print("Checking if any error occurs while decoding data ->")
         
         do {
             let decoder = JSONDecoder()
-            let messages = try decoder.decode(resultType.self, from: dataIs)
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let _ = try decoder.decode(resultType.self, from: dataIs)
             //print(messages as Any)
-        } catch DecodingError.dataCorrupted(let context) {
-            print(context)
-        } catch DecodingError.keyNotFound(let key, let context) {
+        }
+        
+        catch DecodingError.dataCorrupted(let context) {
+            print("Data Corrupted:", context)
+            errorMsg = "Data Corrupted: \(context)"
+        }
+        
+        catch DecodingError.keyNotFound(let key, let context) {
             print("Key '\(key)' not found:", context.debugDescription)
             print("codingPath:", context.codingPath)
-        } catch DecodingError.valueNotFound(let value, let context) {
+            
+            errorMsg = """
+                    Key '\(key)' not found: \(context.debugDescription)
+                    codingPath: \(context.codingPath)
+            """
+        }
+        
+        catch DecodingError.valueNotFound(let value, let context) {
             print("Value '\(value)' not found:", context.debugDescription)
             print("codingPath:", context.codingPath)
-        } catch DecodingError.typeMismatch(let type, let context) {
+            
+            errorMsg = """
+                    Value '\(value)' not found: \(context.debugDescription)
+                    codingPath: \(context.codingPath)
+            """
+        }
+        
+        catch DecodingError.typeMismatch(let type, let context) {
             print("Type '\(type)' mismatch:", context.debugDescription)
             print("codingPath:", context.codingPath)
-        } catch {
-            print("error: ", error)
+            
+            errorMsg = """
+                    Type '\(type)' mismatch,
+                    \(context.debugDescription)
+                    codingPath: \(context.codingPath)
+            """
         }
+        
+        catch {
+            print("Unknown error: ", error)
+            errorMsg = "Unknown error: \(error)"
+        }
+        
+        return errorMsg
+    }
+    
+    private func checkInternetConnectivity(WithUrlStr urlStr: String,
+                                           WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
+                                           WithFailureCallback failureCallback: @escaping(String?) -> Void) -> Bool {
+        if Alamofire.NetworkReachabilityManager.default?.isReachable == false {
+            print("\n\n")
+            print("*************************************************************************************")
+            print("RequestedURL -> \(urlStr)")
+            print("No internet connection available")
+            print("*************************************************************************************")
+            print("\n\n")
+            
+            completionCallback(nil)
+            failureCallback("No internet connection available")
+            return false
+        }
+        
+        return true
     }
 }
