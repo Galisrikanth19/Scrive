@@ -11,7 +11,7 @@ struct SampleActions {
                       WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
                       WithSuccessCallback successCallback: @escaping(ApiResponse?) -> Void,
                       WithFailureCallback failureCallback: @escaping(String?) -> Void) {
-        APIManager.shared.request(WithUrlStr: ApiEndPoints.login.url,
+        APIManager.shared.request(WithUrlStr: ApiEndPoints.login.baseUrl,
                                   WithHttpMethod: .post,
                                   WithHeaders: httpheaders,
                                   WithParameters: parameters,

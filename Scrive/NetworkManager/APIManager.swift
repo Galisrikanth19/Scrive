@@ -13,23 +13,22 @@ class APIManager {
         return decoder
     }()
     
-    private lazy var deviceInfo: (buildVersion: String, buildNumber: String, buildIdentifier: String, deviceType: String) = {
+    private lazy var defaultHttpHeaders: HTTPHeaders = {
+        var httpHeaders: HTTPHeaders = HTTPHeaders()
         let mainBundle = Bundle.main
         let infoDictionary = mainBundle.infoDictionary!
         
-        let buildVersion        =   infoDictionary["CFBundleShortVersionString"] as! String
-        let buildNumber         =   infoDictionary["CFBundleVersion"] as! String
-        let bundleIdentifier    =   mainBundle.bundleIdentifier ?? ""
-        let deviceType          =   "ios"
-        
-        return (buildVersion,
-                buildNumber,
-                bundleIdentifier,
-                deviceType)
+        httpHeaders[ApiHeaderKeys.buildVersion]    = (infoDictionary["CFBundleShortVersionString"] as? String ?? "")
+        httpHeaders[ApiHeaderKeys.buildNumber]     = (infoDictionary["CFBundleVersion"] as? String ?? "")
+        httpHeaders[ApiHeaderKeys.buildIdentifier] = (mainBundle.bundleIdentifier ?? "")
+        httpHeaders[ApiHeaderKeys.deviceType]      = "ios"
+        httpHeaders[ApiHeaderKeys.brandSlug]       = "spot-barbershop"
+        return httpHeaders
     }()
     
     private init() { }
     
+    // MARK: Request with data as parameter
     func request<T: Decodable>(WithUrlStr urlStr: String,
                                WithHttpMethod httpMethod: HTTPMethod,
                                WithHeaders httpHeaders: HTTPHeaders? = nil,
@@ -60,7 +59,7 @@ class APIManager {
             //Adding HttpHeaders
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
             if let accessToken = AppSingleton.shared.accessToken {
-                urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: ApiParamKeys.authorization)
+                urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: ApiHeaderKeys.authorization)
             }
             if let httpHeaders = httpHeaders {
                 for httpH in httpHeaders {
@@ -89,6 +88,7 @@ class APIManager {
         }
     }
     
+    // MARK: Request with dict as parameter
     func request<T: Decodable>(WithUrlStr urlStr: String,
                                WithHttpMethod httpMethod: HTTPMethod,
                                WithHeaders httpHeaders: HTTPHeaders? = nil,
@@ -106,17 +106,12 @@ class APIManager {
             //Adding HttpHeaders
             var httpHeaders: HTTPHeaders? = httpHeaders
             if httpHeaders == nil {
-                httpHeaders = HTTPHeaders()
+                httpHeaders = defaultHttpHeaders
             }
             guard var httpHeaders = httpHeaders else { return }
             if let accessToken = AppSingleton.shared.accessToken {
-                httpHeaders[ApiParamKeys.authorization] = "Bearer \(accessToken)"
+                httpHeaders[ApiHeaderKeys.authorization] = "Bearer \(accessToken)"
             }
-            
-            httpHeaders[ApiHeaderKeys.buildVersion] = deviceInfo.buildVersion
-            httpHeaders[ApiHeaderKeys.buildNumber] = deviceInfo.buildNumber
-            httpHeaders[ApiHeaderKeys.buildIdentifier] = deviceInfo.buildIdentifier
-            httpHeaders[ApiHeaderKeys.deviceType] = deviceInfo.deviceType
             
             //Setting ParameterEncoding
             var encoding:ParameterEncoding!
@@ -147,6 +142,7 @@ class APIManager {
         }
     }
     
+    // MARK: MultipartRequest
     func multipartRequest<T: Decodable>(WithUrlStr urlStr: String,
                                         WithHttpMethod httpMethod: HTTPMethod,
                                         WithHeaders httpHeaders: HTTPHeaders? = nil,
@@ -164,11 +160,11 @@ class APIManager {
             //Adding HttpHeaders
             var httpHeaders: HTTPHeaders? = httpHeaders
             if httpHeaders == nil {
-                httpHeaders = HTTPHeaders()
+                httpHeaders = defaultHttpHeaders
             }
             guard var httpHeaders = httpHeaders else { return }
             if let accessToken = AppSingleton.shared.accessToken {
-                httpHeaders[ApiParamKeys.authorization] = "Bearer \(accessToken)"
+                httpHeaders[ApiHeaderKeys.authorization] = "Bearer \(accessToken)"
             }
             
             AF.upload(multipartFormData: { multipartFormData in
@@ -296,7 +292,7 @@ extension APIManager {
         switch(response.result) {
             case .success:
                 break
-            case .failure(let error):
+            case .failure(_):
                 errorMsg = self.validateResponse(dataIs: response.data, resultType: T.self)
         }
         print("*************************************************************************************")

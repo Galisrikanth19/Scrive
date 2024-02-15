@@ -11,7 +11,7 @@ struct CommonActions {
                       WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
                       WithSuccessCallback successCallback: @escaping(LoginResponseModel?) -> Void,
                       WithFailureCallback failureCallback: @escaping(String?) -> Void) {
-        APIManager.shared.request(WithUrlStr: ApiEndPoints.login.url,
+        APIManager.shared.request(WithUrlStr: ApiEndPoints.login.baseUrl,
                                   WithHttpMethod: .post,
                                   WithHeaders: httpheaders,
                                   WithParameters: parameters,
@@ -25,7 +25,7 @@ struct CommonActions {
                       WithCompletionCallback completionCallback: @escaping(Data?) -> Void,
                       WithSuccessCallback successCallback: @escaping(LoginResponseModel?) -> Void,
                       WithFailureCallback failureCallback: @escaping(String?) -> Void) {
-        APIManager.shared.request(WithUrlStr: ApiEndPoints.login.url,
+        APIManager.shared.request(WithUrlStr: ApiEndPoints.login.baseUrl,
                                   WithHttpMethod: .post,
                                   WithHeaders: httpheaders,
                                   WithData: data,

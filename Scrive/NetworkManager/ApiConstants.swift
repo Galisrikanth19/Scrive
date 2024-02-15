@@ -9,12 +9,11 @@ struct ApiConstants {
 }
 
 struct ApiHeaderKeys {
+    static let authorization = "Authorization"
+    
     static let buildVersion = "build-version"
     static let buildNumber = "build-number"
     static let buildIdentifier = "build-identifier"
     static let deviceType = "device-type"
-}
-
-struct ApiParamKeys {
-    static let authorization = "Authorization"
+    static let brandSlug = "brand-slug"
 }

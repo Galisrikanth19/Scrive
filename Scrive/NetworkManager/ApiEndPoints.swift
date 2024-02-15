@@ -4,13 +4,15 @@
 
 import Foundation
 
+struct BaseUrls {
+    static let baseUrl = "https://stx.yoursalonapp.com:3050/api/"
+}
+
 enum ApiEndPoints: String {
-    case baseUrl = "https://stx.yoursalonapp.com:3050/api/"
-    
     case login = "users/login"
     
-    var url: String {
-        return ApiEndPoints.baseUrl.rawValue + self.rawValue
+    var baseUrl: String {
+        return BaseUrls.baseUrl + self.rawValue
     }
 }
 
@@ -18,6 +20,6 @@ enum ApiEndPoints: String {
 /*
  Usage sourceCode
  ************************************************************************************************
- let restaurantUrl = ApiEndPoints.login.url
+ let restaurantUrl = ApiEndPoints.login.baseUrl
  ************************************************************************************************
  */
