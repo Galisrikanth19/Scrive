@@ -67,20 +67,24 @@
 		<true/>
 	</dict>
 	<key>NSCalendarsUsageDescription</key>
-	<string>This app requires access to the calendar to add events.</string>
+	<string>We need access to your calendar for scheduling events.</string>
 	<key>NSCameraUsageDescription</key>
 	<string>This app requires access to the camera.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app requires access to the photo library.</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
-    <key>NSCalendarsUsageDescription</key>
-       <string>We need access to your calendar for scheduling events.</string>
-    <key>NSCalendarsFullAccessUsageDescription</key>
-       <string>We need access to your calendar for scheduling events.</string>
-    <key>NSCalendarsWriteOnlyAccessUsageDescription</key>
-       <string>We need access to your calendar for scheduling events.</string>
-    <key>NSContactsUsageDescription</key>
-       <string>We need access to your contacts for scheduling events.</string>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>We need access to your calendar for scheduling events.</string>
+	<key>NSCalendarsWriteOnlyAccessUsageDescription</key>
+	<string>We need access to your calendar for scheduling events.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>We need access to your contacts for scheduling events.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>App requires user’s location for better user experience.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>App requires user’s location for better user experience.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>App requires user’s location for better user experience.</string>
 </dict>
 </plist>

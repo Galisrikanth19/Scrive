@@ -66,28 +66,29 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let menuItem = dataArr[indexPath.row].menu
-        
         switch menuItem {
-        case .tableview:
-            SubMenuVC.push(storyboard: .subMenuSB)
-        case .collectionView:
-            CollectionViewVC.push(storyboard: .collectionViewSB)
-        case .textfeild:
-            TextFieldVC.push(storyboard: .textfieldSB)
-        case .checkbox:
-            CheckBoxVC.push(storyboard: .checkBoxSB)
-        case .enums:
-            EnumVC.push(storyboard: .enumSB)
-        case .scrollView:
-            ScrollViewVC.push(storyboard: .scrollViewSB)
-        case .restApi:
-            RestAPIVC.push(storyboard: .restAPISB)
-        case .containerView:
-            ParentVC.push(storyboard: .containerViewSB)
-        case .calendarView:
-            CalendarVC.push(storyboard: .calendarSB)
-        default:
-            self.showToast(WithMessage: "No object selected")
+            case .tableview:
+                SubMenuVC.push(storyboard: .subMenuSB)
+            case .collectionView:
+                CollectionViewVC.push(storyboard: .collectionViewSB)
+            case .textfeild:
+                TextFieldVC.push(storyboard: .textfieldSB)
+            case .checkbox:
+                CheckBoxVC.push(storyboard: .checkBoxSB)
+            case .enums:
+                EnumVC.push(storyboard: .enumSB)
+            case .scrollView:
+                ScrollViewVC.push(storyboard: .scrollViewSB)
+            case .restApi:
+                RestAPIVC.push(storyboard: .restAPISB)
+            case .containerView:
+                ParentVC.push(storyboard: .containerViewSB)
+            case .calendarView:
+                CalendarVC.push(storyboard: .calendarSB)
+            case .locationView:
+                LocationVC.push(storyboard: .locationSB)
+            default:
+                self.showToast(WithMessage: "No object selected")
         }
     }
 }

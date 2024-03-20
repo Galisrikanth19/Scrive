@@ -16,6 +16,7 @@ enum MenuType: String {
     case restApi = "RestAPI"
     case containerView = "ContainerView"
     case calendarView = "CalendarView"
+    case locationView = "LocationView"
 }
 
 struct HomeModel {
@@ -34,6 +35,7 @@ struct HomeData {
         HomeModel(menu: .scrollView),
         HomeModel(menu: .restApi),
         HomeModel(menu: .containerView),
-        HomeModel(menu: .calendarView)
+        HomeModel(menu: .calendarView),
+        HomeModel(menu: .locationView)
     ]
 }

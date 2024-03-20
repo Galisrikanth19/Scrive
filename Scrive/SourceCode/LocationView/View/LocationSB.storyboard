@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--LocationVC-->
+        <scene sceneID="blH-a6-ffC">
+            <objects>
+                <viewController storyboardIdentifier="LocationVC" id="DnB-dV-jbn" customClass="LocationVC" customModule="Scrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ob2-05-FF4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCV-Ru-JyY" customClass="TopBar" customModule="Scrive" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="107" id="vgy-Mo-jWz"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kf9-6y-3rg">
+                                <rect key="frame" x="20" y="127" width="353" height="50"/>
+                                <color key="backgroundColor" name="TitleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ush-qr-9Yl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Get Location Once">
+                                    <color key="titleColor" name="BgColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iCornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getLocationOnlyOnce:" destination="DnB-dV-jbn" eventType="touchUpInside" id="doG-Az-aMu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyc-Sg-9vE">
+                                <rect key="frame" x="20" y="197" width="353" height="50"/>
+                                <color key="backgroundColor" name="TitleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JDo-uf-1hY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Get Location Continues">
+                                    <color key="titleColor" name="BgColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iCornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getLocationContinues:" destination="DnB-dV-jbn" eventType="touchUpInside" id="76P-Bw-qxe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated Location" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msB-w0-e1L">
+                                <rect key="frame" x="20" y="777.66666666666663" width="353" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="TitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1K8-Yk-5jx"/>
+                        <color key="backgroundColor" name="BgColor"/>
+                        <constraints>
+                            <constraint firstItem="1K8-Yk-5jx" firstAttribute="bottom" secondItem="msB-w0-e1L" secondAttribute="bottom" constant="20" id="8rA-2c-jre"/>
+                            <constraint firstItem="Kyc-Sg-9vE" firstAttribute="top" secondItem="kf9-6y-3rg" secondAttribute="bottom" constant="20" id="8x8-y4-fnh"/>
+                            <constraint firstItem="MCV-Ru-JyY" firstAttribute="top" secondItem="ob2-05-FF4" secondAttribute="top" id="A4d-si-zMZ"/>
+                            <constraint firstItem="kf9-6y-3rg" firstAttribute="leading" secondItem="1K8-Yk-5jx" secondAttribute="leading" constant="20" id="Enf-QM-MIU"/>
+                            <constraint firstItem="1K8-Yk-5jx" firstAttribute="trailing" secondItem="kf9-6y-3rg" secondAttribute="trailing" constant="20" id="FYk-QV-3kW"/>
+                            <constraint firstItem="MCV-Ru-JyY" firstAttribute="trailing" secondItem="1K8-Yk-5jx" secondAttribute="trailing" id="IeS-xT-brL"/>
+                            <constraint firstItem="Kyc-Sg-9vE" firstAttribute="height" secondItem="kf9-6y-3rg" secondAttribute="height" id="PYz-J0-sDY"/>
+                            <constraint firstItem="kf9-6y-3rg" firstAttribute="top" secondItem="MCV-Ru-JyY" secondAttribute="bottom" constant="20" id="Rtr-8x-0Rj"/>
+                            <constraint firstItem="Kyc-Sg-9vE" firstAttribute="leading" secondItem="kf9-6y-3rg" secondAttribute="leading" id="VD9-fK-tTR"/>
+                            <constraint firstItem="1K8-Yk-5jx" firstAttribute="trailing" secondItem="msB-w0-e1L" secondAttribute="trailing" constant="20" id="Zme-vz-iXk"/>
+                            <constraint firstItem="Kyc-Sg-9vE" firstAttribute="trailing" secondItem="kf9-6y-3rg" secondAttribute="trailing" id="feF-HP-YnK"/>
+                            <constraint firstItem="MCV-Ru-JyY" firstAttribute="leading" secondItem="1K8-Yk-5jx" secondAttribute="leading" id="h67-J4-AzP"/>
+                            <constraint firstItem="msB-w0-e1L" firstAttribute="leading" secondItem="1K8-Yk-5jx" secondAttribute="leading" constant="20" id="wc3-UW-Ap3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="locationLbl" destination="msB-w0-e1L" id="H9I-nM-xhZ"/>
+                        <outlet property="topBar" destination="MCV-Ru-JyY" id="iFM-Xt-xqR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywa-Gc-H1g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="-13"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BgColor">
+            <color red="0.68199998140335083" green="0.76099997758865356" blue="0.71399998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TitleColor">
+            <color red="0.18000000715255737" green="0.2199999988079071" blue="0.25099998712539673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

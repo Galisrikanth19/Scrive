@@ -17,6 +17,7 @@ enum Storyboard : String {
     case calendarSB = "CalendarSB"
     case subMenuSB = "SubMenuSB"
     case expandableSB = "ExpandableSB"
+    case locationSB = "LocationSB"
 }
 
 extension UIViewController {

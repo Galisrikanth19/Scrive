@@ -142,6 +142,9 @@
 		F32CA46A2B6C106C00B26A2D /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32CA4672B6C106C00B26A2D /* SectionModel.swift */; };
 		F32CA46C2B6C109000B26A2D /* ExpandableSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F32CA46B2B6C109000B26A2D /* ExpandableSB.storyboard */; };
 		F32CA46E2B6C10BC00B26A2D /* ExpandableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32CA46D2B6C10BC00B26A2D /* ExpandableVC.swift */; };
+		F34584772BAAC475009F68F3 /* LocationSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F34584762BAAC475009F68F3 /* LocationSB.storyboard */; };
+		F34584792BAAC499009F68F3 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34584782BAAC499009F68F3 /* LocationVC.swift */; };
+		F345847B2BAAC5D9009F68F3 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F345847A2BAAC5D9009F68F3 /* LocationManager.swift */; };
 		F3C7A1452B71BF3C00144171 /* ExpandableTbvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7A1442B71BF3C00144171 /* ExpandableTbvCell.swift */; };
 		F3C7A1472B71C09C00144171 /* ExpandableHeaderTbvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C7A1462B71C09C00144171 /* ExpandableHeaderTbvCell.swift */; };
 /* End PBXBuildFile section */
@@ -286,6 +289,9 @@
 		F32CA4672B6C106C00B26A2D /* SectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 		F32CA46B2B6C109000B26A2D /* ExpandableSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ExpandableSB.storyboard; sourceTree = "<group>"; };
 		F32CA46D2B6C10BC00B26A2D /* ExpandableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableVC.swift; sourceTree = "<group>"; };
+		F34584762BAAC475009F68F3 /* LocationSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LocationSB.storyboard; sourceTree = "<group>"; };
+		F34584782BAAC499009F68F3 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
+		F345847A2BAAC5D9009F68F3 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		F3C7A1442B71BF3C00144171 /* ExpandableTbvCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTbvCell.swift; sourceTree = "<group>"; };
 		F3C7A1462B71C09C00144171 /* ExpandableHeaderTbvCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderTbvCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,6 +320,7 @@
 		2D3B4A8029D4BF4500E433D8 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				F34584732BAAC44E009F68F3 /* LocationView */,
 				2D8A9E6A2B4702B300F05863 /* CalendarView */,
 				2DE6206A2AE0C87300772B9B /* ContainerView */,
 				2D89A83D2A8A0006008A2CFB /* RestAPI */,
@@ -539,6 +546,7 @@
 			children = (
 				2D3B4B1729D4C06500E433D8 /* NoDataView */,
 				F32CA4432B6BDC9F00B26A2D /* CustomizedButton.swift */,
+				F345847A2BAAC5D9009F68F3 /* LocationManager.swift */,
 				2D8A9E722B47038900F05863 /* CalendarManager.swift */,
 				2DEF9AC92B31BAF600960995 /* NetworkMonitoring.swift */,
 				2DE612D02B34B5D000C47137 /* DateHelper.swift */,
@@ -1048,6 +1056,31 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		F34584732BAAC44E009F68F3 /* LocationView */ = {
+			isa = PBXGroup;
+			children = (
+				F34584752BAAC463009F68F3 /* View */,
+				F34584742BAAC45C009F68F3 /* Controller */,
+			);
+			path = LocationView;
+			sourceTree = "<group>";
+		};
+		F34584742BAAC45C009F68F3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F34584782BAAC499009F68F3 /* LocationVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F34584752BAAC463009F68F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F34584762BAAC475009F68F3 /* LocationSB.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F3C7A1432B71BF2200144171 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -1142,6 +1175,7 @@
 				2D3B4B0529D4C05800E433D8 /* Poppins-ExtraLight.ttf in Resources */,
 				2D3B4B0129D4C05800E433D8 /* ProximaNova-Bold.otf in Resources */,
 				2D974DA32A36F9710081D369 /* OpenSans-Light.ttf in Resources */,
+				F34584772BAAC475009F68F3 /* LocationSB.storyboard in Resources */,
 				2D3B4AF429D4C05800E433D8 /* Colors.xcassets in Resources */,
 				2D974DAB2A36F9710081D369 /* Roboto-Regular.ttf in Resources */,
 				2D89A8442A8A006F008A2CFB /* RestAPISB.storyboard in Resources */,
@@ -1267,10 +1301,12 @@
 				2DCFAF3A2A0F748E00E6986C /* CollcViewModel.swift in Sources */,
 				2DE612D12B34B5D000C47137 /* DateHelper.swift in Sources */,
 				F3C7A1472B71C09C00144171 /* ExpandableHeaderTbvCell.swift in Sources */,
+				F345847B2BAAC5D9009F68F3 /* LocationManager.swift in Sources */,
 				2DE620712AE0C8C600772B9B /* ParentVC.swift in Sources */,
 				2D64B6D129D4B1E0000CBDB8 /* BaseViewController.swift in Sources */,
 				F32CA4612B6C0B2300B26A2D /* SubMenuVC.swift in Sources */,
 				2D3B4ABD29D4BF5400E433D8 /* UIViewExtensions.swift in Sources */,
+				F34584792BAAC499009F68F3 /* LocationVC.swift in Sources */,
 				2D3B4ABA29D4BF5400E433D8 /* StringExtensions.swift in Sources */,
 				2D3B4B2F29D4C06500E433D8 /* Observable.swift in Sources */,
 				2D3B4ACD29D4BF6A00E433D8 /* ApiActions.swift in Sources */,
