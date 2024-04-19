@@ -18,6 +18,7 @@ enum Storyboard : String {
     case subMenuSB = "SubMenuSB"
     case expandableSB = "ExpandableSB"
     case locationSB = "LocationSB"
+    case htmlStringSB = "HtmlStringSB"
 }
 
 extension UIViewController {

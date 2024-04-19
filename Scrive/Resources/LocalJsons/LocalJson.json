@@ -1,0 +1,20 @@
+{
+  "status" : true,
+  "message" : "Success.",
+  "data" : {
+    "tax_amount" : "$0.00",
+    "sub_total" : "$89.00",
+    "total_amount" : "$0.00",
+    "remaining" : "",
+    "message" : {
+      "show_price_list" : false,
+      "prepaid_single" : "Appointment confirmation only, payments processed at the time of service.",
+      "payment_info_key" : "<h3 style=\"color:red\"><font color=\"red\">Confirm Your Appointment:<\/font><\/h3>",
+      "show_total_key" : "Due at time of service",
+      "prepaid_group" : "Appointment confirmation only, payments processed at the time of service",
+      "payment_info" : "<b style=\"color:red\"><font color=\"red\">Credit card info is required only to confirm your appointment.Nothing will be charged at this time.Your float will be charged when you complete your service at which time any prepaid vouchers or certificates may be applied.<\/font><\/b>",
+      "pacemakerDesp" : "<p>I have consulted with a medical professional regarding any potential health risks associated with existing medical conditions <span style=\"color:red\">and\\or pacemakers<\/span> if applicable.<\/p>"
+    },
+    "discount_amount" : "$0.00"
+  }
+}

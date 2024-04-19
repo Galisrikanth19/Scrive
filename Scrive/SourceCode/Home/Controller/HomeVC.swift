@@ -87,6 +87,8 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
                 CalendarVC.push(storyboard: .calendarSB)
             case .locationView:
                 LocationVC.push(storyboard: .locationSB)
+            case .htmlView:
+                HtmlStringVC.push(storyboard: .htmlStringSB)
             default:
                 self.showToast(WithMessage: "No object selected")
         }

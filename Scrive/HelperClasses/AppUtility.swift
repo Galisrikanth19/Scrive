@@ -15,4 +15,23 @@ struct AppUtility {
             }
         }
     }
+    
+    static func readJSONFromFile() -> MyResponseModel? {
+        guard let fileURL = Bundle.main.url(forResource: "LocalJson", withExtension: "json") else {
+            print("File not found")
+            return nil
+        }
+        
+        do {
+            let data = try Data(contentsOf: fileURL)
+            
+            let decoder = JSONDecoder()
+            let myResponseModel = try decoder.decode(MyResponseModel.self, from: data)
+            return myResponseModel
+        } catch {
+            print("Error reading JSON from file:", error)
+        }
+        
+        return nil
+    }
 }

@@ -23,19 +23,19 @@ extension String {
     }
 }
 
-// MARK: HTML
+// MARK: Html attributed string
 extension String {
-    var htmlToAttributedString: NSAttributedString? {
-        guard let data = data(using: .utf8) else { return nil }
+    func htmlAttributed() -> NSAttributedString? {
+        guard let data = self.data(using: .utf8) else { return nil }
         do {
-            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding:String.Encoding.utf8.rawValue], documentAttributes: nil)
+            let font = UIFont.italicSystemFont(ofSize: 16)
+            let attributedString = try NSMutableAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
+            attributedString.addAttribute(.font, value: font, range: NSRange(location: 0, length: attributedString.length))
+            return attributedString
         } catch {
+            print("Error converting HTML string to attributed string:", error)
             return nil
         }
-    }
-    
-    var htmlToString: String {
-        return htmlToAttributedString?.string ?? ""
     }
 }
 

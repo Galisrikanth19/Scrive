@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11D161C02BD2E7F0001C6B49 /* HtmlStringSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D161BF2BD2E7F0001C6B49 /* HtmlStringSB.storyboard */; };
+		11D161C22BD2E862001C6B49 /* HtmlStringVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D161C12BD2E862001C6B49 /* HtmlStringVC.swift */; };
+		11D161C52BD2EC1A001C6B49 /* MyResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D161C42BD2EC1A001C6B49 /* MyResponseModel.swift */; };
+		11D161C82BD2EC7A001C6B49 /* LocalJson.json in Resources */ = {isa = PBXBuildFile; fileRef = 11D161C72BD2EC7A001C6B49 /* LocalJson.json */; };
 		2D041BF729DFFF9900234843 /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D041BF629DFFF9900234843 /* UITextFieldExtensions.swift */; };
 		2D3B4A7F29D4BE1200E433D8 /* ReadMe in Resources */ = {isa = PBXBuildFile; fileRef = 2D3B4A7E29D4BE1200E433D8 /* ReadMe */; };
 		2D3B4A9F29D4BF4500E433D8 /* HomeTbvCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B4A8429D4BF4500E433D8 /* HomeTbvCell.swift */; };
@@ -150,6 +154,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11D161BF2BD2E7F0001C6B49 /* HtmlStringSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HtmlStringSB.storyboard; sourceTree = "<group>"; };
+		11D161C12BD2E862001C6B49 /* HtmlStringVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlStringVC.swift; sourceTree = "<group>"; };
+		11D161C42BD2EC1A001C6B49 /* MyResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyResponseModel.swift; sourceTree = "<group>"; };
+		11D161C72BD2EC7A001C6B49 /* LocalJson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocalJson.json; sourceTree = "<group>"; };
 		2D041BF629DFFF9900234843 /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
 		2D3B4A7E29D4BE1200E433D8 /* ReadMe */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe; sourceTree = "<group>"; };
 		2D3B4A8429D4BF4500E433D8 /* HomeTbvCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTbvCell.swift; sourceTree = "<group>"; };
@@ -317,9 +325,52 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		11D161BC2BD2E7BA001C6B49 /* HtmlStringView */ = {
+			isa = PBXGroup;
+			children = (
+				11D161C32BD2EBFE001C6B49 /* Model */,
+				11D161BE2BD2E7DB001C6B49 /* View */,
+				11D161BD2BD2E7D4001C6B49 /* Controller */,
+			);
+			path = HtmlStringView;
+			sourceTree = "<group>";
+		};
+		11D161BD2BD2E7D4001C6B49 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				11D161C12BD2E862001C6B49 /* HtmlStringVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		11D161BE2BD2E7DB001C6B49 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11D161BF2BD2E7F0001C6B49 /* HtmlStringSB.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		11D161C32BD2EBFE001C6B49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11D161C42BD2EC1A001C6B49 /* MyResponseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		11D161C62BD2EC5D001C6B49 /* LocalJsons */ = {
+			isa = PBXGroup;
+			children = (
+				11D161C72BD2EC7A001C6B49 /* LocalJson.json */,
+			);
+			path = LocalJsons;
+			sourceTree = "<group>";
+		};
 		2D3B4A8029D4BF4500E433D8 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				11D161BC2BD2E7BA001C6B49 /* HtmlStringView */,
 				F34584732BAAC44E009F68F3 /* LocationView */,
 				2D8A9E6A2B4702B300F05863 /* CalendarView */,
 				2DE6206A2AE0C87300772B9B /* ContainerView */,
@@ -476,6 +527,7 @@
 		2D3B4AD429D4C05800E433D8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				11D161C62BD2EC5D001C6B49 /* LocalJsons */,
 				2D3B4AD729D4C05800E433D8 /* Fonts */,
 				2D3B4AD529D4C05800E433D8 /* Colors.xcassets */,
 				2D3B4AD629D4C05800E433D8 /* Assets.xcassets */,
@@ -1169,6 +1221,7 @@
 				2DCFAF412A0F771000E6986C /* CollectionViewSB.storyboard in Resources */,
 				2D3B4AAB29D4BF4500E433D8 /* TopBar.xib in Resources */,
 				2D3B4B0029D4C05800E433D8 /* ProximaNova-Semibold.otf in Resources */,
+				11D161C02BD2E7F0001C6B49 /* HtmlStringSB.storyboard in Resources */,
 				2D3B4B0329D4C05800E433D8 /* ProximaNova-Black.otf in Resources */,
 				2D3B4AF629D4C05800E433D8 /* RoxboroughCF-Heavy.otf in Resources */,
 				2D8A9E712B47034E00F05863 /* CalendarSB.storyboard in Resources */,
@@ -1194,6 +1247,7 @@
 				2D3B4AFC29D4C05800E433D8 /* RoxboroughCF-ExtraBold.otf in Resources */,
 				2D6E7D6B2A0C101F00A7BD3B /* TextfieldSB.storyboard in Resources */,
 				2D3B4B0229D4C05800E433D8 /* ProximaNova-Medium.otf in Resources */,
+				11D161C82BD2EC7A001C6B49 /* LocalJson.json in Resources */,
 				2D89A84D2A8A3949008A2CFB /* BottomBar.xib in Resources */,
 				2D3B4B0D29D4C05800E433D8 /* Poppins-SemiBold.ttf in Resources */,
 				2D974DA72A36F9710081D369 /* OpenSans-Medium.ttf in Resources */,
@@ -1298,6 +1352,7 @@
 				2D8A9E732B47038900F05863 /* CalendarManager.swift in Sources */,
 				2D3B4ACC29D4BF6A00E433D8 /* APIManager.swift in Sources */,
 				2D3B4AAC29D4BF4500E433D8 /* TopBar.swift in Sources */,
+				11D161C22BD2E862001C6B49 /* HtmlStringVC.swift in Sources */,
 				2DCFAF3A2A0F748E00E6986C /* CollcViewModel.swift in Sources */,
 				2DE612D12B34B5D000C47137 /* DateHelper.swift in Sources */,
 				F3C7A1472B71C09C00144171 /* ExpandableHeaderTbvCell.swift in Sources */,
@@ -1332,6 +1387,7 @@
 				2D3B4B2C29D4C06500E433D8 /* AppUtility.swift in Sources */,
 				2D3B4AA129D4BF4500E433D8 /* HomeData.swift in Sources */,
 				2D3B4A9F29D4BF4500E433D8 /* HomeTbvCell.swift in Sources */,
+				11D161C52BD2EC1A001C6B49 /* MyResponseModel.swift in Sources */,
 				2DCFAF3F2A0F760600E6986C /* UICollectionViewExtensions.swift in Sources */,
 				2D3B4ACA29D4BF6A00E433D8 /* ApiConstants.swift in Sources */,
 				2D64B6CD29D4B1E0000CBDB8 /* AppDelegate.swift in Sources */,
