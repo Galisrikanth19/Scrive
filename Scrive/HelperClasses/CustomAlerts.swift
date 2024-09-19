@@ -26,7 +26,7 @@ extension UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    func showAlert(title: String, message:String? = nil, okCallback:@escaping () -> Void) {
+    func showAlertWithCallBack(title: String, message:String? = nil, okCallback:@escaping () -> Void) {
         let alertController = UIAlertController(title: title, message: message ?? "", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: { (_ ) in
             okCallback()
