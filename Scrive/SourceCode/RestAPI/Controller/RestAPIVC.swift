@@ -68,8 +68,8 @@ extension RestAPIVC {
     
     private func loginRequestWithBody() {
         let loginRequestM = LoginRequestModel(userName: "dina@gmail.com",
-                                                       password: "1234",
-                                                       Pushtoken: "")
+                                              password: "1234",
+                                              Pushtoken: "")
         let data: Data? = try? JSONEncoder().encode(loginRequestM)
         self.showProgressHUD()
         
