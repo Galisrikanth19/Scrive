@@ -1,34 +1,35 @@
 //
-//  APIManager.swift
+//  ApiManager.swift
 //  Created by Srikanth on 17/03/23.
 
 import Foundation
 import Alamofire
 
-class APIManager {
-    static let shared = APIManager()
+class ApiManager {
+    static let shared = ApiManager()
+    
     private let camelCaseDecoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return decoder
     }()
     
-    private lazy var defaultHttpHeaders: HTTPHeaders = {
-        var httpHeaders: HTTPHeaders = HTTPHeaders()
-        let mainBundle = Bundle.main
-        let infoDictionary = mainBundle.infoDictionary!
+    private var defaultHttpHeaders: HTTPHeaders {
+        var httpHeaders: HTTPHeaders               = HTTPHeaders()
+        let mainBundle                             = Bundle.main
+        let infoDictionary                         = mainBundle.infoDictionary!
         
         httpHeaders[ApiHeaderKeys.buildVersion]    = (infoDictionary["CFBundleShortVersionString"] as? String ?? "")
         httpHeaders[ApiHeaderKeys.buildNumber]     = (infoDictionary["CFBundleVersion"] as? String ?? "")
         httpHeaders[ApiHeaderKeys.buildIdentifier] = (mainBundle.bundleIdentifier ?? "")
-        httpHeaders[ApiHeaderKeys.deviceType]      = "ios"
-        httpHeaders[ApiHeaderKeys.brandSlug]       = "spot-barbershop"
+        httpHeaders[ApiHeaderKeys.deviceType]      = ApiConstants.deviceType
+        httpHeaders[ApiHeaderKeys.brandSlug]       = ApiConstants.brandSlug
         return httpHeaders
-    }()
+    }
     
     private init() { }
     
-    // MARK: Request with data as parameter
+    // MARK: - Request with data as parameter -
     func request<T: Decodable>(WithUrlStr urlStr: String,
                                WithHttpMethod httpMethod: HTTPMethod,
                                WithHeaders httpHeaders: HTTPHeaders? = nil,
@@ -57,15 +58,13 @@ class APIManager {
             urlRequest = try! encoding.encode(urlRequest, with: nil)
             
             //Adding HttpHeaders
-            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            if let accessToken = AppSingleton.shared.accessToken {
-                urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: ApiHeaderKeys.authorization)
-            }
-            if let httpHeaders = httpHeaders {
-                for httpH in httpHeaders {
-                    urlRequest.setValue(httpH.value, forHTTPHeaderField: httpH.name)
+            var finalHttpHeaders: [String : String] = defaultHttpHeaders.dictionary
+            if httpHeaders != nil {
+                for (key, value) in (httpHeaders?.dictionary ?? [:]) {
+                    finalHttpHeaders[key] = value
                 }
             }
+            urlRequest.allHTTPHeaderFields = finalHttpHeaders
             
             AF.request(urlRequest).responseDecodable(of: T.self, decoder: camelCaseDecoder) { (afDataResponse) in
                 //Debug response
@@ -75,14 +74,14 @@ class APIManager {
                 completionCallback(afDataResponse.data)
                 
                 switch(afDataResponse.result) {
-                case .success:
-                    successCallback(afDataResponse.value)
-                case .failure(let error):
-                    if let errorMsg = errorMsg {
-                        failureCallback(errorMsg)
-                    } else {
-                        failureCallback(error.errorDescription)
-                    }
+                    case .success:
+                        successCallback(afDataResponse.value)
+                    case .failure(let error):
+                        if let errorMsg = errorMsg {
+                            failureCallback(errorMsg)
+                        } else {
+                            failureCallback(error.errorDescription)
+                        }
                 }
             }
         }
@@ -104,13 +103,11 @@ class APIManager {
             URLCache.shared.removeAllCachedResponses()
             
             //Adding HttpHeaders
-            var httpHeaders: HTTPHeaders? = httpHeaders
-            if httpHeaders == nil {
-                httpHeaders = defaultHttpHeaders
-            }
-            guard var httpHeaders = httpHeaders else { return }
-            if let accessToken = AppSingleton.shared.accessToken {
-                httpHeaders[ApiHeaderKeys.authorization] = "Bearer \(accessToken)"
+            var finalHttpHeaders: HTTPHeaders = defaultHttpHeaders
+            if httpHeaders != nil {
+                for (key, value) in (httpHeaders?.dictionary ?? [:]) {
+                    finalHttpHeaders[key] = value
+                }
             }
             
             //Setting ParameterEncoding
@@ -121,7 +118,7 @@ class APIManager {
                 encoding = JSONEncoding.default
             }
             
-            AF.request(urlStr, method: httpMethod, parameters: parameters, encoding: encoding, headers: httpHeaders).responseDecodable(of: T.self, decoder: camelCaseDecoder) { (afDataResponse) in
+            AF.request(urlStr, method: httpMethod, parameters: parameters, encoding: encoding, headers: finalHttpHeaders).responseDecodable(of: T.self, decoder: camelCaseDecoder) { (afDataResponse) in
                 //Debug response
                 let errorMsg: String? = self.debugResponse(WithResponse: afDataResponse)
                 
@@ -129,14 +126,14 @@ class APIManager {
                 completionCallback(afDataResponse.data)
                 
                 switch(afDataResponse.result) {
-                case .success:
-                    successCallback(afDataResponse.value)
-                case .failure(let error):
-                    if let errorMsg = errorMsg {
-                        failureCallback(errorMsg)
-                    } else {
-                        failureCallback(error.errorDescription)
-                    }
+                    case .success:
+                        successCallback(afDataResponse.value)
+                    case .failure(let error):
+                        if let errorMsg = errorMsg {
+                            failureCallback(errorMsg)
+                        } else {
+                            failureCallback(error.errorDescription)
+                        }
                 }
             }
         }
@@ -158,13 +155,11 @@ class APIManager {
             URLCache.shared.removeAllCachedResponses()
             
             //Adding HttpHeaders
-            var httpHeaders: HTTPHeaders? = httpHeaders
-            if httpHeaders == nil {
-                httpHeaders = defaultHttpHeaders
-            }
-            guard var httpHeaders = httpHeaders else { return }
-            if let accessToken = AppSingleton.shared.accessToken {
-                httpHeaders[ApiHeaderKeys.authorization] = "Bearer \(accessToken)"
+            var finalHttpHeaders: HTTPHeaders = defaultHttpHeaders
+            if httpHeaders != nil {
+                for (key, value) in (httpHeaders?.dictionary ?? [:]) {
+                    finalHttpHeaders[key] = value
+                }
             }
             
             AF.upload(multipartFormData: { multipartFormData in
@@ -207,7 +202,7 @@ class APIManager {
             },
                       to: urlStr,
                       method: httpMethod,
-                      headers: httpHeaders)
+                      headers: finalHttpHeaders)
             .responseDecodable(of: T.self, decoder: camelCaseDecoder) { (afDataResponse) in
                 //Debug response
                 let errorMsg: String? = self.debugResponse(WithResponse: afDataResponse, WithParameters: parameters)
@@ -230,10 +225,9 @@ class APIManager {
     }
 }
 
-extension APIManager {
+extension ApiManager {
     private func debugResponse<T: Decodable>(WithResponse response: AFDataResponse<T>, WithParameters parameters: Parameters? = nil) -> String? {
         var errorMsg: String?
-        
         print("\n\n")
         print("*************************************************************************************")
         print("RequestedURL -> \(response.request?.url?.absoluteString ?? "")")
@@ -303,7 +297,6 @@ extension APIManager {
     
     private func validateResponse<T: Decodable>(dataIs: Data?, resultType: T.Type) -> String? {
         var errorMsg: String?
-        
         guard let dataIs = dataIs else {
             print("Data object is nil")
             errorMsg = "Data object is nil"
@@ -316,7 +309,6 @@ extension APIManager {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let _ = try decoder.decode(resultType.self, from: dataIs)
-            //print(messages as Any)
         }
         
         catch DecodingError.dataCorrupted(let context) {
