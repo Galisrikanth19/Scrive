@@ -7,11 +7,7 @@ import UIKit
 class ExpandableVC: BaseViewController {
     @IBOutlet weak var topBar: TopBar!
     @IBOutlet weak var tbv: UITableView!
-    var dataArr:[SectionModel] = [SectionModel]() {
-        didSet{
-            tbv.reloadData()
-        }
-    }
+    var dataArr:[SectionModel] = [SectionModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +29,7 @@ extension ExpandableVC {
     
     private func loadData() {
         dataArr = ExpandableData.dataArr
+        tbv.reloadData()
     }
 }
 
@@ -87,16 +84,22 @@ extension ExpandableVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            if dataArr[indexPath.section].isOpened == true {
-                dataArr[indexPath.section].isOpened = false
-                
-                let sections = IndexSet.init(integer: indexPath.section)
-                tableView.reloadSections(sections, with: .middle)
+            let section = indexPath.section
+            
+            if dataArr[section].isOpened {
+                dataArr[section].isOpened = false
+                var rowsToDelete = dataArr[section].rowsArr.indices.map { index in
+                    let row = index + 1
+                    return IndexPath(row: row, section: section)
+                }
+                tableView.deleteRows(at: rowsToDelete, with: .fade)
             } else {
                 dataArr[indexPath.section].isOpened = true
-                
-                let sections = IndexSet.init(integer: indexPath.section)
-                tableView.reloadSections(sections, with: .middle)
+                let rowsToInsert = dataArr[section].rowsArr.indices.map { index in
+                    let row = index + 1
+                    return IndexPath(row: row, section: section)
+                }
+                tableView.insertRows(at: rowsToInsert, with: .fade)
             }
         }
     }
