@@ -16,17 +16,17 @@ struct AppUtility {
         }
     }
     
-    static func readJSONFromFile() -> MyResponseModel? {
-        guard let fileURL = Bundle.main.url(forResource: "LocalJson", withExtension: "json") else {
+    static func readJSONFromFile<T: Codable>(WithFileName fileName: String) -> T? {
+        guard let fileURL = Bundle.main.url(forResource: fileName, withExtension: "json") else {
             print("File not found")
             return nil
         }
         
         do {
             let data = try Data(contentsOf: fileURL)
-            
             let decoder = JSONDecoder()
-            let myResponseModel = try decoder.decode(MyResponseModel.self, from: data)
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let myResponseModel = try decoder.decode(T.self, from: data)
             return myResponseModel
         } catch {
             print("Error reading JSON from file:", error)

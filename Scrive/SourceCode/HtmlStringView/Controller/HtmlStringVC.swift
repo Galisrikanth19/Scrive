@@ -40,9 +40,9 @@ extension HtmlStringVC {
 
 extension HtmlStringVC {
     private func loadData() {
-        if let myResponseM = AppUtility.readJSONFromFile() {
+        if let myResponseM: MyResponseModel = AppUtility.readJSONFromFile(WithFileName: "LocalJson") {
             //Title
-            let titleStr = myResponseM.data.message.payment_info_key
+            let titleStr = myResponseM.data.message.paymentInfoKey
             if let titleAttributedString = titleStr.htmlAttributed() {
                 titleLbl.attributedText = titleAttributedString
             } else {
@@ -50,7 +50,7 @@ extension HtmlStringVC {
             }
             
             //Desp
-            let despStr = myResponseM.data.message.payment_info
+            let despStr = myResponseM.data.message.paymentInfo
             if let despAttributedString = despStr.htmlAttributed() {
                 despLbl.attributedText = despAttributedString
             } else {

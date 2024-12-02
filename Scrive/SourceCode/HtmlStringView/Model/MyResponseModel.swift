@@ -15,7 +15,7 @@ struct ResponseModel: Codable {
 }
 
 struct MessagesModel: Codable {
-    let payment_info_key: String
-    let payment_info: String
-    let prepaid_single: String
+    let paymentInfoKey: String
+    let paymentInfo: String
+    let prepaidSingle: String
 }
