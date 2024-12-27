@@ -20,7 +20,12 @@ class HomeTbvCell: UITableViewCell {
         self.backgroundColor = .clear
         self.selectionStyle = .none
         
-        imgV.image = UIImage(named: (homeM.menu?.rawValue ?? "Placeholder"))
+        if let imgName = (homeM.menu?.rawValue),
+           let img = UIImage(named: imgName) {
+            imgV.image = img
+        } else {
+            imgV.image = UIImage(named: "Placeholder")
+        }
         titleLbl.text = (homeM.menu?.rawValue ?? "")
     }
 }

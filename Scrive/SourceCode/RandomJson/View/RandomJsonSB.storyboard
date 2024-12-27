@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Random JsonVC-->
+        <scene sceneID="hfy-Ip-qEG">
+            <objects>
+                <viewController storyboardIdentifier="RandomJsonVC" id="N5z-nW-80w" customClass="RandomJsonVC" customModule="Scrive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B8d-Nk-oNZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pl0-bA-Tjv" customClass="TopBar" customModule="Scrive" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="107" id="uIG-HB-mZT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dRh-gt-b0s"/>
+                        <color key="backgroundColor" name="BgColor"/>
+                        <constraints>
+                            <constraint firstItem="Pl0-bA-Tjv" firstAttribute="leading" secondItem="dRh-gt-b0s" secondAttribute="leading" id="BXu-ga-hDT"/>
+                            <constraint firstAttribute="trailing" secondItem="Pl0-bA-Tjv" secondAttribute="trailing" id="O9f-hN-sUd"/>
+                            <constraint firstItem="Pl0-bA-Tjv" firstAttribute="top" secondItem="B8d-Nk-oNZ" secondAttribute="top" id="bLD-ZR-Yi8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="topBar" destination="Pl0-bA-Tjv" id="R66-Si-jjQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5dd-le-vu9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053" y="-6"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BgColor">
+            <color red="0.68199998140335083" green="0.76099997758865356" blue="0.71399998664855957" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

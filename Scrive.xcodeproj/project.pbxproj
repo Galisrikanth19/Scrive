@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1161F6022CC81C8E0024BB03 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1161F6012CC81C8E0024BB03 /* AppManager.swift */; };
+		118579972D1ED599006D43B0 /* AnyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118579962D1ED592006D43B0 /* AnyValue.swift */; };
+		118579992D1ED791006D43B0 /* RandomData.json in Resources */ = {isa = PBXBuildFile; fileRef = 118579982D1ED787006D43B0 /* RandomData.json */; };
+		118579A02D1ED8D5006D43B0 /* RandomJsonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1185799F2D1ED8D0006D43B0 /* RandomJsonVC.swift */; };
+		118579A22D1ED969006D43B0 /* RandomJsonSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118579A12D1ED969006D43B0 /* RandomJsonSB.storyboard */; };
+		118579A52D1EDA45006D43B0 /* RandomJsonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118579A42D1EDA41006D43B0 /* RandomJsonModel.swift */; };
 		11D161C02BD2E7F0001C6B49 /* HtmlStringSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D161BF2BD2E7F0001C6B49 /* HtmlStringSB.storyboard */; };
 		11D161C22BD2E862001C6B49 /* HtmlStringVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D161C12BD2E862001C6B49 /* HtmlStringVC.swift */; };
 		11D161C52BD2EC1A001C6B49 /* MyResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D161C42BD2EC1A001C6B49 /* MyResponseModel.swift */; };
@@ -156,6 +161,11 @@
 
 /* Begin PBXFileReference section */
 		1161F6012CC81C8E0024BB03 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		118579962D1ED592006D43B0 /* AnyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyValue.swift; sourceTree = "<group>"; };
+		118579982D1ED787006D43B0 /* RandomData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RandomData.json; sourceTree = "<group>"; };
+		1185799F2D1ED8D0006D43B0 /* RandomJsonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJsonVC.swift; sourceTree = "<group>"; };
+		118579A12D1ED969006D43B0 /* RandomJsonSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RandomJsonSB.storyboard; sourceTree = "<group>"; };
+		118579A42D1EDA41006D43B0 /* RandomJsonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomJsonModel.swift; sourceTree = "<group>"; };
 		11D161BF2BD2E7F0001C6B49 /* HtmlStringSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HtmlStringSB.storyboard; sourceTree = "<group>"; };
 		11D161C12BD2E862001C6B49 /* HtmlStringVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlStringVC.swift; sourceTree = "<group>"; };
 		11D161C42BD2EC1A001C6B49 /* MyResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyResponseModel.swift; sourceTree = "<group>"; };
@@ -327,6 +337,40 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		1185799A2D1ED86A006D43B0 /* RandomJson */ = {
+			isa = PBXGroup;
+			children = (
+				118579A32D1EDA34006D43B0 /* Model */,
+				1185799B2D1ED883006D43B0 /* View */,
+				1185799E2D1ED8B4006D43B0 /* Controller */,
+			);
+			path = RandomJson;
+			sourceTree = "<group>";
+		};
+		1185799B2D1ED883006D43B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				118579A12D1ED969006D43B0 /* RandomJsonSB.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1185799E2D1ED8B4006D43B0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1185799F2D1ED8D0006D43B0 /* RandomJsonVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		118579A32D1EDA34006D43B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				118579A42D1EDA41006D43B0 /* RandomJsonModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		11D161BC2BD2E7BA001C6B49 /* HtmlStringView */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				11D161C72BD2EC7A001C6B49 /* LocalJson.json */,
+				118579982D1ED787006D43B0 /* RandomData.json */,
 			);
 			path = LocalJsons;
 			sourceTree = "<group>";
@@ -372,6 +417,7 @@
 		2D3B4A8029D4BF4500E433D8 /* SourceCode */ = {
 			isa = PBXGroup;
 			children = (
+				1185799A2D1ED86A006D43B0 /* RandomJson */,
 				11D161BC2BD2E7BA001C6B49 /* HtmlStringView */,
 				F34584732BAAC44E009F68F3 /* LocationView */,
 				2D8A9E6A2B4702B300F05863 /* CalendarView */,
@@ -521,6 +567,7 @@
 		2D3B4AC729D4BF6A00E433D8 /* ResponseWrappers */ = {
 			isa = PBXGroup;
 			children = (
+				118579962D1ED592006D43B0 /* AnyValue.swift */,
 				2D3B4AC829D4BF6A00E433D8 /* ApiResponse.swift */,
 				2D3B4AC929D4BF6A00E433D8 /* DecodableDefault.swift */,
 			);
@@ -1224,6 +1271,7 @@
 				F32CA45B2B6C0A5C00B26A2D /* SubMenuSB.storyboard in Resources */,
 				2DCFAF412A0F771000E6986C /* CollectionViewSB.storyboard in Resources */,
 				2D3B4AAB29D4BF4500E433D8 /* TopBar.xib in Resources */,
+				118579992D1ED791006D43B0 /* RandomData.json in Resources */,
 				2D3B4B0029D4C05800E433D8 /* ProximaNova-Semibold.otf in Resources */,
 				11D161C02BD2E7F0001C6B49 /* HtmlStringSB.storyboard in Resources */,
 				2D3B4B0329D4C05800E433D8 /* ProximaNova-Black.otf in Resources */,
@@ -1267,6 +1315,7 @@
 				2D3B4AF729D4C05800E433D8 /* RoxboroughCF-Bold.otf in Resources */,
 				2D3B4AFF29D4C05800E433D8 /* ProximaNova-Light.otf in Resources */,
 				2D6E7D642A0C0FE700A7BD3B /* TableviewSB.storyboard in Resources */,
+				118579A22D1ED969006D43B0 /* RandomJsonSB.storyboard in Resources */,
 				2D3B4B2929D4C06500E433D8 /* NoDataView.xib in Resources */,
 				2D974DA52A36F9710081D369 /* OpenSans-ExtraBold.ttf in Resources */,
 			);
@@ -1350,6 +1399,7 @@
 				2D3B4B3029D4C06500E433D8 /* AppFont.swift in Sources */,
 				2D3B4B2A29D4C06500E433D8 /* PushNotifications.swift in Sources */,
 				2D3B4B2829D4C06500E433D8 /* NoDataView.swift in Sources */,
+				118579A02D1ED8D5006D43B0 /* RandomJsonVC.swift in Sources */,
 				2D6E814C2A67C63000F6E33E /* SampleActions.swift in Sources */,
 				2D8A9E6F2B47032800F05863 /* CalendarVC.swift in Sources */,
 				2D3B4B2629D4C06500E433D8 /* GlobalPrint.swift in Sources */,
@@ -1406,6 +1456,8 @@
 				2D3B4AC129D4BF5400E433D8 /* UIColorExtensions.swift in Sources */,
 				2D3B4AA029D4BF4500E433D8 /* HomeVC.swift in Sources */,
 				2D6E814E2A67C65700F6E33E /* CommonActions.swift in Sources */,
+				118579972D1ED599006D43B0 /* AnyValue.swift in Sources */,
+				118579A52D1EDA45006D43B0 /* RandomJsonModel.swift in Sources */,
 				2DD951182A177B0500A0AF8E /* EnumVC.swift in Sources */,
 				2D3B4B2129D4C06500E433D8 /* CheckBoxButton.swift in Sources */,
 				2D3B4B2C29D4C06500E433D8 /* AppUtility.swift in Sources */,

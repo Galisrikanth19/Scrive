@@ -89,6 +89,8 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
                 LocationVC.push(storyboard: .locationSB)
             case .htmlView:
                 HtmlStringVC.push(storyboard: .htmlStringSB)
+            case .randomJsonView:
+                RandomJsonVC.push(storyboard: .randomJsonSB)
             default:
                 self.showToast(WithMessage: "No object selected")
         }

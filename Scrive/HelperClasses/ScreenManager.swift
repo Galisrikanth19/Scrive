@@ -19,6 +19,7 @@ enum Storyboard : String {
     case expandableSB = "ExpandableSB"
     case locationSB = "LocationSB"
     case htmlStringSB = "HtmlStringSB"
+    case randomJsonSB = "RandomJsonSB"
 }
 
 extension UIViewController {

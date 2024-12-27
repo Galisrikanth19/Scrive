@@ -1,0 +1,19 @@
+{
+    "status" : true,
+    "message" : "Success.",
+    "data" :  [
+        {
+            "name" : "Srikanth",
+            "runs" : "100"
+        },
+        {
+            "name" : "Saanvi",
+            "runs" : 100
+        },
+        {
+            "name" : "Sagarika",
+            "runs" : null
+        }
+    ]
+    
+}
